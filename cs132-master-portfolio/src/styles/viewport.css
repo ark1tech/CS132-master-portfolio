@@ -1,0 +1,107 @@
+/* 2xl */
+@media (max-width: 1536px) {
+	.container {
+		max-width: 1280px;
+	}
+	.small-text {
+		font-size: 0.7rem;
+	}
+	.sm-text {
+		font-size: 0.85rem;
+	}
+}
+
+/* xl */
+@media (max-width: 1280px) {
+	.container {
+		max-width: 1024px;
+	}
+	.small-text {
+		font-size: 0.7rem;
+	}
+	.sm-text {
+		font-size: 0.85rem;
+	}
+}
+
+/* lg */
+@media (max-width: 1024px) {
+	.container {
+		max-width: 768px;
+	}
+	.small-text {
+		font-size: 0.7rem;
+	}
+	.sm-text {
+		font-size: 0.85rem;
+	}
+}
+
+/* md */
+@media (max-width: 768px) {
+	.container,
+	.foot,
+	nav,
+	main {
+		max-width: 640px;
+	}
+	a,
+	::placeholder,
+	input,
+	li,
+	p {
+		font-size: 1rem;
+	}
+	.small-text {
+		font-size: 0.7rem;
+	}
+	.sm-text {
+		font-size: 0.8rem;
+	}
+}
+
+/* sm */
+@media (max-width: 640px) {
+	.container,
+	.foot,
+	nav,
+	main {
+		width: 100%;
+	}
+	a,
+	::placeholder,
+	input,
+	li,
+	p {
+		font-size: 0.9rem;
+	}
+	.small-text {
+		font-size: 0.7rem;
+	}
+	.sm-text {
+		font-size: 0.8rem;
+	}
+}
+
+/* xs */
+@media (max-width: 475px) {
+	.container,
+	.foot,
+	nav,
+	main {
+		width: 100%;
+	}
+	a,
+	::placeholder,
+	input,
+	li,
+	p {
+		font-size: 0.8rem;
+	}
+	.small-text {
+		font-size: 0.6rem;
+	}
+	.sm-text {
+		font-size: 0.8rem;
+	}
+}

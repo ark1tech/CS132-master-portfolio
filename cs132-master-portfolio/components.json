@@ -3,12 +3,12 @@
 	"style": "new-york",
 	"tailwind": {
 		"config": "tailwind.config.js",
-		"css": "src/app.css",
+		"css": "src/styles/shadcn.css",
 		"baseColor": "slate"
 	},
 	"aliases": {
-		"components": "$lib/components",
-		"utils": "$lib/utils"
+		"components": "$lib/shadcn/components",
+		"utils": "$lib/shadcn/utils"
 	},
 	"typescript": false
 }

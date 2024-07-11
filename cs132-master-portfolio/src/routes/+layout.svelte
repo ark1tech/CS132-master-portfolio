@@ -2,4 +2,8 @@
 	import '../app.css';
 </script>
 
-<slot></slot>
+<div class="container">
+	<main class="min-h-[100dvh]">
+		<slot></slot>
+	</main>
+</div>

@@ -1,7 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Reddit+Sans:ital,wght@0,200..900;1,200..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+/* shadcn */
 @layer base {
 	:root {
 		--background: 0 0% 100%;
@@ -75,4 +80,324 @@
 	body {
 		@apply bg-background text-foreground;
 	}
+}
+
+/* ------------------------------------------------- */
+
+:root {
+	--background-start-rgb: rgb(0, 0, 0);
+	--background-end-rgb: rgb(0, 0, 0);
+	--h-text-color: rgb(255, 255, 255);
+	--body-text-color: rgb(156, 156, 156);
+	--text-gray: rgb(100, 100, 100);
+}
+
+::-webkit-scrollbar {
+	width: 7px;
+	height: 3px;
+}
+::-webkit-scrollbar-track {
+	background: rgba(0, 0, 0, 0);
+}
+::-webkit-scrollbar-thumb {
+	background: rgba(187, 187, 187, 0.5);
+	border-radius: 2000px;
+}
+::-webkit-scrollbar-corner {
+	background: rgba(0, 0, 0, 0);
+}
+
+/* ---------------------- TEXT --------------------------- */
+
+* {
+	font-family: 'Reddit Sans', Arial, Helvetica, sans-serif;
+	text-wrap: balance;
+}
+
+h5 {
+	font-family: 'Reddit Sans', Arial, Helvetica, sans-serif;
+	font-size: 1.15rem;
+	font-weight: 300;
+	letter-spacing: -0.01em;
+	color: var(--h-text-color);
+}
+
+h4 {
+	font-family: 'Reddit Sans', Arial, Helvetica, sans-serif;
+	font-size: 4rem;
+	font-weight: 600;
+	color: var(--h-text-color);
+}
+
+h3 {
+	font-family: 'Lora', Arial, Helvetica, sans-serif;
+	color: var(--h-text-color);
+	font-size: 1.75rem;
+	font-weight: 500;
+	line-height: 1.1em;
+	/* letter-spacing: -0.03em; */
+}
+
+h2 {
+	font-family: 'Public Sans', Arial, Helvetica, sans-serif;
+	color: var(--h-text-color);
+	font-size: 1.5rem;
+	font-weight: 400;
+	/* letter-spacing: -0.03em; */
+}
+
+h1 {
+	font-family: 'JetBrains Mono', Arial, Helvetica, sans-serif;
+	color: var(--h-text-color);
+	font-size: 2rem;
+	font-weight: 500;
+}
+
+p {
+	font-family: 'JetBrains Mono', Arial, Helvetica, sans-serif;
+	color: var(--body-text-color);
+	text-wrap: pretty;
+	font-kerning: auto;
+	font-weight: 300;
+	line-height: 120%;
+}
+
+a,
+li {
+	font-family: 'Reddit Sans', Arial, Helvetica, sans-serif;
+	color: var(--body-text-color);
+	text-wrap: pretty;
+	font-kerning: auto;
+	font-weight: 300;
+	text-decoration: none;
+}
+
+.footnote {
+	font-family: 'Reddit Sans', Arial, Helvetica, sans-serif;
+	color: var(--body-text-color);
+	text-wrap: pretty;
+	font-kerning: auto;
+	font-weight: 300;
+	line-height: 120%;
+}
+
+.description {
+	font-family: 'Reddit Sans', Arial, Helvetica, sans-serif;
+	color: var(--body-text-color);
+	text-wrap: pretty;
+	font-kerning: auto;
+	font-weight: 300;
+	line-height: 120%;
+}
+
+.graytext {
+	color: var(--text-gray);
+}
+
+.ascii {
+	white-space-collapse: preserve;
+	text-wrap: nowrap;
+	font-family: 'JetBrains Mono', Arial, Helvetica, sans-serif;
+	font-weight: 500;
+	font-size: 0.5rem;
+	letter-spacing: 0.2em;
+}
+
+/* ---------------------- CONTAINERS --------------------------- */
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	color: var(--foreground-rgb);
+	background: linear-gradient(to bottom, transparent, var(--background-end-rgb))
+		var(--background-start-rgb);
+}
+
+.container {
+	max-width: 1536px;
+	margin-left: auto;
+	margin-right: auto;
+	min-height: 100dvh;
+}
+
+main {
+	max-width: 1024px;
+	margin-left: auto;
+	margin-right: auto;
+	width: 100%;
+	padding-left: 1rem;
+	padding-right: 1rem;
+}
+
+nav {
+	max-width: 1024px;
+	margin-left: auto;
+	margin-right: auto;
+	width: 100%;
+}
+
+button {
+	text-decoration: none;
+	outline: none;
+	background-color: transparent;
+	border: 0;
+}
+
+.border-style {
+	border-color: #bccbc080;
+	border-width: 0.5px;
+}
+
+/* ---------------------- MEDIA QUERIES --------------------------- */
+
+/* 2xl */
+@media (max-width: 1536px) {
+	.container {
+		max-width: 1280px;
+	}
+	.small-text {
+		font-size: 0.7rem;
+	}
+	.sm-text {
+		font-size: 0.85rem;
+	}
+}
+
+/* xl */
+@media (max-width: 1280px) {
+	.container {
+		max-width: 1024px;
+	}
+	.small-text {
+		font-size: 0.7rem;
+	}
+	.sm-text {
+		font-size: 0.85rem;
+	}
+}
+
+/* lg */
+@media (max-width: 1024px) {
+	.container {
+		max-width: 768px;
+	}
+	.small-text {
+		font-size: 0.7rem;
+	}
+	.sm-text {
+		font-size: 0.85rem;
+	}
+}
+
+/* md */
+@media (max-width: 768px) {
+	.container,
+	.foot,
+	nav,
+	main {
+		max-width: 640px;
+	}
+	a,
+	::placeholder,
+	input,
+	li,
+	p {
+		font-size: 1rem;
+	}
+	.small-text {
+		font-size: 0.7rem;
+	}
+	.sm-text {
+		font-size: 0.8rem;
+	}
+}
+
+/* sm */
+@media (max-width: 640px) {
+	.container,
+	.foot,
+	nav,
+	main {
+		width: 100%;
+	}
+	a,
+	::placeholder,
+	input,
+	li,
+	p {
+		font-size: 0.9rem;
+	}
+	.small-text {
+		font-size: 0.7rem;
+	}
+	.sm-text {
+		font-size: 0.8rem;
+	}
+}
+
+/* xs */
+@media (max-width: 475px) {
+	.container,
+	.foot,
+	nav,
+	main {
+		width: 100%;
+	}
+	a,
+	::placeholder,
+	input,
+	li,
+	p {
+		font-size: 0.8rem;
+	}
+	.small-text {
+		font-size: 0.6rem;
+	}
+	.sm-text {
+		font-size: 0.8rem;
+	}
+}
+
+/* ---------------------- ANIMATIONS --------------------------- */
+
+.spin_element {
+	animation: spin 5s linear infinite;
+}
+
+@keyframes spin {
+	from {
+		transform: rotate(0deg) scale(4.5);
+	}
+	to {
+		transform: rotate(360deg) scale(4.5);
+	}
+}
+
+@keyframes background-pan {
+	from {
+		background-position: 0 0;
+	}
+
+	to {
+		background-position: 100% 100%;
+	}
+}
+
+.magic-text {
+	animation: background-pan 7s linear infinite;
+	background: linear-gradient(
+		to top left,
+		#50505000 20%,
+		#ffffff 50%,
+		#626262 52%,
+		#505050 60%,
+		#50505000 80%
+	);
+	background-size: 800% 800%;
+	background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
 }

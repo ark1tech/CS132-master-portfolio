@@ -1,0 +1,84 @@
+* {
+	font-family: 'Reddit Sans', Arial, Helvetica, sans-serif;
+	text-wrap: balance;
+}
+
+h5 {
+	font-family: 'Reddit Sans', Arial, Helvetica, sans-serif;
+	font-size: 1.15rem;
+	font-weight: 300;
+	letter-spacing: -0.01em;
+	color: var(--h-text-color);
+}
+
+h4 {
+	font-family: 'Reddit Sans', Arial, Helvetica, sans-serif;
+	font-size: 4rem;
+	font-weight: 600;
+	color: var(--h-text-color);
+}
+
+h3 {
+	font-family: 'Lora', Arial, Helvetica, sans-serif;
+	color: var(--h-text-color);
+	font-size: 1.75rem;
+	font-weight: 500;
+	line-height: 1.1em;
+	/* letter-spacing: -0.03em; */
+}
+
+h2 {
+	font-family: 'Public Sans', Arial, Helvetica, sans-serif;
+	color: var(--h-text-color);
+	font-size: 1.5rem;
+	font-weight: 400;
+	/* letter-spacing: -0.03em; */
+}
+
+h1 {
+	font-family: 'JetBrains Mono', Arial, Helvetica, sans-serif;
+	color: var(--h-text-color);
+	font-size: 2rem;
+	font-weight: 500;
+}
+
+p {
+	font-family: 'Reddit Sans', Arial, Helvetica, sans-serif;
+	color: var(--body-text-color);
+	text-wrap: pretty;
+	font-kerning: auto;
+	font-weight: 300;
+	line-height: 120%;
+}
+
+a,
+li {
+	font-family: 'Reddit Sans', Arial, Helvetica, sans-serif;
+	color: var(--body-text-color);
+	text-wrap: pretty;
+	font-kerning: auto;
+	font-weight: 300;
+	text-decoration: none;
+}
+
+.footnote {
+	font-family: 'Reddit Sans', Arial, Helvetica, sans-serif;
+	color: var(--body-text-color);
+	text-wrap: pretty;
+	font-kerning: auto;
+	font-weight: 300;
+	line-height: 120%;
+}
+
+.description {
+	font-family: 'Reddit Sans', Arial, Helvetica, sans-serif;
+	color: var(--body-text-color);
+	text-wrap: pretty;
+	font-kerning: auto;
+	font-weight: 300;
+	line-height: 120%;
+}
+
+.graytext {
+	color: var(--text-gray);
+}

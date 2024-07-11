@@ -9,7 +9,11 @@
             ],
             "$server/*": [
                 "./src/lib/server/*"
+            ],
+            "$assets/*": [
+                "./src/lib/assets/*"
             ]
-        }
-    }
+        },
+    },
+    // "extends": "./.svelte-kit/tsconfig.json"
 }
