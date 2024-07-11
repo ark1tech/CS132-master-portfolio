@@ -1,0 +1,15 @@
+{
+    "compilerOptions": {
+        "paths": {
+            "$lib/*": [
+                "./src/lib/*"
+            ],
+            "$components/*": [
+                "./src/lib/components/*"
+            ],
+            "$server/*": [
+                "./src/lib/server/*"
+            ]
+        }
+    }
+}
