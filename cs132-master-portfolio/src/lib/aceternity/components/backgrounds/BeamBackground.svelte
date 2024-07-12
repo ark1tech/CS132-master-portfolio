@@ -1,5 +1,5 @@
 <script>
-	import { cn } from '../utils';
+	import { cn } from '../../utils';
 	import { Motion } from 'svelte-motion/src/render/dom/motion';
 
 	export let className = undefined;
