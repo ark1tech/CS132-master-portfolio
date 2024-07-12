@@ -197,7 +197,7 @@ li {
 .ascii {
 	white-space-collapse: preserve;
 	text-wrap: nowrap;
-	font-family: 'JetBrains Mono', Arial, Helvetica, sans-serif;
+	font-family: 'JetBrains Mono', 'Courier New', Courier, monospace;
 	font-weight: 500;
 	font-size: 0.5rem;
 	letter-spacing: 0.2em;
@@ -377,24 +377,23 @@ button {
 }
 
 @keyframes background-pan {
-	from {
+	0% {
 		background-position: 0 0;
 	}
 
-	to {
+	100% {
 		background-position: 100% 100%;
 	}
 }
 
 .magic-text {
-	animation: background-pan 7s linear infinite;
+	animation: background-pan 6s cubic-bezier(.21,.74,.71,.97) infinite;
 	background: linear-gradient(
 		to top left,
-		#50505000 20%,
+		#5050507d 30%,
 		#ffffff 50%,
-		#626262 52%,
-		#505050 60%,
-		#50505000 80%
+		#505050 55%,
+		#5050507d 60%
 	);
 	background-size: 800% 800%;
 	background-clip: text;

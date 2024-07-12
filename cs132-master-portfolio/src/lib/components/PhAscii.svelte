@@ -1,6 +1,6 @@
-<section class="ascii magic-text">
+<div class="ascii magic-text">
 &nbsp;
-                              O                           
+                           O                           
                       O00                               
                      00OOOOOZmZZ                        
                     0OOOZZZZZmm                         
@@ -45,4 +45,4 @@
                        @@@                   @@@@@@     
                                                 @@      
                  @@                                     
-</section>
+</div>
