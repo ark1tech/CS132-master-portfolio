@@ -4,6 +4,7 @@ import adapter from '@sveltejs/adapter-auto';
 const config = {
 	kit: {
 		alias: {
+			'$lib/*': './src/lib/*',
 			'$components/*': './src/lib/components/*',
 			'$server/*': './src/lib/server/*',
 			'$assets/*': './src/lib/assets/*'

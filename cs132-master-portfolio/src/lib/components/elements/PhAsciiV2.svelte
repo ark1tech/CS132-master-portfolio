@@ -53,6 +53,7 @@
                                                       @@      
                        @@`;
 
+	const bgAsciiArt = originalAsciiArt;
 	let randomString = originalAsciiArt;
 	let pendingUpdate = false;
 
@@ -121,7 +122,7 @@
 </script>
 
 <div
-  class="select-none cursor-crosshair"
+  class="select-none cursor-crosshair relative -z-0"
 	on:mousemove={onMouseMove}
 	on:mouseenter={onMouseEnter}
 	on:mouseleave={onMouseLeave}
@@ -132,4 +133,7 @@
 			{randomString}
 		</div>
 	</Motion>
+	<!-- <div class="top-0 translate-x-1 translate-y-1 blur-[5px] text-[#464646] absolute ascii ">
+		{bgAsciiArt}
+	</div> -->
 </div>
