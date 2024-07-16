@@ -2,7 +2,7 @@
 	export let showFade = true;
 </script>
 
-<div class="relative -z-10 flex items-center justify-center gradient-mask-r-70 bg-black bg-grid-dash-[#232323]/[0.7]">
+<div class="relative -z-10 flex items-center justify-center gradient-mask-r-70 bg-transparent bg-grid-dash-[#232323]/[0.7]">
 	<!-- Radial gradient for the container to give a faded look -->
 	{#if showFade}
 		<div
