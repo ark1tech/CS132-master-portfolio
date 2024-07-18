@@ -1,13 +1,16 @@
-<script>
-	export let showFade = true;
-</script>
-
-<div class="relative -z-10 flex items-center justify-center gradient-mask-r-70 bg-transparent bg-grid-dash-[#232323]/[0.7]">
-	<!-- Radial gradient for the container to give a faded look -->
-	{#if showFade}
-		<div
-			class="pointer-events-none absolute inset-0 flex items-center justify-center bg-black [mask-image:radial-gradient(ellipse_at_right,transparent_20%,black_70%)]"
-		></div>
-	{/if}
+<div class="relative z-10 flex items-center justify-center bg-transparent gradient-mask-r-60">
+	<div class="full-width full-height background-mask bg-grid-dash-[#232323]/[0.8]"></div>
 	<slot />
-</div>	
+</div>
+
+<style>
+	.background-mask {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		mask-image: radial-gradient(ellipse at right, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 72%);
+		z-index: -1; /* Ensure it stays behind the slot content */
+	}
+</style>

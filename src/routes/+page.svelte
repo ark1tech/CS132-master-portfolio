@@ -21,17 +21,17 @@
 
 <!-- Hero Section -->
 <div
-	class="pointer-events-none z-0 absolute inset-y-0 left-0 w-full bg-[radial-gradient(ellipse_at_top_left,#262626_-50%,transparent_60%)] text-[#262626]"
+	class="pointer-events-none z-0 absolute inset-y-0 left-0 w-full bg-[radial-gradient(ellipse_at_top_left,#01130c_-50%,transparent_60%)] text-[#01130c]"
 ></div>
 <GridBackground>
 	<section class="flex min-h-[100dvh] flex-col items-center justify-center md:flex-row">
 		<div class="relative z-10 flex flex-col gap-[2rem]">
 			<div class="flex w-fit flex-col">
 				<span class="flex flex-col items-start">
-					<h5 class="font-['JetBrains_Mono'] text-sm">PILIPINUTS 2023:</h5>
-					<h1 class="magic-text-static">Pilipinas in a Nutshell</h1>
+					<p class="text-white">Pilipinas in a Nutshell:</p>
+					<h1 class="sans-text font-[600]">PilipiNuts 2023</h1>
 				</span>
-				<p>The state of Philippine data</p>
+				<p class="foot-text">The state of Philippine data</p>
 				<!-- <PrimaryButton /> -->
 			</div>
 		</div>

@@ -2,86 +2,86 @@
 	"1": {
 		"Title": "No Poverty",
 		"Description": "End poverty in all its forms everywhere.",
-		"Image": "/src/lib/sdg/1.svg"
+		"Image": "./src/lib/assets/sdg/1.svg"
 	},
 	"2": {
 		"Title": "Zero Hunger",
 		"Description": "End hunger, achieve food security and improved nutrition, and promote sustainable agriculture.",
-		"Image": "/src/lib/sdg/2.svg"
+		"Image": "./src/lib/assets/sdg/2.svg"
 	},
 	"3": {
 		"Title": "Good Health and Well-being",
 		"Description": "Ensure healthy lives and promote well-being for all at all ages.",
-		"Image": "/src/lib/sdg/3.svg"
+		"Image": "./src/lib/assets/sdg/3.svg"
 	},
 	"4": {
 		"Title": "Quality Education",
 		"Description": "Ensure inclusive and equitable quality education and promote lifelong learning opportunities for all.",
-		"Image": "/src/lib/sdg/4.svg"
+		"Image": "./src/lib/assets/sdg/4.svg"
 	},
 	"5": {
 		"Title": "Gender Equality",
 		"Description": "Achieve gender equality and empower all women and girls.",
-		"Image": "/src/lib/sdg/5.svg"
+		"Image": "./src/lib/assets/sdg/5.svg"
 	},
 	"6": {
 		"Title": "Clean Water and Sanitation",
 		"Description": "Ensure availability and sustainable management of water and sanitation for all.",
-		"Image": "/src/lib/sdg/6.svg"
+		"Image": "./src/lib/assets/sdg/6.svg"
 	},
 	"7": {
 		"Title": "Affordable and Clean Energy",
 		"Description": "Ensure access to affordable, reliable, sustainable, and modern energy for all.",
-		"Image": "/src/lib/sdg/7.svg"
+		"Image": "./src/lib/assets/sdg/7.svg"
 	},
 	"8": {
 		"Title": "Decent Work and Economic Growth",
 		"Description": "Promote sustained, inclusive, and sustainable economic growth, full and productive employment, and decent work for all.",
-		"Image": "/src/lib/sdg/8.svg"
+		"Image": "./src/lib/assets/sdg/8.svg"
 	},
 	"9": {
 		"Title": "Industry, Innovation, and Infrastructure",
 		"Description": "Build resilient infrastructure, promote inclusive and sustainable industrialization, and foster innovation.",
-		"Image": "/src/lib/sdg/9.svg"
+		"Image": "./src/lib/assets/sdg/9.svg"
 	},
 	"10": {
 		"Title": "Reduced Inequality",
 		"Description": "Reduce inequality within and among countries.",
-		"Image": "/src/lib/sdg/10.svg"
+		"Image": "./src/lib/assets/sdg/10.svg"
 	},
 	"11": {
 		"Title": "Sustainable Cities and Communities",
 		"Description": "Make cities and human settlements inclusive, safe, resilient, and sustainable.",
-		"Image": "/src/lib/sdg/11.svg"
+		"Image": "./src/lib/assets/sdg/11.svg"
 	},
 	"12": {
 		"Title": "Responsible Consumption and Production",
 		"Description": "Ensure sustainable consumption and production patterns.",
-		"Image": "/src/lib/sdg/12.svg"
+		"Image": "./src/lib/assets/sdg/12.svg"
 	},
 	"13": {
 		"Title": "Climate Action",
 		"Description": "Take urgent action to combat climate change and its impacts.",
-		"Image": "/src/lib/sdg/13.svg"
+		"Image": "./src/lib/assets/sdg/13.svg"
 	},
 	"14": {
 		"Title": "Life Below Water",
 		"Description": "Conserve and sustainably use the oceans, seas, and marine resources for sustainable development.",
-		"Image": "/src/lib/sdg/14.svg"
+		"Image": "./src/lib/assets/sdg/14.svg"
 	},
 	"15": {
 		"Title": "Life on Land",
 		"Description": "Protect, restore, and promote sustainable use of terrestrial ecosystems, sustainably manage forests, combat desertification, halt and reverse land degradation, and halt biodiversity loss.",
-		"Image": "/src/lib/sdg/15.svg"
+		"Image": "./src/lib/assets/sdg/15.svg"
 	},
 	"16": {
 		"Title": "Peace, Justice, and Strong Institutions",
 		"Description": "Promote peaceful and inclusive societies for sustainable development, provide access to justice for all, and build effective, accountable, and inclusive institutions at all levels.",
-		"Image": "/src/lib/sdg/16.svg"
+		"Image": "./src/lib/assets/sdg/16.svg"
 	},
 	"17": {
 		"Title": "Partnerships for the Goals",
 		"Description": "Strengthen the means of implementation and revitalize the Global Partnership for Sustainable Development.",
-		"Image": "/src/lib/sdg/17.svg"
+		"Image": "./src/lib/assets/sdg/17.svg"
 	}
 }

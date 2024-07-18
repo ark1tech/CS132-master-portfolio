@@ -90,7 +90,7 @@
 </script>
 
 <div class="select-none" role="presentation">
-	<div class="ascii magic-text threedee-effect">
+	<div class="ascii magic-text">
 		{randomString}
 	</div>
 </div>

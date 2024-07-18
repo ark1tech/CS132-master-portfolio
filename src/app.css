@@ -101,7 +101,6 @@
 }
 ::-webkit-scrollbar-thumb {
 	background: rgba(103, 103, 103, 0.5);
-	/* border-radius: 2000px; */
 }
 ::-webkit-scrollbar-corner {
 	background: rgba(0, 0, 0, 0);
@@ -116,7 +115,7 @@
 
 h5 {
 	font-family: 'Albert Sans', Arial, Helvetica, sans-serif;
-	font-size: 1.15rem;
+	font-size: clamp(1rem, 1.15rem, 1.2rem); /* Adjusted */
 	font-weight: 300;
 	letter-spacing: -0.01em;
 	color: var(--h-text-color);
@@ -124,7 +123,7 @@ h5 {
 
 h4 {
 	font-family: 'Albert Sans', Arial, Helvetica, sans-serif;
-	font-size: 4rem;
+	font-size: clamp(3rem, 4rem, 5rem); /* Adjusted */
 	font-weight: 600;
 	color: var(--h-text-color);
 }
@@ -132,24 +131,22 @@ h4 {
 h3 {
 	font-family: 'Albert Sans', Arial, Helvetica, sans-serif;
 	color: var(--h-text-color);
-	font-size: 1.75rem;
+	font-size: clamp(1.5rem, 1.75rem, 2rem); /* Adjusted */
 	font-weight: 500;
 	line-height: 1.1em;
-	/* letter-spacing: -0.03em; */
 }
 
 h2 {
 	font-family: 'Public Sans', Arial, Helvetica, sans-serif;
 	color: var(--h-text-color);
-	font-size: 1.5rem;
+	font-size: clamp(1.25rem, 1.5rem, 1.75rem); /* Adjusted */
 	font-weight: 400;
-	/* letter-spacing: -0.03em; */
 }
 
 h1 {
 	font-family: 'JetBrains Mono', Arial, Helvetica, sans-serif;
 	color: var(--h-text-color);
-	font-size: 2rem;
+	font-size: clamp(2rem, 2.5rem, 3rem); /* Adjusted */
 	font-weight: 500;
 }
 
@@ -160,6 +157,7 @@ p {
 	font-kerning: auto;
 	font-weight: 300;
 	line-height: 120%;
+	font-size: clamp(0.8rem, 1rem, 1.2rem); /* Adjusted */
 }
 
 a,
@@ -170,6 +168,15 @@ li {
 	font-kerning: auto;
 	font-weight: 300;
 	text-decoration: none;
+	font-size: clamp(0.8rem, 1rem, 1.2rem); /* Adjusted */
+}
+
+.sans-text {
+	font-family: 'Public Sans', Arial, Helvetica, sans-serif;
+}
+
+.mono-text {
+	font-family: 'JetBrains Mono', 'Courier New', Courier, monospace;
 }
 
 .footnote {
@@ -179,15 +186,17 @@ li {
 	font-kerning: auto;
 	font-weight: 300;
 	line-height: 120%;
+	font-size: clamp(0.8rem, 1rem, 1.2rem); /* Adjusted */
 }
 
 .description {
 	font-family: 'Reddit Sans', Arial, Helvetica, sans-serif;
-	color: var(--body-text-color);
+	color: var(--body-text_color);
 	text-wrap: pretty;
 	font-kerning: auto;
 	font-weight: 300;
 	line-height: 120%;
+	font-size: clamp(0.8rem, 1rem, 1.2rem); /* Adjusted */
 }
 
 .graytext {
@@ -203,11 +212,21 @@ li {
 	letter-spacing: 0.2em;
 }
 
+.foot-text {
+	font-size: clamp(0.6rem, 0.7rem, 0.8rem); /* Newly adjusted with clamp */
+}
+
+.smaller-text {
+	font-size: clamp(0.75rem, 0.85rem, 0.95rem); /* Newly adjusted with clamp */
+}
+
 /* ---------------------- CONTAINERS --------------------------- */
 
 * {
 	margin: 0;
 	padding: 0;
+	box-sizing: border-box;
+	overflow-wrap: break-word;
 }
 
 body {
@@ -217,14 +236,14 @@ body {
 }
 
 .container {
-	max-width: 1536px;
+	max-width: clamp(320px, 100%, 1536px); /* Adjusted */
 	margin-left: auto;
 	margin-right: auto;
 	min-height: 100dvh;
 }
 
 main {
-	max-width: 1024px;
+	max-width: clamp(320px, 100%, 1024px); /* Adjusted */
 	margin-left: auto;
 	margin-right: auto;
 	width: 100%;
@@ -233,18 +252,18 @@ main {
 }
 
 nav {
-	max-width: 1024px;
+	max-width: clamp(320px, 100%, 1024px); /* Adjusted */
 	margin-left: auto;
 	margin-right: auto;
 	width: 100%;
 }
 
-button {
+/* button {
 	text-decoration: none;
 	outline: none;
 	background-color: transparent;
 	border: 0;
-}
+} */
 
 .border-style {
 	border-color: #bccbc080;
@@ -253,113 +272,23 @@ button {
 
 /* ---------------------- MEDIA QUERIES --------------------------- */
 
-/* 2xl */
-@media (max-width: 1536px) {
-	.container {
-		max-width: 1280px;
-	}
-	.small-text {
-		font-size: 0.7rem;
-	}
-	.sm-text {
-		font-size: 0.85rem;
-	}
+/* @media (max-width: 1536px) {
 }
 
-/* xl */
 @media (max-width: 1280px) {
-	.container {
-		max-width: 1024px;
-	}
-	.small-text {
-		font-size: 0.7rem;
-	}
-	.sm-text {
-		font-size: 0.85rem;
-	}
 }
 
-/* lg */
 @media (max-width: 1024px) {
-	.container {
-		max-width: 768px;
-	}
-	.small-text {
-		font-size: 0.7rem;
-	}
-	.sm-text {
-		font-size: 0.85rem;
-	}
 }
 
-/* md */
 @media (max-width: 768px) {
-	.container,
-	.foot,
-	nav,
-	main {
-		max-width: 640px;
-	}
-	a,
-	::placeholder,
-	input,
-	li,
-	p {
-		font-size: 1rem;
-	}
-	.small-text {
-		font-size: 0.7rem;
-	}
-	.sm-text {
-		font-size: 0.8rem;
-	}
 }
 
-/* sm */
 @media (max-width: 640px) {
-	.container,
-	.foot,
-	nav,
-	main {
-		width: 100%;
-	}
-	a,
-	::placeholder,
-	input,
-	li,
-	p {
-		font-size: 0.9rem;
-	}
-	.small-text {
-		font-size: 0.7rem;
-	}
-	.sm-text {
-		font-size: 0.8rem;
-	}
 }
 
-/* xs */
 @media (max-width: 475px) {
-	.container,
-	.foot,
-	nav,
-	main {
-		width: 100%;
-	}
-	a,
-	::placeholder,
-	input,
-	li,
-	p {
-		font-size: 0.8rem;
-	}
-	.small-text {
-		font-size: 0.6rem;
-	}
-	.sm-text {
-		font-size: 0.8rem;
-	}
-}
+} */
 
 /* ---------------------- ANIMATIONS --------------------------- */
 
@@ -387,7 +316,7 @@ button {
 }
 
 .magic-text {
-	animation: background-pan 10s cubic-bezier(0.21, 0.74, 0.71, 0.97) infinite;
+	animation: background-pan 8s cubic-bezier(0.21, 0.74, 0.71, 0.97) infinite;
 	background: linear-gradient(to top left, #505050e1 30%, #ffffff 50%, #505050 55%, #505050e1 60%);
 	background-size: 800% 800%;
 	background-clip: text;
@@ -402,7 +331,3 @@ button {
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 }
-
-/* .threedee-effect {
-	rotate: 0deg 1333deg 12deg;
-} */
