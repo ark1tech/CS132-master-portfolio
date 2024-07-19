@@ -12,7 +12,7 @@
 
 <div
 	class={cn(
-		'group flex w-full items-center justify-center overflow-hidden [--duration:120s] [--gap:0rem] [gap:var(--gap)]',
+		'group flex w-full items-center justify-center overflow-hidden [--duration:0s] [--gap:0rem] [gap:var(--gap)]',
 		{
 			'flex-row': !vertical,
 			'flex-col': vertical

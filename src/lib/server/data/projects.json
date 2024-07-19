@@ -5,7 +5,7 @@
 			"authors": "J.N. Pecson, B.J. Riña, W.R. Partosa",
 			"title": "Household Finances and Expenditures: Understanding the Key Factors",
 			"desc": "The nutshell graph illustrates the average allocation of household income across key expenditure categories based on annual data from Filipino households incomes and expenditures. Notably, a significant portion of household income is allocated to food and water expenditures. This study aims to identify the expenditures that heavily affect a household's financial status and  determine the effect of having businesses or employment wages to a households' overall financial status.",
-			"plot": "./src/lib/assets/plots/9.webp",
+			"plot": "src/lib/assets/plots/9.webp",
 			"repo": "https://github.com/riru12/cs132portfolio",
 			"website": "https://riru12.github.io/cs132portfolio/"
 		},
