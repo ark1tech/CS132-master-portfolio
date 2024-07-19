@@ -4,13 +4,13 @@
 </script>
 
 {#if sdg}
-	<div class="flex items-center gap-2">
+	<div class="flex flex-row items-center gap-2">
 		<div class="relative">
-			<img src={sdg.Image} alt={`SDG ${key} icon`} class="z-30 w-[12px]" />
+			<img src={sdg.Image} alt={`SDG ${key} icon`} class="z-30 w-[10px]" />
 			<img
 				src={sdg.Image}
 				alt={`SDG ${key} icon`}
-				class="absolute bottom-0 left-0 z-20 m-auto w-[12px] animate-ping-custom blur-[2px]"
+				class="absolute bottom-0 left-0 z-20 m-auto w-[10px] animate-ping-custom blur-[2px]"
 			/>
 		</div>
 		<p class="foot-text">{sdg.Title}</p>

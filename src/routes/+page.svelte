@@ -27,11 +27,11 @@
 
 <!-- Hero Section -->
 <div
-	class="pointer-events-none absolute inset-y-0 left-0 z-0 w-full bg-[radial-gradient(ellipse_at_top_left,#01130c_-50%,transparent_60%)] text-[#01130c]"
+	class="pointer-events-none absolute inset-y-0 left-0 z-0 w-full bg-[radial-gradient(ellipse_at_top_left,#565656_-250%,transparent_60%)] text-[#262626]"
 ></div>
 <GridBackground>
-	<section class="flex min-h-[100dvh] flex-col items-center justify-center md:flex-row">
-		<div class="relative z-10 flex flex-col gap-[2rem]">
+	<section class="flex min-h-[100dvh] w-full flex-col items-center justify-between md:flex-row">
+		<div class="w-full relative z-10 flex flex-col gap-[2rem]">
 			<div class="flex w-fit flex-col">
 				<span class="flex flex-col items-start">
 					<p class="text-white">Pilipinas in a Nutshell:</p>
@@ -41,11 +41,13 @@
 				<!-- <PrimaryButton /> -->
 			</div>
 		</div>
-		<PhAscii />
+		<div class="flex w-full justify-begin">
+			<PhAscii />
+		</div>
 	</section>
 </GridBackground>
 
-<!-- Hero Section -->
+<!-- Marquee Section -->
 <section class="flex h-[100dvh] w-full flex-col items-center justify-center gap-[2rem]">
 	<h2>Here's what we found out</h2>
 	<div
