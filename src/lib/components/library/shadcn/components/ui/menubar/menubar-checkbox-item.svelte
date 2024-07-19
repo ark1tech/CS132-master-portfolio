@@ -1,7 +1,7 @@
 <script>
 	import { Menubar as MenubarPrimitive } from "bits-ui";
 	import Check from "svelte-radix/Check.svelte";
-	import { cn } from "$lib/shadcn/utils.js";
+	import { cn } from "$lib/utils";
 	let className = undefined;
 	export { className as class };
 	export let checked = undefined;

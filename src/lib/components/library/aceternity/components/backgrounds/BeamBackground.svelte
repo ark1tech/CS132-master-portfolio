@@ -1,9 +1,10 @@
 <script>
-	import { cn } from '../../utils';
+	import { cn } from '$lib/utils';
 	import { Motion } from 'svelte-motion/src/render/dom/motion';
 
-	export let className = undefined;
-	
+	let className = undefined;
+	export { className as class };
+
 	const paths = [
 		'M-380 -189C-380 -189 -312 216 152 343C616 470 684 875 684 875',
 		'M-373 -197C-373 -197 -305 208 159 335C623 462 691 867 691 867',

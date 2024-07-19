@@ -1,5 +1,5 @@
 <script>
-	import { cn } from "$lib/shadcn/utils.js";
+	import { cn } from "$lib/utils";
 	let className = undefined;
 	export { className as class };
 </script>

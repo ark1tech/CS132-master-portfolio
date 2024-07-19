@@ -1,7 +1,7 @@
 <script>
 	import { Menubar as MenubarPrimitive } from "bits-ui";
 	import DotFilled from "svelte-radix/DotFilled.svelte";
-	import { cn } from "$lib/shadcn/utils.js";
+	import { cn } from "$lib/utils";
 	let className = undefined;
 	export let value;
 	export { className as class };

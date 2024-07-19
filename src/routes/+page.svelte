@@ -1,8 +1,8 @@
-<script lang="ts">
+<script>
 	/*
 	 * Components *
 	 */
-	import PhAscii from '$components/global/elements/PhAscii.svelte';
+	import PhAscii from '$lib/components/page_home/PhAscii.svelte';
 	import GridBackground from '$lib/components/library/aceternity/components/backgrounds/GridBackground.svelte';
 	import Marquee from '$components/library/magicui/components/Marquee.svelte';
 	import PreviewCards from '$components/page_home/PreviewCards.svelte';
@@ -16,12 +16,18 @@
 	/*
 	 * Data *
 	 */
-	// export let data;
+	export let data;
+	function getSdgData(id) {
+		return data.sdg[id];
+	}
+	function halfPoint(projects) {
+		return Math.ceil(projects.length / 2);
+	}
 </script>
 
 <!-- Hero Section -->
 <div
-	class="pointer-events-none z-0 absolute inset-y-0 left-0 w-full bg-[radial-gradient(ellipse_at_top_left,#01130c_-50%,transparent_60%)] text-[#01130c]"
+	class="pointer-events-none absolute inset-y-0 left-0 z-0 w-full bg-[radial-gradient(ellipse_at_top_left,#01130c_-50%,transparent_60%)] text-[#01130c]"
 ></div>
 <GridBackground>
 	<section class="flex min-h-[100dvh] flex-col items-center justify-center md:flex-row">
@@ -40,22 +46,42 @@
 </GridBackground>
 
 <!-- Hero Section -->
-<section class="f flex h-[100dvh] w-full flex-col items-center justify-center gap-[2rem]">
+<section class="flex h-[100dvh] w-full flex-col items-center justify-center gap-[2rem]">
 	<h2>Here's what we found out</h2>
 	<div
-		class="relative flex w-full flex-col items-center justify-center overflow-hidden md:shadow-xl"
+		class="relative flex w-full flex-col items-center justify-center gap-[1.5rem] overflow-hidden"
 	>
-		<Marquee pauseOnHover class="[--duration:5s]">
-			<PreviewCards />
+		<Marquee pauseOnHover class="[--duration:240s]">
+			{#each Object.entries(data.projects) as [key, projects]}
+				{#each projects.slice(0, halfPoint(projects)) as project}
+					<PreviewCards
+						imageSource={project.plot}
+						title={project.title}
+						sdg={getSdgData(key)}
+						{key}
+						class="mx-4"
+					/>
+				{/each}
+			{/each}
 		</Marquee>
-		<Marquee reverse pauseOnHover class="[--duration:5s]">
-			<PreviewCards />
+		<Marquee reverse pauseOnHover class="[--duration:240s]">
+			{#each Object.entries(data.projects) as [key, projects]}
+				{#each projects.slice(halfPoint(projects)) as project}
+					<PreviewCards
+						imageSource={project.plot}
+						title={project.title}
+						sdg={getSdgData(key)}
+						{key}
+						class="mx-4"
+					/>
+				{/each}
+			{/each}
 		</Marquee>
 		<div
-			class="pointer-events-none absolute inset-y-0 left-0 w-1/3 border bg-gradient-to-r from-black via-black"
+			class="pointer-events-none absolute inset-y-0 left-0 w-[20%] bg-gradient-to-r from-black via-black"
 		></div>
 		<div
-			class="pointer-events-none absolute inset-y-0 right-0 w-1/3 border bg-gradient-to-l from-black via-black"
+			class="pointer-events-none absolute inset-y-0 right-0 w-[20%] bg-gradient-to-l from-black via-black"
 		></div>
 	</div>
 </section>

@@ -9,40 +9,16 @@
 /* shadcn */
 @layer base {
 	:root {
-		--background: 0 0% 100%;
-		--foreground: 222.2 84% 4.9%;
+		/* local variables */
+		--background-start-rgb: rgb(0, 0, 0);
+		--background-end-rgb: rgb(0, 0, 0);
+		--foreground-rgb: rgb(0, 0, 0);
+		--h-text-color: rgb(255, 255, 255);
+		--body-text-color: rgb(156, 156, 156);
+		--text-gray: rgb(100, 100, 100);
 
-		--muted: 210 40% 96.1%;
-		--muted-foreground: 215.4 16.3% 46.9%;
-
-		--popover: 0 0% 100%;
-		--popover-foreground: 222.2 84% 4.9%;
-
-		--card: 0 0% 100%;
-		--card-foreground: 222.2 84% 4.9%;
-
-		--border: 214.3 31.8% 91.4%;
-		--input: 214.3 31.8% 91.4%;
-
-		--primary: 222.2 47.4% 11.2%;
-		--primary-foreground: 210 40% 98%;
-
-		--secondary: 210 40% 96.1%;
-		--secondary-foreground: 222.2 47.4% 11.2%;
-
-		--accent: 210 40% 96.1%;
-		--accent-foreground: 222.2 47.4% 11.2%;
-
-		--destructive: 0 72.2% 50.6%;
-		--destructive-foreground: 210 40% 98%;
-
-		--ring: 222.2 84% 4.9%;
-
-		--radius: 0.5rem;
-	}
-
-	.dark {
-		--background: 222.2 84% 4.9%;
+		/* shadcn/ui variables */
+		--background: 0 0% 0%;
 		--foreground: 210 40% 98%;
 
 		--muted: 217.2 32.6% 17.5%;
@@ -73,24 +49,7 @@
 	}
 }
 
-@layer base {
-	* {
-		@apply border-border;
-	}
-	body {
-		@apply bg-background text-foreground;
-	}
-}
-
 /* ------------------------------------------------- */
-
-:root {
-	--background-start-rgb: rgb(0, 0, 0);
-	--background-end-rgb: rgb(0, 0, 0);
-	--h-text-color: rgb(255, 255, 255);
-	--body-text-color: rgb(156, 156, 156);
-	--text-gray: rgb(100, 100, 100);
-}
 
 ::-webkit-scrollbar {
 	width: 7px;
@@ -213,11 +172,11 @@ li {
 }
 
 .foot-text {
-	font-size: clamp(0.6rem, 0.7rem, 0.8rem); /* Newly adjusted with clamp */
+	font-size: clamp(0.6rem, 2vw, 0.75rem); /* Responsive to viewport width */
 }
 
-.smaller-text {
-	font-size: clamp(0.75rem, 0.85rem, 0.95rem); /* Newly adjusted with clamp */
+.small-text {
+	font-size: clamp(0.9rem, 2vw, 1.1rem); /* Responsive to viewport width */
 }
 
 /* ---------------------- CONTAINERS --------------------------- */
@@ -264,6 +223,12 @@ nav {
 	background-color: transparent;
 	border: 0;
 } */
+
+.card-border {
+	border-color: #bccbc080;
+	border-width: 0.5px;
+	border-radius: 0.5rem;
+}
 
 .border-style {
 	border-color: #bccbc080;

@@ -1,6 +1,6 @@
 <script>
 	import { Menubar as MenubarPrimitive } from "bits-ui";
-	import { cn, flyAndScale } from "$lib/shadcn/utils.js";
+	import { cn, flyAndScale } from "$lib/utils";
 	let className = undefined;
 	export let transition = flyAndScale;
 	export let transitionConfig = {

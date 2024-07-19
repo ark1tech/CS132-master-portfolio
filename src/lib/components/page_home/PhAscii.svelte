@@ -90,7 +90,7 @@
 </script>
 
 <div class="select-none" role="presentation">
-	<div class="ascii magic-text">
+	<pre class="ascii magic-text">
 		{randomString}
-	</div>
+	</pre>
 </div>

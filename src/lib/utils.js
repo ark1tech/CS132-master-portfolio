@@ -2,10 +2,13 @@ import { clsx } from 'clsx';
 import { twMerge } from 'tailwind-merge';
 import { cubicOut } from 'svelte/easing';
 
+
+// Class names for components
 export function cn(...inputs) {
 	return twMerge(clsx(inputs));
 }
 
+// Animations 
 export const flyAndScale = (node, params = { y: -8, x: 0, start: 0.95, duration: 150 }) => {
 	const style = getComputedStyle(node);
 	const transform = style.transform === 'none' ? '' : style.transform;

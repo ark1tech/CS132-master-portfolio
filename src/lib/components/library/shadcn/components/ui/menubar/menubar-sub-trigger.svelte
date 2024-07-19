@@ -1,7 +1,7 @@
 <script>
 	import { Menubar as MenubarPrimitive } from "bits-ui";
 	import ChevronRight from "svelte-radix/ChevronRight.svelte";
-	import { cn } from "$lib/shadcn/utils.js";
+	import { cn } from "$lib/utils";
 	let className = undefined;
 	export let inset = undefined;
 	export { className as class };

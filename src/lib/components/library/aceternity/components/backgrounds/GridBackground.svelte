@@ -1,5 +1,17 @@
-<div class="relative z-10 flex items-center justify-center bg-transparent gradient-mask-r-60">
-	<div class="full-width full-height background-mask bg-grid-dash-[#232323]/[0.8]"></div>
+<script>
+	import { cn } from '$lib/utils';
+
+	let className = undefined;
+	export { className as class };
+</script>
+
+<div
+	class={cn(
+		'relative z-10 flex items-center justify-center bg-transparent gradient-mask-r-60',
+		className
+	)}
+>
+	<div class="full-width full-height background-mask bg-grid-dash-[#313131]/[0.75]"></div>
 	<slot />
 </div>
 
