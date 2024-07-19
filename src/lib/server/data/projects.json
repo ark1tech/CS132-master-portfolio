@@ -2,7 +2,7 @@
 	"1": [
 		{
 			"group": "09",
-			"authors": "Jeff P., Brill R., Rafa P.",
+			"authors": "J.N. Pecson, B.J. Riña, W.R. Partosa",
 			"title": "Household Finances and Expenditures: Understanding the Key Factors",
 			"desc": "The nutshell graph illustrates the average allocation of household income across key expenditure categories based on annual data from Filipino households incomes and expenditures. Notably, a significant portion of household income is allocated to food and water expenditures. This study aims to identify the expenditures that heavily affect a household's financial status and  determine the effect of having businesses or employment wages to a households' overall financial status.",
 			"plot": "./src/lib/assets/plots/9.webp",
@@ -11,7 +11,7 @@
 		},
 		{
 			"group": "10",
-			"authors": "Alleenna C., Aisha G., Monica L., Paul M.",
+			"authors": "A. Cajandab, A.A. Go, M.A. Laviste, P.J. Montecillo",
 			"title": "As Population Booms, Poverty Looms: Regional Population and Poverty (2020)",
 			"desc": "The plot consists of a bar graph depicting the total population per region and a line graph showing the magnitude of poverty per region. The data on the level of urbanization of each region was utilized to classify areas as either urban or rural. As seen in the bar graph, urban regions have a higher overall population. One of the reasons could be due to the influx of individuals moving to cities in search of better employment opportunities. However, urban regions also have a larger number of residents living in poverty. This suggests that for all opportunities urban regions provide, it also comes with major challenges, such as higher cost of living, trapping Filipinos in poverty. On the other hand, rural areas, while having smaller populations, tend to experience less poverty. Overall, this graph shows the need for effective poverty alleviation programs that specifically address the diverse and complex challenges faced in urban and rural settings.",
 			"plot": "./src/lib/assets/plots/10.webp",
@@ -22,7 +22,7 @@
 	"2": [
 		{
 			"group": "01",
-			"authors": "Lance A., Althea M., Brandon M.",
+			"authors": "L.L. Andres, J.A. Manansala, B.K. Martin",
 			"title": "Rice & Corn Production in the Philippines (1987-2023)",
 			"desc": "The graph shows the production in units of rice and corn within the Philippines throughout the years of 1987 till 2023. Line plots display the rate of production for each crop within the time period, wherein each dip is labeled with a significant natural disaster that could have explained the sudden decrease in production. Trendlines were also plotted and can be seen to show a positive relationship between the production of each crop per year and the corresponding year in which it was recorded.",
 			"repo": "",
@@ -31,7 +31,7 @@
 		},
 		{
 			"group": "02",
-			"authors": "Luis D., Jared H., Clarice S.",
+			"authors": "L.P. Dupalco, J. Hechanova, C.A. Sandoval",
 			"title": "Rice Supply & Prices: Insights for Philippine Food Security",
 			"desc": "Rice is a crucial staple food in Filipino households, yet the cost of rice steadily rises despite promises to lower grain prices. According to PSA, rice inflation increased from 19.6% in December 2023 to 22.6% in January 2024. Furthermore, the World Food Program (WFP) October 2022 report said 1 out of 10 households in the Philippines faced food insecurity. Hence, we aim to explore the correlation between rice supply—Local Rice Production, Imports, and Stocks—and the Retail Prices of different types of rice (Special, Well Milled, Regular Milled) from 1995-2023 to offer insights to policymakers in ensuring food security in the Philippines. Through Spearman’s rank correlation, the nutshell plot revealed a strong positive correlation between local rice production and retail prices with coefficients of 0.95-0.97, suggesting that retail price increases with local production, contrary to the supply and demand expectations, likely influenced by increasing population and demand for rice. Moderate correlation exists between rice imports and retail prices with coefficients ranging from 0.47-0.54, potentially due to factors necessitating increased imports and import restrictions pre-Rice Tariffication Law. Similarly, moderate correlation exists between rice stocks and retail prices with coefficients of 0.43-0.44, likely influenced by inclusion of household stocks that do not affect retail prices. These findings highlight the importance of correlation analysis in identifying confounding variables and policy responses in agriculture. Hence, to address the confounding variable for local production, we further measured the self-sufficiency level of the Philippines in rice by obtaining the ratio of production to consumption that indicates how well local rice production meets national rice consumption demands. Moderate negative correlation between the ratio of production to consumption and retail prices with -0.3 to -0.43 coefficients suggests that higher self-sufficiency corresponds to lower prices. Leveraging these insights can help in enhancing food security in the Philippines.",
 			"repo": "",
@@ -40,7 +40,7 @@
 		},
 		{
 			"group": "03",
-			"authors": "Fahad D., Juan L., Alec L.",
+			"authors": "F.A. Decampong, J.P. Lapira, A.T. Lopez",
 			"title": "Is Local Food Production Satiating Hunger in the Country?",
 			"desc": "The yearly indexes for both Food Industry Production and Hunger Growth (2001-2021) were commutatively compiled and illustrated in a line graph as shown. Over the course of 20 years, both can be seen to deviate; as food production grows annually, national hunger shrinks over time. Thus, there's reason to speculate a direct causal relationship between the two, as the behavior of spikes between one variable can also trigger an indirectly proportional spike to the other (e.g. 2011). Moreover, it can also be seen that there are evident periods wherein Food Production Growth trends upwards, while Hunger Growth trends oppositely downwards (e.g. 2015-2020). Overall, this could mean that a general increase in the growth of Food Production will eventually counter and conquer Hunger Growth within the country in the forthcoming future.",
 			"repo": "",
@@ -49,7 +49,7 @@
 		},
 		{
 			"group": "04",
-			"authors": "John D.G., Stephen P., Audrey S.",
+			"authors": "J.R. De Guzman, S.R. Pangilinan, A.V.M. Sy",
 			"title": "Prices of Common Household Food Items in the Philippines (2020-2024)",
 			"desc": "In October of 2023, Inquirer published an article titled, Food prices seen to rise until 2024, detailing an interview with Agricultural economist Geny Lapina on the potential rise in price of food items in 2024. He stated that international conflict, climate change, export restrictions in other countries, and high fuel prices are just some of the many factors contributing to these changes (Corrales, 2023). In the past few years as well, food prices have not always been consistent. This plot illustrates the prices of several food items commonly found in a Filipino household over the years 2020 to 2024, with information sourced from the World Food Programme (WFP) Price Database. This is depicted using a 3D line graph, with each line displaying the trend in price of a specific food item over time. A number are seen to be maintaining a relatively consistent price range (Eggs, Rice, Bananas, Chicken, Fish), while others frequently rise and fall in price (Carrots, Tomatoes, Red Onions). A few are also seen to be gradually rising in price (Beef, Pork) or gradually lowering in price (Garlic).",
 			"repo": "",
@@ -58,7 +58,7 @@
 		},
 		{
 			"group": "05",
-			"authors": "Ralph D., Garlu E., Yenzy H.",
+			"authors": "R.B. Diaz, G.V. Eladio, Y.U. Hebron",
 			"title": "Rice Price Fluctuations Amidst Market and Economic Conditions (2010-2023)",
 			"desc": "The graph illustrates the fluctuation in the average wholesale price of rice in the Philippines from 2010 onwards. The y-axis represents the price in Philippine pesos (PHP), while the x-axis spans the years from 2010 to 2024. Starting at approximately Php 28.00 in 2010, the price of rice has shown a general upward trend, reaching up to Php 45.00 in recent years. This increase is punctuated by several notable peaks that correspond to key market conditions and economic events. In January 2014, a significant price increase due to rampant hoarding, leading to a shortage of rice. Meanwhile, in December 2016, another spike in prices occurred, attributed to supply shortages in several regions due to prolonged El Nino and typhoons. In February 2018, the Department of Foreign Affairs (DFA) announced a rice crisis, causing a substantial rise in prices. This is countered by the enactment of the Rice Tariffication Law in March 2019. This initially resulting in a decline in prices due to the liberalization of rice imports. The onset of the COVID-19 pandemic on April 2020 led to a price freeze as a lockdown measure, stabilizing the prices temporarily. Lastly, in the 3rd quarter of 2023, a sharp increase in prices was observed, driven by a rising inflation rate. Overall, the graph highlights how various crises, policy changes, and economic conditions have impacted the wholesale price of rice in the Philippines over the years. With rice being a staple and main food consumed by Filipinos, this significantly highlights the pressing rice insecurity that the country deals with.",
 			"repo": "",
@@ -69,7 +69,7 @@
 	"3": [
 		{
 			"group": "08",
-			"authors": "Mikhail G., Shane O., Ann P.",
+			"authors": "M.E. Guiao, S. Odhuno, A.G. Purisima",
 			"title": "2022 State of STI Perception in the Philippines",
 			"desc": "The nutshell graph illustrates the mean perception of sexually transmitted infections (STIs) among different ages, separated by their highest educational attainment, based on data from the 2022 Philippines National Demographic and Health Survey. The y-axis represents the perception level means (ranging from 0.45 to 0.74), while the x-axis represents the ages (ranging from 15 to 50). The lines are color-coded to indicate the educational levels: blue for primary, red for secondary, and green for higher education. Those aged 15 years old with solely a primary level education possess the lowest perception mean at 0.4538. Meanwhile, those aged 19 years old with a college-level education possess the highest at 0.7353. The data suggests a correlation between educational attainment and STI awareness, with higher education leading to greater awareness. This highlights the vital role of education in enhancing STI awareness.",
 			"repo": "",
@@ -78,7 +78,7 @@
 		},
 		{
 			"group": "11",
-			"authors": "Ayen M., James M., Jose T.",
+			"authors": "A.U. Manguan, J.E. Mejilla, J.E. Tomanan",
 			"title": "Poverty Incidence vs. Birth Rate in the Philippines",
 			"desc": "The nutshell consists of three main plots, from left to right: (1) Poverty Incidence, (2) Birth Rate, and (3) Poverty Incidence vs. Birth Rate. We use color spectra to geospatially map values across different regions. For instance, in the first graph, purple would indicate a low poverty incidence (less than 10%) while green would indicate high poverty incidence (around 60%). For the second graph, purple would indicate a low birth rate (around 0%) and yellow would indicate a high birth rate (around 1.7%). For the third, main graph: we combine the extremes of the values found within the first two graphs. This leads us to determine four colors at each corner of the colormap. There's blue which corresponds to low poverty incidence and low birth rate; purple which signifies low poverty incidence and high birth rate; green which shows high poverty incidence; and yellow which shows high poverty incidence and high birth rate.",
 			"repo": "",
@@ -89,7 +89,7 @@
 	"4": [
 		{
 			"group": "06",
-			"authors": "Ralf B., Stephen E., John V.",
+			"authors": "R.M. Balatibat, S.M. Encarnacion, J.Y. Villamil",
 			"title": "Education Access Percentage Across Philippine Regions (2019)",
 			"desc": "The bar graph displays the percentage of regions within the Philippines that have access to education in back 2019. Some regions excel with high percentages (e.g., NCR at 81.7% and CALABARZON at 76.59%), while others struggle (e.g., BARMM at 49.9%). In addition, the Choropleth Graph on the right supplements the prior graph by enhancing the visualization of the regions and the percentage of their residents with access to education.",
 			"repo": "",
@@ -98,7 +98,7 @@
 		},
 		{
 			"group": "07",
-			"authors": "Clyde A., Dominic B., Eoghaine S.",
+			"authors": "C.A. Acyatan, D.L. Bermudez, E.C. Saavedra",
 			"title": "Significance of Education from School to Filipinos' Lives (2019)",
 			"desc": "The heatmap shows the perceived usefulness of knowledge of correspondents crossed with their highest educational attainment. A darker hue of blue means that more respondents fall under the intersection of these two categories and a lighter hue of green means less. Perceived usefulness of knowledge is divided into two: 'Yes' signifies that the respondents perceive that the knowledge they gained from school is useful while 'No' signifies that they perceive it as NOT useful. Highest educational attainment is divided into 10 parts, namely: Did not study, Early childhood education, Elementary school, Lower secondary/junior high school, upper secondary/senior high school, post-secondary non-tertiary education, short-cycle tertiary education, bachelor or equivalent, master or equivalent, and doctorate or equivalent. It can be seen from the heatmap that most respondents are found in the categories of 'Junior High School' and 'Bachelor or equivalent', both of which generally consider their education to be useful. On the other hand, the other categories have less respondents overall, and have a more mixed perception of their education usefulness.",
 			"repo": "",
@@ -107,7 +107,7 @@
 		},
 		{
 			"group": "12",
-			"authors": "Cedric D., John M., Elijah G.",
+			"authors": "C.J. De Vera, J.M. Domingo, E.I. Galang",
 			"title": "Average Student-Teacher Ratio in the Philippines vs. Other Continents",
 			"desc": "The graph shows the average student-teacher ratios for the Philippines and the continental averages for 2017 until 2021. It can be seen by how the Philippine ratio is quite high compared to the global mean and among the continental ratios. This means that the Philippines, among other countries holds a larger class size for one teacher.",
 			"repo": "",
@@ -118,7 +118,7 @@
 	"5": [
 		{
 			"group": "13",
-			"authors": "David A., Enrico B., Krisha C., Jordan S.",
+			"authors": "D.A. Amante, E. Baratang, K.A. Chan, J.N. Sta Maria",
 			"title": "Women in the Workforce",
 			"desc": "The nutshell consists of two plots. The plot on the left shows women's participation in the workforce as a percentage of the female population, whereas the graph on the right shows how this has been changing over the past 30 years.",
 			"repo": "",
@@ -127,7 +127,7 @@
 		},
 		{
 			"group": "15",
-			"authors": "Audrey D., Janelle M., Jacqueline V.",
+			"authors": "A.K. Dela Vega, J. Mendoza, J.A. Vicerra",
 			"title": "Closing the Gap: An In-Depth Look at Gender Inequality in the Philippine Labor Force",
 			"desc": "The findings reveal that traditional gender roles and structural barriers significantly influence women's participation in the labor force, confining them to supportive, caregiving, and unpaid roles while underrepresenting them in skilled, technical, and formal private sector jobs. This reflects societal norms that limit women's opportunities and reinforces gender inequality. Addressing these disparities requires targeted policies to support women in non-traditional fields, promote fair hiring practices, and value unpaid domestic work, alongside cultural shifts to challenge and change traditional gender expectations.",
 			"repo": "",
@@ -136,7 +136,7 @@
 		},
 		{
 			"group": "21",
-			"authors": "Christian Q., Pe R., Princess V.",
+			"authors": "C. Quinzon, P.A. Rey, P.A. Ventures",
 			"title": "Uncovering the Shadows of Gender-Based Violence Among Filipino Redditors",
 			"desc": "This plot illustrates the average engagement over time on discussions related to gender-based violence within Filipino Reddit communities, segmented by various holidays, specifically the top 5 holidays with the most average engagements (including no holiday). The x-axis represents the timeline from 2014 to 2024, while the y-axis shows the average engagement metrics such as upvotes and comments. Several holidays exhibit notable spikes in engagement. New Year's Day stands out with significant peaks around 2016 and 2023, indicating heightened activity and discussions related to gender-based violence during this period. Similarly, Ninoy Aquino Day shows prominent spikes, especially in 2016 and post-2020, reflecting increased community interaction and responsiveness. The plot also reveals a general trend of rising engagement post-2020, with more frequent and intense spikes around holidays. This suggests a growing awareness and responsiveness within the community to gender-based violence discussions during these times. The variety of colored lines representing different holidays provides a clear visual differentiation of engagement patterns across these special dates, highlighting specific periods when discussions are more active.",
 			"repo": "",
@@ -147,7 +147,7 @@
 	"6": [
 		{
 			"group": "25",
-			"authors": "Jacky A., Seth L., Arturo S.",
+			"authors": "J.J. Abucay, S.K. Limbo, A.M. Saquilayan",
 			"title": "Where Did Filipinos Source Their Water in 2020?",
 			"desc": "Exploring the water sources for Filipinos during the year 2020, we check into the diverse and complex landscape of urban and rural water distribution. Filipinos primarily sourced their water from improved sources like water refilling stations and piped water, with progress in access to safe drinking water and sanitation facilities, yet challenges remain in ensuring universal access across rural areas. Continued efforts are essential to bridge these gaps and secure a consistent water supply for every community.",
 			"repo": "",
@@ -156,7 +156,7 @@
 		},
 		{
 			"group": "26",
-			"authors": "Sean D., Theodore E., Maricris M.",
+			"authors": "S.A. Dizon, T.R.A. Esguerra, M. Mandario",
 			"title": "Philippines: Linking Clean Water Shortage to Cholera Cases",
 			"desc": "The geospatial data visualizes two main variables in the study, the shade of the color orange to purple is the percentage of clean water access while the number bubbles display the Cholera cases in the year 2020. This geospatial separates the each regions in the Philippines. Showing the relationship of the two on the geospatial data and the percentage of clean to unclean water source at the bar graph, and also showing the need of action in the particular regions that is need of improvement of clean water sources.",
 			"repo": "",
@@ -167,7 +167,7 @@
 	"7": [
 		{
 			"group": "17",
-			"authors": "Medwin D., Marc M., Rae S., Ron S.",
+			"authors": "M. Devilleres, M.G. Macaraeg, R.G. Samonte, R.M. Surara",
 			"title": "Scheduled Power Outages by Luzon Electricity Cooperatives, 2022-2023",
 			"desc": "The plot visualizes electric shortages across various regions over Luzon in the Philippines from 2022 to 2023. Each color represents a local energy cooperative, highlighting the temporal distribution and magnitude of shortages they managed. The plot also features a map legend showing each electric cooperative's jurisdiction throughout Luzon. Significant peaks are evident for MERALCO and OEDC in mid-2022, ISELCOII's spike in August 2023, and consistent high values for PANELCO3 throughout 2023. Notably, only MASELCO and MERALCO showed significant associations, while the rest did not, reflecting unique regional dynamics.",
 			"repo": "https://github.com/smtnhacker/cs132-ph-electric-shortages/tree/main",
@@ -175,8 +175,7 @@
 			"website": "https://smtnhacker.github.io/cs132-ph-electric-shortages/"
 		},
 		{
-			"group": "23",
-			"authors": "Christian C., Jan B., Carl R.",
+			"authors": "C.J. Choa, J.P. Batrina, C.D. Ragunton",
 			"title": "Soaring electricity prices amidst slower minimum wage growth",
 			"desc": "As shown by the gradient plot, the average electricity price billed by Meralco has fluctuated over the years, with the price dropping down to around 9PHP/kWh in 2015-2018, rising back to 10.5PHP/kWh in 2019 during the Covid-19 pandemic, dropping to 8.7PHP/kWh in 2021 but rising steadily up to 12PHP/kWh in 2024.<br><br>Placing the prices in more context, the electricity prices have been rising even faster than the increase in average Household Expenditure (blue line). Coupled with the slower increase in the average Minimum Wage (green line), electricity is made even more expensive by the fact that its increasing price takes more budget away from other household expenses (such as food) which are also getting more expensive.<br><br>Additionally, electricity price is frequently the highest around the month of April, when weather is the hottest in the Philippines, resulting to increased electricity demand for fans and air conditioning.",
 			"repo": "https://github.com/jmbatrina/CS132-RBC/tree/main",
@@ -187,7 +186,7 @@
 	"8": [
 		{
 			"group": "14",
-			"authors": "Denise D., Denzell D., Jose L.",
+			"authors": "D.M. Dee, D.R. Dy, J.M. Lozada",
 			"title": "Spaghetti Pataas: Inflation Rates of Certain Commodities in the Philippines",
 			"desc": "With the subtle but steady increase in the inflation rate every year, it is no wonder that many people are left wondering how they will adapt. The graph shows the inflation rate of significant commodity groups every month from 1995 to 2023. Namely, 'All Items', 'Housing, Water, Electricity Gas, and Other Fuels,' 'Information and Communication,' 'Food and Non-Alcoholic Beverages,' 'Transport,' and 'Alcoholic Beverages and Tobacco.' Negative inflation rates are indicated by a darker shade of the line color when coming below the 0 axis.<br><br>Diving deeper into the plot, each line shows the differences in the inflation rate and how each group has its own fluctuations, ranging from subtle changes to very dramatic increases or decreases in the rate. Out of all the commodity groups shown, Alcoholic Beverages and Tobacco have the most fluctuations with a drastic change per year, indicating the effects of laws and policies on the price.<br><br>On the other hand, the graph of Information and Communication has significant fluctuations around the year 2000, indicating the significant developments in technology during that time, but gradually slows down and eventually stagnates with little fluctuations.<br><br>Although the All Items commodity group seems to be on the lower end of the spectrum in terms of the inflation rate, this shows how the overall inflation rate, which is based on All Items, is balanced out despite the dramatic change in rates of some commodity groups.",
 			"repo": "",
@@ -196,7 +195,7 @@
 		},
 		{
 			"group": "16",
-			"authors": "Eisenhower A., Abram M., Nina V.",
+			"authors": "E. Aldemita II, A.J. Marcel, N.M. Valdez",
 			"title": "IO-n na nga: Correlation Spotted Between Agriculture and Other Industries",
 			"desc": "As the data points show, there seems to be a correlation between the input from the agricultural industry to the different industries in a country and the output of those industries. Of note is the Food, beverages, and tobacco industry with its clear linear correlation and relatively large industry size in each country. Another large industry in Indonesia’s case is Construction with also a clear correlation. These first impressions on the data points lead to curiosity on which industries have a strong correlation from the agriculture input.",
 			"repo": "",
@@ -205,7 +204,7 @@
 		},
 		{
 			"group": "18",
-			"authors": "Judelle G., Rodrigo R., Carl S.",
+			"authors": "J.C. Gaza, R.E. Roy, C.J. Salces",
 			"title": "Rising Rice Prices: Analyzing Price Movements of Agricultural Commodities",
 			"desc": "The graph illustrates the months wherein rice, and other goods, are experiencing above average prices. It also categorizes these goods into four. The first category, which is colored blue, corresponds to seafood. The second category, colored purple, is for fruits, vegetables, and other rootcrops. The third, depicted with color pink, is for meat products. The last category, which is colored with yellow, is for grains and starches.",
 			"repo": "",
@@ -214,7 +213,7 @@
 		},
 		{
 			"group": "19",
-			"authors": "Diego M., Jasmin P., Jeanne T.",
+			"authors": "D.E. Montenejo, J.V. Pascual, J.C. Toledo",
 			"title": "Fueled Up: CPI of Transportation Rises Amidst Fluctuating Fuel Prices",
 			"desc": "The plot depicts the Consumer Price Index for Philippine Land Transportation and Fuel from January 2019 to December 2023. Each solid line represents different land transportation groups, while each dashed line represents either gasoline or diesel. The plot tells us that the CPI of land transportation in the Philippines has been trending upwards alongside fuel prices, which may be caused by a multitude of societal factors over the past five years.",
 			"repo": "",
@@ -223,7 +222,7 @@
 		},
 		{
 			"group": "20",
-			"authors": "Bianca A., Lee M., Julian Y.",
+			"authors": "B.M. Amurao, L.J. Maca, J.C. Yabut",
 			"title": "Comparing Cost of Living and Wages Across the Philippines",
 			"desc": "The plot illustrates the poverty threshold (shown in dashed lines) and minimum wage (shown in solid lines) between the National Capital Region (NCR) and the rest of the Philippines from around 2003 onwards. For this plot, we used the poverty threshold as our metric for cost of living. Poverty threshold is defined by the PSA as the monthly minimum income required for a family to meet the basic food and non-food requirements. The x-axis represents the date, while the y-axis represents the price of the minimum wage/poverty threshold in Philippine pesos (PHP). Minimum wage is at a daily rate, while poverty threshold is at a monthly rate, so the poverty threshold was divided by 30 to make it daily. The average of the poverty thresholds of the non-NCR regions was taken and used to determine the poverty threshold for the rest of the Philippines.<br><br>The plot shows the disparity of cost of living and wages between the NCR and the rest of the country. Minimum wage in the non-NCR regions is lower than the NCR minimum wage by around 100 to 200 pesos for the last 20 years. Conversely, the poverty threshold of the NCR is lower than that of the non-NCR regions by 100 pesos. This shows that Metro Manila, being the economic center of the country, can offer higher wages and cheaper goods.<br><br>The plot also shows that wages are not keeping up with cost of living. In fact, the gap between cost of living and minimum wage, both in the NCR and outside of it, has been steadily increasing in the last 20 years. This is shown by how the regression lines for the poverty threshold are slightly steeper than the regression lines for minimum wage. This shows that despite a rise in minimum wages, Filipinos living off of minimum wage still cannot afford to meet basic food and non-food requirements.",
 			"repo": "",
@@ -232,7 +231,7 @@
 		},
 		{
 			"group": "22",
-			"authors": "Annika D., Seth E., Raymund M.",
+			"authors": "A.M. Domondon, S.M. Eliserio, R.K. Mañago",
 			"title": "Through the Reddit Lens of Filipino Workers",
 			"desc": "The dataset was clustered into five (5) topics as extracted by LDA using t-SNE. In the resulting plot, each color represents a topic cluster. These clusters are made up of points where each corresponds to a post; the larger the radius of the point, the greater the engagements a post has accumulated. Topic 3, identified as Job Application and the focus of our hypothesis, lagged as third in both the number of posts and engagements. Topic 2, identified as BPO Work & Culture, placed first for the total number of engagements, while Topic 5, identified as Employee Well-being, placed first for the total number of posts. Topic 1, identified as Employee Exit Process, placed last for both categories.<br><br>Moreover, we can see how each topic is grouped and how close they are. For instance, Workplace Management is relatively separate from Employee Exit Process, which could mean employees quit for reasons other than workplace management. BPO Work & Culture is closely related to Workplace Management and Job Application but relatively isolated from the others. This may be because BPO is a leading industry. Job Application dabbles with the others but ties closely with Employee Exit Process since an exit from a job usually means applying for another one. Employee Well-being interacts with all other clusters and has a small patch in the middle of the plot, which could indicate that it is a core concern of most posts.",
 			"repo": "",
@@ -241,7 +240,7 @@
 		},
 		{
 			"group": "24",
-			"authors": "Nathaniel F., Prince Q., Thomas R.",
+			"authors": "N. Feliciano, P.H. Quijano, T.N. Reyes",
 			"title": "Effect of SHS and COVID-19 on the Philippine Unemployment Rate",
 			"desc": "In analyzing the trends of the unemployment rate in the Philippines per quarter since 2016, four significant events can have an impact on the Philippine unemployment rate. The implementation of Senior High School (SHS) in the second quarter of 2016, the graduation of the first batch of SHS students in the second quarter of 2018, the COVID-19 pandemic which triggered a nationwide lockdown in the first quarter of 2020, and the establishment of the new normal in the first quarter of 2022 - according to the Department of Education. As shown in the graph, the trends show a notable increase in the unemployment rate in the quarters where these four significant events have taken place.",
 			"repo": "",
@@ -252,7 +251,7 @@
 	"9": [
 		{
 			"group": "27",
-			"authors": "Ehren C., Hans S., Kevin T.",
+			"authors": "E. Castillo, H.M. Salazar, K. Trinidad",
 			"title": "Minimal changes in Spam SMS after Sim Registration Act",
 			"desc": "After the implementation of Republic Act No. 11934 - the Sim Registration Act, several trends in Spam SMS have been shown to adjust. The most frequent word remains to be 'Bonus' but can be observed to have an increase in usage compared to before, with the second also remaining the same and the third most frequent having changed, both also appearing at a much higher rate. Spam SMS have also been observed to be more likely to be sent on Thursday now, but the results indicate that this is likely due to a more distributed rate of sending across all days. Most of these spam messages also contained links where the most frequent top level domains went from .com to .tv and the overall presence of links had been affected as well. Finally, the average length of an SMS has been observed to have a minimal decrease as well.",
 			"repo": "",
@@ -261,7 +260,7 @@
 		},
 		{
 			"group": "31",
-			"authors": "Godfrey C., Angelo D.L., Justin G.",
+			"authors": "G.A. Convento, A.L. De Leon, J.A. Gonzales",
 			"title": "Public Concern: Improvement for PUV Modernization",
 			"desc": "Generally, 'jeepney,' 'modernization,' 'phaseout,' and 'PUV' are expected to have a higher co-occurrence as these words are the main idea of the study.",
 			"repo": "",
@@ -272,7 +271,7 @@
 	"10": [
 		{
 			"group": "28",
-			"authors": "Danyael D.C., Kathleen J., Ieiaiel S., Sunny S.",
+			"authors": "D.J. Dela Cruz, K. Jocson, I. Sanceda, S. Sy",
 			"title": "Unexpected Resilience: Philippine Poverty Levels During COVID-19",
 			"desc": "Despite expectations of an increase in poverty due to COVID-19 lockdowns, patterns in the Philippines remained consistent. Luzon and Visayas had lower poverty rates than Mindanao, with Sulu highest at 82% in 2018 and 63% in 2021. The lowest rates were in NCR (2% in 2018) and Siquijor (3% in 2021).",
 			"repo": "",
@@ -281,7 +280,7 @@
 		},
 		{
 			"group": "34",
-			"authors": "Aneko D., William S., Raphael T.",
+			"authors": "A. Delfin, W.I. Santos, R.L. Tan",
 			"title": "Widening Gap: Income Disparity between Urban and Rural Areas",
 			"desc": "The graph illustrates the income disparity between urban and rural areas. Both areas show a relatively steady increase in income over time. However, the widening gap between the bars in the graph indicates a growing disparity between rural and urban incomes. It can also be observed that the average income in rural regions is approximately half that of urban areas.",
 			"repo": "",
@@ -292,7 +291,7 @@
 	"11": [
 		{
 			"group": "29",
-			"authors": "Will J., Alquen S., Amiel Z.",
+			"authors": "W.B. Jose, A.A. Sarmiento, A.D. Zamuco",
 			"title": "Bagyo Ka Lang, Pinoy Kami: Internal Displacement in the Philippines",
 			"desc": "Internal displacements are one of the few means we have to mitigate damage from natural disasters but the Philippines heavily relies on it as we see that in 2014, displacements reached up to 7 million occurrences. Comparing data over the years with other neighboring Southeast Asian countries, only the Philippines is increasing in the number of displacements while other countries have seemingly stabilized.",
 			"repo": "",
@@ -301,7 +300,7 @@
 		},
 		{
 			"group": "30",
-			"authors": "Jose C., Basti O., Angelica R.",
+			"authors": "J.E.M. Caluag, S.L. Ortiz, A.J. Raborar",
 			"title": "Bantay Bangga: A Look at Road Safety Over the Years",
 			"desc": "Road incidents in the Philippines are commonly reported. A fatality rate of 25% of incidents was recorded in November 2020, in addition to widespread cases of minor and serious injuries resulting from road incidents. Hospital capacity and quality of care should be kept at a sufficient level for these road crash victims. However, as the COVID-19 pandemic demanded the world's full attention, this unique situation poses an interesting inquiry into what could possibly affect road crash incident fatalities and their possible avenues for recovery in a time where something else (i.e., the pandemic) was the top priority.",
 			"repo": "",
@@ -310,7 +309,7 @@
 		},
 		{
 			"group": "32",
-			"authors": "Timothy J., Led S., Nina S.",
+			"authors": "T. Javier, L.R. Salazar, N.P. Sapitula",
 			"title": "PulotPinas: Hazardous Waste in NCR in 2022",
 			"desc": "The nutshell plot includes a bar graph and a heatmap of the Philippines. The bar graph shows the hazardous waste generators registered in NCR in 2022. Each bar represents the number of generators of a hazardous waste code, with hazardous waste codes described in words instead of their original alphanumeric string. The colors of the bars indicate grouping via hazardous waste codes, which is indicated by the letter that starts the hazardous waste code. For example, electronic waste, pathogenic/infectious waste and pharmaceuticals/drugs all fall under miscellaneous hazardous waste and thus have the same bar color. The color mappings for these groupings are shown at the upper right of the bar graph. On the other hand, the heatmap indicates the amount of hazardous waste produced by each region in 2022. The colormap used is magma, which ranges from purple to yellow. Darker shades of purple indicate less hazardous waste generated, while lighter shades of yellow indicate more hazardous waste generated. The color values for the amount of trash generated is shown to the left of the heat map. Also, the tons of hazardous waste produced by the NCR in 2022 is shown below the heatmap of the Philippines.",
 			"repo": "",
@@ -319,7 +318,7 @@
 		},
 		{
 			"group": "33",
-			"authors": "Chase G., Ray N., Lara P.",
+			"authors": "C. Gonzaga, R.G. Nuñez, L.A. Punsalan",
 			"title": "Real(i)ty Check: The Reality of Realty",
 			"desc": "Shown in the graph are the average prices-per-sqm of three different types of real estate across the different Philippine provinces. Each heatmap corresponds to a specific type of real estate namely, houses, empty lots, and condo units. For each heatmap, lighter shading corresponds to a cheaper average price per sqm of real estate in that province while darker shading corresponds to provinces with more expensive real estate. The white areas are areas not represented in the scraped data from Lamudi. From the data gathered and looking at the graphs, houses are most expensive on average in Cebu and NCR while it is least expensive in Iloilo. Lots in general are most expensive on average in NCR and least expensive in South Cotabato. Lastly, Condo Units are most expensive in Aklan and NCR while it is least expensive in Cavite. Overall, the graphs show the differences of real estate pricing across different provinces in the Philippines which can be helpful for aspiring homeowners and those looking into buying or investing in real estate.",
 			"repo": "",
@@ -330,7 +329,7 @@
 	"13": [
 		{
 			"group": "37",
-			"authors": "Kyle M., Maria O., Paul P.",
+			"authors": "K.M. Martinez, M.K. Ondoy, P.J. Perez",
 			"title": "From Crowds to Clouds",
 			"desc": "The graph reflects the CO₂ emissions and population density of the Philippines and 20 other nearby countries in 2022. Both variables are divided to three ranges - resulting to 9 unique value combinations.",
 			"repo": "",
@@ -339,7 +338,7 @@
 		},
 		{
 			"group": "38",
-			"authors": "Alfonso D.L.R., Louis F., Anthony L.",
+			"authors": "A.L. De Los Reyes, L.M. Fermiza, A.A. Lazaro",
 			"title": "Hotter Harvests: Curious Case of Crops and Temperatures",
 			"desc": "This graph showcases the unexpected trend between increasing temperatures and the Crop Production Index of the Philippines.",
 			"repo": "",
@@ -348,7 +347,7 @@
 		},
 		{
 			"group": "40",
-			"authors": "Mark C., Gerimiah J., Jim O.",
+			"authors": "M.L. Cumabig, G. Juganas, J. Oscares",
 			"title": "Weather or Not: The Correlation of Baguio's Temperature and Tourism Flow",
 			"desc": "The graph shows the average monthly temperature and monthly number of tourists in Baguio across time from January 2011 to October 2023 to show the relationship or possible correlation of the two variables.",
 			"repo": "",
@@ -357,7 +356,7 @@
 		},
 		{
 			"group": "41",
-			"authors": "Jeezer L., Jeremy Y., Sebastian Y.",
+			"authors": "J.N. Lee, J.V. Yu, S. Yunque",
 			"title": "Philippines GDP Rises Slowly with CO2 Emissions",
 			"desc": "This graph shows the Philippines' total CO2 emissions, from both cement and fossil fuels, rising slowly with GDP throughout the years 1946-2022. The y-axis directly shows the GDP in  billions of 2011 USD, and markers grow with the CO2 emissions.",
 			"repo": "",
@@ -368,7 +367,7 @@
 	"14": [
 		{
 			"group": "35",
-			"authors": "Yanni E., Jensen R., Dean R., Nadinne S.",
+			"authors": "Y.J. Ella, J.N. Rabatan, D.C. Ramirez, N. Sumulong",
 			"title": "Flow of Progress: Water Quality Enhancements in Major Philippine Rivers (2019-2021)",
 			"desc": "The graph depicts the change in water quality from 2019 to 2021 for ten major rivers in the Philippines, chosen based on their priority and impact. The Y-axis represents the years, while the color gradient shows water quality: green indicates poorer quality, blue indicates better quality. Water quality was calculated as the mean of the 'passes' for all parameters using the formula: number of passes / total number of parameters. Key observations include: Bagatayam River: Cleanest, passing all parameters in 2020 and 2021, and 8/10 in 2019. Jalaur River: Dirtiest, passing 4/10 parameters in 2019 and improving by 1 parameter each year. Guadalupe River: Passed 5/10 parameters in 2019 and 2020, and 6/10 in 2021. Pampanga River: Consistent, passing 7/10 parameters over the three years. Overall, the graph shows a general improvement in water quality over this period.",
 			"repo": "",
@@ -379,7 +378,7 @@
 	"15": [
 		{
 			"group": "42",
-			"authors": "Lorenzo P., Zachary R., Roberto S.",
+			"authors": "L.G. Pangan, Z.M. Romualdez, R.J. Santos",
 			"title": "Mother Nature's Big Footprint",
 			"desc": "The graph plots out the amount of tree cover loss (in kha) and amount of carbon dioxide emitted (in g) by each Philippine province for each year from 2001 to 2023.",
 			"repo": "",
@@ -390,7 +389,7 @@
 	"16": [
 		{
 			"group": "36",
-			"authors": "David A., Julian D., Justine S.",
+			"authors": "D.V. Andal, J.A. Dolojan, J.E. Soriano",
 			"title": "Who are the Filipinos dying from?",
 			"desc": "This plot compares the number of fatal and non-fatal encounters between specific groups and civilians since the start of Duterte’s administration (June 30, 2016). The group most involved in fatal reports is the Political Militia, followed by the State Forces. Both groups share significant similarities, with the Political Militia being considered as unofficial state forces.",
 			"repo": "",
@@ -399,7 +398,7 @@
 		},
 		{
 			"group": "39",
-			"authors": "Brylle L., Earl N., Aaron T.",
+			"authors": "B.J. Logroño, E.W. Nogra, A.J. Tanael",
 			"title": "Decoding Discontent: CPI's Role in Political Unrest Dynamics",
 			"desc": "This graph provides a visual representation of the trend between two significant socio-economic indicators: the continuous increase of the Consumer Price Index (CPI) and the simultaneous decrease in Reported Political Incidents over time.",
 			"repo": "",
