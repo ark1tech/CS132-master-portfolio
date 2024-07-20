@@ -4,7 +4,7 @@
 	 */
 	import PhAscii from '$lib/components/page_home/PhAscii.svelte';
 	import GridBackground from '$lib/components/library/aceternity/components/backgrounds/GridBackground.svelte';
-	import Marquee from '$components/library/magicui/components/Marquee.svelte';
+	import Marquee from '$components/page_home/Marquee.svelte';
 	import PreviewCards from '$components/page_home/PreviewCards.svelte';
 	import PrimaryButton from '$components/global/buttons/PrimaryButton.svelte';
 
@@ -17,12 +17,30 @@
 	 * Data *
 	 */
 	export let data;
-	function getSdgData(id) {
-		return data.sdg[id];
+	const splitProjects = (data) => {
+		return Object.entries(data.projects).reduce(
+			(acc, [key, projects]) => {
+				const midpoint = Math.ceil(projects.length / 2);
+				acc.firstHalf.push({
+					key,
+					projects: projects.slice(0, midpoint).map((project) => ({
+						...project,
+						sdg: data.sdg[key]
+					}))
+				});
+				acc.secondHalf.push({
+					key,
+					projects: projects.slice(midpoint).map((project) => ({
+						...project,
+						sdg: data.sdg[key]
+					}))
+				});
+				return acc;
+			},
+			{ firstHalf: [], secondHalf: [] }
+		);
 	}
-	function halfPoint(projects) {
-		return Math.ceil(projects.length / 2);
-	}
+	const { firstHalf: firstHalfProjects, secondHalf: secondHalfProjects } = splitProjects(data);
 </script>
 
 <!-- Hero Section -->
@@ -31,7 +49,7 @@
 ></div>
 <GridBackground>
 	<section class="flex min-h-[100dvh] w-full flex-col items-center justify-between md:flex-row">
-		<div class="w-full relative z-10 flex flex-col gap-[2rem]">
+		<div class="relative z-10 flex w-full flex-col gap-[2rem]">
 			<div class="flex w-fit flex-col">
 				<span class="flex flex-col items-start">
 					<p class="text-white">Pilipinas in a Nutshell:</p>
@@ -41,7 +59,7 @@
 				<!-- <PrimaryButton /> -->
 			</div>
 		</div>
-		<div class="flex w-full justify-begin">
+		<div class="justify-begin flex w-full">
 			<PhAscii />
 		</div>
 	</section>
@@ -53,32 +71,33 @@
 	<div
 		class="relative flex w-full flex-col items-center justify-center gap-[1.5rem] overflow-hidden"
 	>
-		<Marquee pauseOnHover class="[--duration:240s]">
-			{#each Object.entries(data.projects) as [key, projects]}
-				{#each projects.slice(0, halfPoint(projects)) as project}
+		<Marquee>
+			{#each firstHalfProjects as { key, projects }}
+				{#each projects as project}
 					<PreviewCards
 						imageSource={project.plot}
 						title={project.title}
-						sdg={getSdgData(key)}
+						sdg={project.sdg}
 						{key}
 						class="mx-4"
 					/>
 				{/each}
 			{/each}
 		</Marquee>
-		<Marquee reverse pauseOnHover class="[--duration:240s]">
-			{#each Object.entries(data.projects) as [key, projects]}
-				{#each projects.slice(halfPoint(projects)) as project}
+		<Marquee isReversed={true}>
+			{#each secondHalfProjects as { key, projects }}
+				{#each projects as project}
 					<PreviewCards
 						imageSource={project.plot}
 						title={project.title}
-						sdg={getSdgData(key)}
+						sdg={project.sdg}
 						{key}
 						class="mx-4"
 					/>
 				{/each}
 			{/each}
 		</Marquee>
+
 		<div
 			class="pointer-events-none absolute inset-y-0 left-0 w-[20%] bg-gradient-to-r from-black via-black"
 		></div>
