@@ -1,17 +1,21 @@
 <script>
+	import { onMount } from 'svelte';
+
 	/*
 	 * Components *
 	 */
-	import PhAscii from '$lib/components/page_home/PhAscii.svelte';
-	import GridBackground from '$lib/components/library/aceternity/components/backgrounds/GridBackground.svelte';
+	import PhAscii from '$components/page_home/PhAscii.svelte';
+	import GridBackground from '$components/library/aceternity/components/backgrounds/GridBackground.svelte';
 	import Marquee from '$components/page_home/Marquee.svelte';
 	import PreviewCards from '$components/page_home/PreviewCards.svelte';
-	import PrimaryButton from '$components/global/buttons/PrimaryButton.svelte';
+	import LogoMark from '$components/global/LogoMark.svelte';
+	import BorderBeam from '$components/library/aceternity/components/backgrounds/BorderBeam.svelte';
 
 	/*
 	 * Assets *
 	 */
-	// import PilipiNutsLogo from '$assets/logo.svg';
+	import PilipiNutsLogo from '$assets/logo/logo-plain.svg';
+	// import Rive from '@rive-app/canvas';
 
 	/*
 	 * Data *
@@ -42,43 +46,49 @@
 	};
 	const { firstHalf: firstHalfProjects, secondHalf: secondHalfProjects } = splitProjects(data);
 
-	console.log(firstHalfProjects);
-	console.log(secondHalfProjects);
+	// Animations
+	// let canvasElement;
+	// onMount(() => {
+	// 	if (canvasElement) {
+	// 		const r = new Rive({
+	// 			src: '/logo.riv',
+	// 			canvas: canvasElement,
+	// 			autoplay: true,
+	// 			stateMachines: 'State Machine 1',
+	// 			artboard: 'Logo',
+	// 			onLoad: () => {
+	// 				r.resizeDrawingSurfaceToCanvas();
+	// 			}
+	// 		});
+	// 	}
+	// });
 </script>
 
 <!-- Hero Section -->
 <GridBackground>
-	<section class="flex min-h-[100dvh] w-full flex-col items-center justify-between md:flex-row">
-		<div class="relative z-10 flex w-full flex-col gap-[2rem]">
-			<div class="flex w-fit flex-col">
-				<span class="flex flex-col items-start">
-					<p class="text-white">Pilipinas in a Nutshell:</p>
-					<h1 class="sans-text font-[600]">PilipiNuts 2023</h1>
-				</span>
-				<p class="foot-text">
-					The state of Philippines's sustainable development through big data.
-				</p>
+	<section
+		class="relative z-[30] flex min-h-[94dvh] w-full flex-col items-center py-[10dvh] md:items-start md:py-[30dvh]"
+	>
+		<div class="flex w-full flex-col items-center gap-[2rem] md:w-[60%] md:items-start">
+			<div class="flex flex-col">
+				<h2 class="text-center font-[600] leading-tight md:text-left">
+					The state of 2023 Philippine data:
+				</h2>
+				<h2 class="text-center font-[600] leading-tight md:text-left">A closer look at sustainable development goals</h2>
 			</div>
-		</div>
-		<div class="justify-begin flex w-full">
-			<PhAscii />
+			<BorderBeam>Learn More</BorderBeam>
 		</div>
 	</section>
+	<div class="absolute bottom-0 right-0 my-auto md:right-[4rem] md:top-0">
+		<PhAscii class="flex h-full w-full items-center justify-center" />
+	</div>
 </GridBackground>
-
-<!-- Context Section -->
-<section class="flex h-[100dvh] w-full flex-col items-center justify-center gap-[2rem]">
-	<h2>
-		Discover how the Philippines is moving towards its Sustainable Development Goals through data.
-		PilipiNuts 2023 brings you closer to the numbers, trends, and insights that matter. Our data
-		science projects cut through the noise to highlight what's truly impacting development across
-		the nation.
-	</h2>
-</section>
 
 <!-- Marquee Section -->
 <section class="flex h-[100dvh] w-full flex-col items-center justify-center gap-[2rem]">
-	<h2>Here's what we found out</h2>
+	<h2 class="mx-auto max-w-3xl text-center leading-relaxed">
+		Explore trends. Shape tomorrow.
+	</h2>
 	<div
 		class="relative flex w-full flex-col items-center justify-center gap-[1.5rem] overflow-hidden"
 	>

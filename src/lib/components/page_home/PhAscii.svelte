@@ -1,5 +1,8 @@
 <script>
 	import { onMount } from 'svelte';
+  import { cn } from '$lib/utils';
+  export let className = undefined;
+  export { className as class };
 
 	const originalAsciiArt = `
                                  O                           
@@ -89,8 +92,8 @@
 	}
 </script>
 
-<div class="select-none" role="presentation">
-	<pre class="ascii magic-text">
+<div class={cn("select-none", className)} role="presentation">
+	<pre style="font-weight:500;"class="ascii magic-text md:scale-100 scale-75 md:opacity-100 opacity-50">
 		{randomString}
 	</pre>
 </div>

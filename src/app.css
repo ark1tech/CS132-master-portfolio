@@ -6,6 +6,31 @@
 @tailwind components;
 @tailwind utilities;
 
+/* :root {
+	--font-size-min: 17;
+	--font-size-max: 20;
+	--font-ratio-min: 1.2;
+	--font-ratio-max: 1.33;
+	--font-width-min: 320;
+	--font-width-max: 1500;
+}
+
+:where(.fluid) {
+	--fluid-min: calc(var(--font-size-min) * pow(var(--font-ratio-min), var(--font-level, 0)));
+	--fluid-max: calc(var(--font-size-max) * pow(var(--font-ratio-max), var(--font-level, 0)));
+	--fluid-preferred: calc(
+		(var(--fluid-max) - var(--fluid-min)) / (var(--font-width-max) - var(--font-width-min))
+	);
+	--fluid-type: clamp(
+		(var(--fluid-min) / 16) * 1rem,
+		((var(--fluid-min) / 16) * 1rem) -
+			(((var(--fluid-preferred) * var(--font-width-min)) / 16) * 1rem) +
+			(var(--fluid-preferred) * var(--variable-unit, 100vi)),
+		(var(--fluid-max) / 16) * 1rem
+	);
+	font-size: var(--fluid-type);
+} */
+
 /* shadcn */
 @layer base {
 	:root {
@@ -98,7 +123,7 @@ h3 {
 h2 {
 	font-family: 'Public Sans', Arial, Helvetica, sans-serif;
 	color: var(--h-text-color);
-	font-size: clamp(1.25rem, 6vw, 1.75rem); /* Adjusted */
+	font-size: clamp(1.25rem, 6vw, 2.1rem); /* Adjusted */
 	font-weight: 400;
 }
 
@@ -116,7 +141,7 @@ p {
 	font-kerning: auto;
 	font-weight: 300;
 	line-height: 120%;
-	font-size: clamp(0.8rem, 2vw, 1.2rem); /* Adjusted */
+	font-size: clamp(0.8rem, 2vw, 0.9rem); /* Adjusted */
 }
 
 a,
@@ -192,7 +217,7 @@ main {
 }
 
 nav {
-	max-width: clamp(320px, 100%, 1024px); /* Adjusted */
+	max-width: clamp(320px, 100%, 1536px); /* Adjusted */
 	margin-left: auto;
 	margin-right: auto;
 	width: 100%;
@@ -263,8 +288,9 @@ nav {
 
 .magic-text {
 	animation: background-pan 8s cubic-bezier(0.21, 0.74, 0.71, 0.97) infinite;
-	background: linear-gradient(to top left, #505050e1 30%, #ffffff 50%, #505050 55%, #505050e1 60%);
+	background: linear-gradient(to top left, #29322ee1 30%, #56f5b2 50%, #095e3a 55%, #29322ee1 60%);
 	background-size: 800% 800%;
+	will-change: background-position;
 	background-clip: text;
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
