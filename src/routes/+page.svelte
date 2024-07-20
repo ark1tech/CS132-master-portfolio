@@ -39,14 +39,14 @@
 			},
 			{ firstHalf: [], secondHalf: [] }
 		);
-	}
+	};
 	const { firstHalf: firstHalfProjects, secondHalf: secondHalfProjects } = splitProjects(data);
+
+	console.log(firstHalfProjects);
+	console.log(secondHalfProjects);
 </script>
 
 <!-- Hero Section -->
-<div
-	class="pointer-events-none absolute inset-y-0 left-0 z-0 w-full bg-[radial-gradient(ellipse_at_top_left,#565656_-250%,transparent_60%)] text-[#262626]"
-></div>
 <GridBackground>
 	<section class="flex min-h-[100dvh] w-full flex-col items-center justify-between md:flex-row">
 		<div class="relative z-10 flex w-full flex-col gap-[2rem]">
@@ -55,8 +55,9 @@
 					<p class="text-white">Pilipinas in a Nutshell:</p>
 					<h1 class="sans-text font-[600]">PilipiNuts 2023</h1>
 				</span>
-				<p class="foot-text">The state of Philippine data</p>
-				<!-- <PrimaryButton /> -->
+				<p class="foot-text">
+					The state of Philippines's sustainable development through big data.
+				</p>
 			</div>
 		</div>
 		<div class="justify-begin flex w-full">
@@ -64,6 +65,16 @@
 		</div>
 	</section>
 </GridBackground>
+
+<!-- Context Section -->
+<section class="flex h-[100dvh] w-full flex-col items-center justify-center gap-[2rem]">
+	<h2>
+		Discover how the Philippines is moving towards its Sustainable Development Goals through data.
+		PilipiNuts 2023 brings you closer to the numbers, trends, and insights that matter. Our data
+		science projects cut through the noise to highlight what's truly impacting development across
+		the nation.
+	</h2>
+</section>
 
 <!-- Marquee Section -->
 <section class="flex h-[100dvh] w-full flex-col items-center justify-center gap-[2rem]">
@@ -73,7 +84,7 @@
 	>
 		<Marquee>
 			{#each firstHalfProjects as { key, projects }}
-				{#each projects as project}
+				{#each projects as project, i}
 					<PreviewCards
 						imageSource={project.plot}
 						title={project.title}
