@@ -54,8 +54,8 @@
 	let randomString = originalAsciiArt;
 
 	const characters = '1234567890';
-	const updateInterval = 20; // Interval in milliseconds for updates
-	const resetDelay = 6000; // Delay in milliseconds before resetting
+	const updateInterval = 40; // Interval in milliseconds for updates
+	const resetDelay = 5500; // Delay in milliseconds before resetting
 
 	function startAnimation() {
 		let currentLine = randomString.split('\n').length - 1; // Start from the last line
@@ -93,7 +93,7 @@
 </script>
 
 <div class={cn("select-none", className)} role="presentation">
-	<pre style="font-weight:500;"class="ascii magic-text md:scale-100 scale-75 md:opacity-100 opacity-50">
+	<pre style="font-weight:600;"class="ascii magic-text md:scale-100 scale-75 md:opacity-100 opacity-50">
 		{randomString}
 	</pre>
 </div>

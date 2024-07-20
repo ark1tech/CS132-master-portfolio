@@ -5,7 +5,7 @@
 	export let className = undefined;
 	export { className as class };
 
-	const navItems = ['About', 'Projects', 'Contact Us'];
+	const navItems = ['About', 'Projects', 'Contact'];
 </script>
 
 <nav class={cn('top-0 z-50 flex flex-col', className)}>

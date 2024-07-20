@@ -7,7 +7,7 @@
 
 <div class={cn('relative z-10 flex items-center justify-center', className)}>
 	<slot />
-	<div class="z-[-3] background-mask bg-grid-dash-[#313131]/[0.75]"></div>
+	<div class="z-[-3] background-mask bg-grid-dash-[#29322ee1]/[0.6]"></div>
 	<div
 		class="pointer-events-none absolute inset-y-0 right-0 w-[20%]  bg-gradient-to-l from-black  "
 	></div>

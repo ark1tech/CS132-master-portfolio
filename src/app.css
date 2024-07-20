@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Albert+Sans:ital,wght@0,100..900;1,100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Reddit+Sans:ital,wght@0,200..900;1,200..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -163,6 +163,10 @@ li {
 	font-family: 'JetBrains Mono', 'Courier New', Courier, monospace;
 }
 
+.mono-text-2 {
+	font-family: 'Space Grotesk', 'Courier New', Courier, monospace;
+}
+
 .gray-text {
 	color: var(--text-gray);
 }
@@ -208,12 +212,27 @@ body {
 }
 
 main {
-	max-width: clamp(320px, 100%, 1024px); /* Adjusted */
+	width: 100%;
+	max-width: 1020px;
 	margin-left: auto;
 	margin-right: auto;
-	width: 100%;
-	padding-left: 1rem;
-	padding-right: 1rem;
+	padding-left: 1.5rem;
+	padding-right: 1.5rem;
+	
+}
+
+@media (width > 1024px) {
+	main {
+		max-width: 1024px;
+		padding-left: 2rem;
+	}
+}
+
+@media (768px < width < 1024px) {
+	main {
+		max-width: 768px;
+		padding-left: 2rem;
+	}
 }
 
 nav {
