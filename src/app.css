@@ -115,7 +115,7 @@ h4 {
 h3 {
 	font-family: 'Albert Sans', Arial, Helvetica, sans-serif;
 	color: var(--h-text-color);
-	font-size: clamp(1.5rem, 8vw, 2rem); /* Adjusted */
+	font-size: clamp(0.9rem, 6vw, 1.2rem); /* Adjusted */
 	font-weight: 500;
 	line-height: 1.1em;
 }

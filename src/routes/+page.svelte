@@ -66,30 +66,42 @@
 
 <!-- Hero Section -->
 <GridBackground>
-	<Spotlight class="md:left-[5rem] md:top-[10rem] left-[10rem] top-0" />
+	<Spotlight class="left-[5rem] top-[-5rem] md:left-[5rem] md:top-[2rem]" />
 	<section
-		class="relative z-[30] flex min-h-[94dvh] w-full flex-col items-center py-[10dvh] md:items-start md:py-[20dvh] lg:py-[30dvh]"
+		class="relative z-[30] flex min-h-[93dvh] w-full flex-col items-center py-[10dvh] md:items-start md:py-[20dvh]"
 	>
 		<div class="flex w-full flex-col items-center gap-[2rem] md:w-[60%] md:items-start">
 			<div class="flex flex-col">
 				<h2 class="text-center font-[600] leading-tight md:text-left">
-					The state of <span class="text-inherit sm:inline hidden">Philippine</span><span class="text-inherit sm:hidden inline">PH</span> sustainable development goals:
+					The state of <span class="hidden text-inherit sm:inline">Philippine</span><span
+						class="inline text-inherit sm:hidden">PH</span
+					> sustainable development goals:
 				</h2>
-				<h2 class="text-center font-[200] leading-tight md:text-left">A closer look through data science</h2>
+				<h2 class="text-center font-[200] leading-tight md:text-left">
+					A closer look through data science
+				</h2>
 			</div>
+			<h3 class="sans-text text-center font-[200] leading-tight text-[#959595] md:text-left">
+				Subheading maybe
+			</h3>
 			<BorderBeam>Learn More</BorderBeam>
 		</div>
 	</section>
 	<div class="absolute bottom-0 right-0 my-auto md:right-[4rem] md:top-0">
-		<PhAscii class="flex h-full w-full items-center justify-center" />
+		<PhAscii class="flex h-full w-full flex-col items-end justify-center" />
 	</div>
 </GridBackground>
 
+<!-- About section -->
+<section class="flex min-h-[93dvh] w-full flex-col items-center justify-start gap-[2rem]">
+	<h2 class="">About the project</h2>
+	<h3 class="">Meow meow meow</h3>
+	<p class="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</p>
+</section>
+
 <!-- Marquee Section -->
-<section class="flex h-[100dvh] w-full flex-col items-center justify-center gap-[2rem]">
-	<h2 class="mx-auto max-w-3xl text-center leading-relaxed">
-		Meow meow. Meow. Meow meow.
-	</h2>
+<section class="flex min-h-[93dvh] w-full flex-col items-center justify-center gap-[2rem]">
+	<h2 class="mx-auto max-w-3xl text-center leading-relaxed">Meow meow. Meow. Meow meow.</h2>
 	<div
 		class="relative flex w-full flex-col items-center justify-center gap-[1.5rem] overflow-hidden"
 	>

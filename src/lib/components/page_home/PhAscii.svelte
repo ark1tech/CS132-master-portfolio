@@ -93,7 +93,36 @@
 </script>
 
 <div class={cn("select-none", className)} role="presentation">
-	<pre style="font-weight:600;"class="ascii magic-text md:scale-100 scale-75 md:opacity-100 opacity-50">
+	<pre style="font-weight:600;" class="ascii magic-text">
 		{randomString}
 	</pre>
 </div>
+
+<style>
+  @media (width > 768px) {
+    .ascii {
+      opacity: 1;
+    }
+  }
+
+  @media (640px < width <= 768px ) {
+    .ascii {
+      font-size: 0.45rem;
+      opacity: 0.5;
+    }
+  }
+
+  @media (475px < width <= 640px) {
+    .ascii {
+      font-size: 0.37rem;
+      opacity: 0.5;
+    }
+  }
+
+  @media (width <= 475px) {
+    .ascii {
+      font-size: 0.32rem;
+      opacity: 0.5;
+    }
+  }
+</style>

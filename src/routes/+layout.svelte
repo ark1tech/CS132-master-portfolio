@@ -9,7 +9,7 @@
 
 <NavBar class="sticky h-[7dvh]"/>
 <div class="container">
-	<main class="min-h-[93dvh]">
+	<main class="min-h-[93dvh] relative">
 		<!-- {#if !browser}
 			<Loading />
 		{:else}
