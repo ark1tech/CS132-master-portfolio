@@ -1,5 +1,7 @@
 <script>
-	import { onMount } from 'svelte';
+	import { onMount, onDestroy } from 'svelte';
+	import { dataStore } from '$lib/stores/dataStore.js';
+	import { splitProjects } from '$lib/utils.js';
 
 	/*
 	 * Components *
@@ -8,65 +10,31 @@
 	import GridBackground from '$components/library/aceternity/components/backgrounds/GridBackground.svelte';
 	import Marquee from '$components/page_home/Marquee.svelte';
 	import PreviewCards from '$components/page_home/PreviewCards.svelte';
-	import BorderBeam from '$components/library/aceternity/components/backgrounds/BorderBeam.svelte';
+	import MainButton from '$components/library/aceternity/components/backgrounds/MainButton.svelte';
 	import Spotlight from '$components/library/aceternity/components/backgrounds/Spotlight.svelte';
 
 	/*
 	 * Assets *
 	 */
 	import PilipiNutsLogo from '$assets/logo/logo-plain.svg';
-	// import Rive from '@rive-app/canvas';
 
 	/*
 	 * Data *
 	 */
-	export let data;
-	const splitProjects = (data) => {
-		return Object.entries(data.projects).reduce(
-			(acc, [key, projects]) => {
-				const midpoint = Math.ceil(projects.length / 2);
-				acc.firstHalf.push({
-					key,
-					projects: projects.slice(0, midpoint).map((project) => ({
-						...project,
-						sdg: data.sdg[key]
-					}))
-				});
-				acc.secondHalf.push({
-					key,
-					projects: projects.slice(midpoint).map((project) => ({
-						...project,
-						sdg: data.sdg[key]
-					}))
-				});
-				return acc;
-			},
-			{ firstHalf: [], secondHalf: [] }
-		);
-	};
-	const { firstHalf: firstHalfProjects, secondHalf: secondHalfProjects } = splitProjects(data);
-
-	// Animations
-	// let canvasElement;
-	// onMount(() => {
-	// 	if (canvasElement) {
-	// 		const r = new Rive({
-	// 			src: '/logo.riv',
-	// 			canvas: canvasElement,
-	// 			autoplay: true,
-	// 			stateMachines: 'State Machine 1',
-	// 			artboard: 'Logo',
-	// 			onLoad: () => {
-	// 				r.resizeDrawingSurfaceToCanvas();
-	// 			}
-	// 		});
-	// 	}
-	// });
+	let firstHalfProjects, secondHalfProjects;
+	const unsubscribe = dataStore.subscribe((data) => {
+		const { firstHalf: fhp, secondHalf: shp } = splitProjects(data);
+		firstHalfProjects = fhp;
+		secondHalfProjects = shp;
+	});
+	onDestroy(unsubscribe);
 </script>
 
 <!-- Hero Section -->
 <GridBackground>
-	<Spotlight class="left-[5rem] top-[-5rem] md:left-[5rem] md:top-[2rem]" />
+	<div class="animate-fade">
+		<Spotlight class="left-[5rem] top-[-5rem] md:left-[5rem] md:top-[2rem]" />
+	</div>
 	<section
 		class="relative z-[30] flex min-h-[93dvh] w-full flex-col items-center py-[10dvh] md:items-start md:py-[20dvh]"
 	>
@@ -84,7 +52,7 @@
 			<h3 class="sans-text text-center font-[200] leading-tight text-[#959595] md:text-left">
 				Subheading maybe
 			</h3>
-			<BorderBeam>Learn More</BorderBeam>
+			<MainButton>Learn More</MainButton>
 		</div>
 	</section>
 	<div class="absolute bottom-0 right-0 my-auto md:right-[4rem] md:top-0">

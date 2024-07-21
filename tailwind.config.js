@@ -18,7 +18,8 @@ const config = {
 		extend: {
 			animation: {
 				'border-beam': 'border-beam calc(var(--duration)*1s) infinite linear',
-				spotlight: 'spotlight 2s ease .75s 1 forwards'
+				spotlight: 'spotlight 12s ease 1000ms infinite',
+				fade: 'fade 1000ms ease-in-out'
 			},
 			keyframes: {
 				'border-beam': {
@@ -28,13 +29,30 @@ const config = {
 				},
 				spotlight: {
 					'0%': {
-						opacity: 0,
-						transform: 'translate(-62%, -62%) scale(0.5)'
+						transform: 'translate(-55%,-47%) scale(1)'
+					},
+					'20%': {
+						transform: 'translate(-52%,-55%) scale(1)'
+					},
+					'30%': {
+						transform: 'translate(-50%,-40%) scale(1.02)'
+					},
+					'50%': {
+						transform: 'translate(-48%,-41%) scale(1.05)'
+					},
+					'70%': {
+						transform: 'translate(-46%,-43%) scale(1.08)'
+					},
+					'80%': {
+						transform: 'translate(-51%,-44%) scale(1.05)'
 					},
 					'100%': {
-						opacity: 1,
-						transform: 'translate(-50%,-40%) scale(1)'
+						transform: 'translate(-55%,-47%) scale(1)'
 					}
+				},
+				fade: {
+					'0%': { opacity: 0 },
+					'100%': { opacity: 1 }
 				}
 			},
 			colors: {

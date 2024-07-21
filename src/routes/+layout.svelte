@@ -1,20 +1,24 @@
 <script>
 	import '../app.css';
 	import { browser } from '$app/environment';
+	import { ModeWatcher } from 'mode-watcher';
+	import { dataStore } from '$lib/stores/dataStore.js';
+
+	export let data;
+	dataStore.set(data);
+
 	import Loading from './loading.svelte';
-	// import BeamBackground from '$lib/aceternity/components/BeamBackground.svelte';
-	// import DotBackground from '$lib/aceternity/components/backgrounds/DotBackground.svelte';
 	import NavBar from '$lib/components/global/nav/NavBar.svelte';
 </script>
 
-<NavBar class="sticky h-[7dvh]"/>
-<div class="container">
-	<main class="min-h-[93dvh] relative">
-		<!-- {#if !browser}
-			<Loading />
-		{:else}
+<ModeWatcher defaultMode={'dark'} />
+{#if !true}
+	<!-- <Loading /> -->
+{:else}
+	<NavBar class="sticky h-[7dvh]" />
+	<div class="container">
+		<main class="relative min-h-[93dvh]">
 			<slot></slot>
-		{/if} -->
-		<slot></slot>
-	</main>
-</div>
+		</main>
+	</div>
+{/if}

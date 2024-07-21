@@ -7,7 +7,8 @@ const config = {
 			'$lib/*': './src/lib/*',
 			'$components/*': './src/lib/components/*',
 			'$server/*': './src/lib/server/*',
-			'$assets/*': './src/lib/assets/*'
+			'$assets/*': './src/lib/assets/*',
+			'$stores/*': './src/lib/stores/*'
 		},
 		adapter: adapter()
 	}

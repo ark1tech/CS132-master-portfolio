@@ -1,14 +1,12 @@
 <script>
 	import { cn } from '$lib/utils';
-
 	export let className = undefined;
-
 	export { className as class };
 </script>
 
 <svg
 	class={cn(
-		'animate-spotlight pointer-events-none absolute z-[1] h-[170%] w-[150%] opacity-0 md:h-[100%] md:w-[100%]',
+		'translate-x-[-55%] translate-y-[-47%] scale-100 pointer-events-none absolute z-[1] h-[170%] w-[150%] animate-spotlight md:h-[100%] md:w-[100%]',
 		className
 	)}
 	width="454"
@@ -21,7 +19,7 @@
 		<path
 			d="M45 45.2329L182.807 284.794C228.947 365.003 334.755 386.96 409 331.733V331.733L45 45.2329Z"
 			fill="url(#paint0_linear_192_16)"
-            fill-opacity="0.21"
+			fill-opacity="0.21"
 		/>
 	</g>
 	<defs>

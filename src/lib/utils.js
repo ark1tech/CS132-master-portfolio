@@ -78,3 +78,27 @@ export const lazyLoad = (image, src) => {
         }
     }
 }
+
+export const splitProjects = (data) => {
+	return Object.entries(data.projects).reduce(
+		(acc, [key, projects]) => {
+			const midpoint = Math.ceil(projects.length / 2);
+			acc.firstHalf.push({
+				key,
+				projects: projects.slice(0, midpoint).map((project) => ({
+					...project,
+					sdg: data.sdg[key]
+				}))
+			});
+			acc.secondHalf.push({
+				key,
+				projects: projects.slice(midpoint).map((project) => ({
+					...project,
+					sdg: data.sdg[key]
+				}))
+			});
+			return acc;
+		},
+		{ firstHalf: [], secondHalf: [] }
+	);
+};

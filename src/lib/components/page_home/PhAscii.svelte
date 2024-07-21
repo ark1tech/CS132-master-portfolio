@@ -101,7 +101,7 @@
 <style>
   @media (width > 768px) {
     .ascii {
-      opacity: 1;
+      opacity: 0.8;
     }
   }
 

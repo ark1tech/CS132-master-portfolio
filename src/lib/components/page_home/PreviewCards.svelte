@@ -24,6 +24,8 @@
 	<img
 		src={imageSource}
 		alt={title}
+		fetchpriority="high"
+		loading="eager"
 		class="image absolute left-0 top-0 m-auto h-full w-full object-cover opacity-65 brightness-[0.5] duration-500"
 	/>
 	<div
