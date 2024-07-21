@@ -76,19 +76,23 @@
 	onMount(() => {
 		startAnimation();
 		document.addEventListener('scroll', function () {
-			// const scrollPercentage = Math.min((window.scrollY + window.innerHeight) / (window.innerHeight * 2), 1);
-			const scrollPercentage = Math.min((window.scrollY * 3.5) / window.innerHeight, 1);
-			const maxRotateX = 20;
+			const scrollPercentage = Math.min((window.scrollY * 4.5) / window.innerHeight, 1);
+			const scrollPercentageScale = Math.min((window.scrollY * 10.5) / window.innerHeight, 1);
+			const maxRotateX = 15;
 			const maxRotateY = -30;
+			const maxScale = 1;
+			const minScale = 0.9;
+
+			const scaleRange = maxScale - minScale;
+			const newScale = Math.max(minScale, minScale + scrollPercentageScale * scaleRange);
 			const newRotateX = Math.max(0, (1 - scrollPercentage) * maxRotateX);
 			const newRotateY = Math.max(0, (1 - scrollPercentage) * maxRotateY);
 
-			const element = document.querySelector('.three-dee');
-			if (element) {
-				element.style.transform = `perspective(35em) rotateX(${newRotateX}deg) rotateY(${newRotateY}deg) scale(0.9) translateY(-30px)`;
+			const foreground = document.querySelector('.three-deez');
+			if (foreground) {
+				foreground.style.transform = `perspective(35em) rotateX(${newRotateX}deg) rotateY(${newRotateY}deg) scale(${newScale}) translateY(-30px)`;
 			}
 		});
-
 		return () => {
 			clearInterval(interval); // Clear interval on component unmount
 		};
@@ -106,7 +110,7 @@
 </script>
 
 <div class={cn('select-none', className)} role="presentation">
-	<pre style="font-weight:600;" class="ascii magic-text-static-2 three-dee">
+	<pre style="font-weight:600;" class="three-deez ascii magic-text-static-2 hack-effect">
 		{randomString}
 	</pre>
 </div>
@@ -114,28 +118,29 @@
 <style>
 	@media (width > 768px) {
 		.ascii {
-			opacity: 0.8;
+			font-size: 0.52rem;
+			opacity: 0.5;
 		}
 	}
 
 	@media (640px < width <= 768px) {
 		.ascii {
-			font-size: 0.45rem;
-			opacity: 0.6;
+			font-size: 0.36rem;
+			opacity: 0.4;
 		}
 	}
 
 	@media (475px < width <= 640px) {
 		.ascii {
-			font-size: 0.37rem;
-			opacity: 0.6;
+			font-size: 0.34rem;
+			opacity: 0.4;
 		}
 	}
 
 	@media (width <= 475px) {
 		.ascii {
-			font-size: 0.32rem;
-			opacity: 0.6;
+			font-size: 0.29rem;
+			opacity: 0.4;
 		}
 	}
 </style>

@@ -28,40 +28,43 @@
 		secondHalfProjects = shp;
 	});
 	onDestroy(unsubscribe);
-
-
-	
 </script>
 
 <!-- Hero Section -->
-<div class="animate-fade">
-	<Spotlight class="md:left-[5rem] md:top-[5rem] top-[10rem] left-[10rem]" />
+<div class="absolute h-full w-[calc(100%-3rem)] animate-fade">
+	<Spotlight
+		class="animate-spotlight absolute top-[1rem] h-[200dvh] max-h-[300%] w-[120dvh] max-w-[300%] translate-x-[-30%]  translate-y-[-40%] md:h-[100dvh] md:max-h-[100%] md:w-full md:max-w-[100%] md:scale-[1.5]"
+	/>
 </div>
-<GridBackground>
-	<section
-		class="relative z-[30] flex min-h-[93dvh] w-full flex-col items-center py-[10dvh] md:items-start md:py-[20dvh]"
-	>
-		<div class="flex w-full flex-col items-center gap-[2rem] md:w-[60%] md:items-start">
-			<div class="flex flex-col">
-				<h2 class="text-center font-[600] leading-tight md:text-left">
-					The state of <span class="hidden text-inherit sm:inline">Philippine</span><span
-						class="inline text-inherit sm:hidden">PH</span
-					> sustainable development goals:
+<div class="min-h-[140dvh]">
+	<GridBackground>
+		<section
+			class="relative z-[30] flex h-[93dvh] w-full flex-col items-center py-[10dvh] md:items-start md:py-[20dvh]"
+		>
+			<div class="flex w-full flex-col items-center gap-[2rem] md:w-[60%] md:items-start">
+				<div class="shadow-effect flex flex-col">
+					<h2 class="shadow-effect text-center font-[600] leading-tight md:text-left">
+						The state of <span class="hidden text-inherit sm:inline">Philippine</span><span
+							class="inline text-inherit sm:hidden">PH</span
+						> sustainable development goals:
 				</h2>
-				<h2 class="text-center font-[200] leading-tight md:text-left">
-					A closer look through data science
-				</h2>
+					<h2 class="shadow-effect text-center font-[200] leading-tight md:text-left">
+						A closer look through data science
+					</h2>
+				</div>
+				<h3
+					class="shadow-effect sans-text text-center font-[200] leading-tight text-[#959595] md:text-left"
+				>
+					Subheading maybe
+				</h3>
+				<MainButton class="drop-shadow-xl">Learn More</MainButton>
 			</div>
-			<h3 class="sans-text text-center font-[200] leading-tight text-[#959595] md:text-left">
-				Subheading maybe
-			</h3>
-			<MainButton>Learn More</MainButton>
+		</section>
+		<div class="absolute bottom-0 right-0 my-auto md:right-[4rem] md:top-0">
+			<PhAscii class="flex h-full w-full flex-col items-end justify-center" />
 		</div>
-	</section>
-	<div class="absolute bottom-0 right-0 my-auto md:right-[4rem] md:top-0">
-		<PhAscii class="flex h-full w-full flex-col items-end justify-center" />
-	</div>
-</GridBackground>
+	</GridBackground>
+</div>
 
 <!-- About section -->
 <section class="flex min-h-[93dvh] w-full flex-col items-center justify-start gap-[2rem]">
@@ -104,10 +107,10 @@
 		</Marquee>
 
 		<div
-			class="pointer-events-none absolute inset-y-0 left-0 w-[20%] bg-gradient-to-r from-black via-black"
+			class="pointer-events-none absolute inset-y-0 left-0 w-[5%] bg-gradient-to-r from-black via-black sm:w-[10%]"
 		></div>
 		<div
-			class="pointer-events-none absolute inset-y-0 right-0 w-[20%] bg-gradient-to-l from-black via-black"
+			class="pointer-events-none absolute inset-y-0 right-0 w-[5%] bg-gradient-to-l from-black via-black sm:w-[10%]"
 		></div>
 	</div>
 </section>

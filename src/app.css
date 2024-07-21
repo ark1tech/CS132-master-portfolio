@@ -194,6 +194,7 @@ body {
 	color: var(--foreground-rgb);
 	background: linear-gradient(to bottom, transparent, var(--background-end-rgb))
 		var(--background-start-rgb);
+	scrollbar-gutter: stable;
 }
 
 .container {
@@ -205,7 +206,6 @@ body {
 
 main {
 	width: 100%;
-	max-width: 1020px;
 	margin-left: auto;
 	margin-right: auto;
 	padding-left: 1.5rem;
@@ -215,14 +215,12 @@ main {
 @media (width > 1024px) {
 	main {
 		max-width: 1024px;
-		padding-left: 2rem;
 	}
 }
 
 @media (768px < width < 1024px) {
 	main {
 		max-width: 768px;
-		padding-left: 2rem;
 	}
 }
 
@@ -332,8 +330,17 @@ nav {
 	-webkit-text-fill-color: transparent;
 }
 
-.three-dee, .three-deez {
-    text-shadow: 0 0 10px #3bad7e;
-    transform: perspective(35em) rotateX(20deg) scale(0.9) translateY(-30px);
-    transition: transform 0.3s ease-out; /* Smooth transition */
+.hack-effect {
+	text-shadow: 0 0 20px #3cffae8c;
+}
+
+.shadow-effect h2,
+.shadow-effect {
+	text-shadow: 2.5px 2.5px 10px #000000c9;
+}
+
+.three-deez,
+.three-dee {
+	transform: perspective(35em) rotateX(15deg) scale(0.9) translateY(-30px);
+	transition: transform 0.3s ease-out; /* Smooth transition */
 }

@@ -8,7 +8,8 @@
 	dataStore.set(data);
 
 	import Loading from './loading.svelte';
-	import NavBar from '$lib/components/global/nav/NavBar.svelte';
+	import NavBar from '$components/global/nav/NavBar.svelte';
+	import Spotlight from '$components/library/aceternity/components/backgrounds/Spotlight.svelte';
 </script>
 
 <ModeWatcher defaultMode={'dark'} />
@@ -16,9 +17,17 @@
 	<!-- <Loading /> -->
 {:else}
 	<NavBar class="sticky h-[7dvh]" />
-	<div class="container overflow-y-hidden">
+	<div class="container relative">
 		<main class="relative min-h-[93dvh]">
 			<slot></slot>
 		</main>
 	</div>
 {/if}
+
+<style>
+	@media (width < 768px) {
+		main {
+			contain: paint;
+		}
+	}
+</style>
