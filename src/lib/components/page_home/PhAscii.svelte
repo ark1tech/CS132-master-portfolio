@@ -1,8 +1,8 @@
 <script>
 	import { onMount } from 'svelte';
-  import { cn } from '$lib/utils';
-  export let className = undefined;
-  export { className as class };
+	import { cn } from '$lib/utils';
+	export let className = undefined;
+	export { className as class };
 
 	const originalAsciiArt = `
                                  O                           
@@ -55,7 +55,7 @@
 
 	const characters = '1234567890';
 	const updateInterval = 40; // Interval in milliseconds for updates
-	const resetDelay = 5500; // Delay in milliseconds before resetting
+	const resetDelay = 3500; // Delay in milliseconds before resetting
 
 	function startAnimation() {
 		let currentLine = randomString.split('\n').length - 1; // Start from the last line
@@ -92,37 +92,37 @@
 	}
 </script>
 
-<div class={cn("select-none", className)} role="presentation">
-	<pre style="font-weight:600;" class="ascii magic-text">
+<div class={cn('select-none', className)} role="presentation">
+	<pre style="font-weight:600;" class="ascii magic-text-static-2 three-dee">
 		{randomString}
 	</pre>
 </div>
 
 <style>
-  @media (width > 768px) {
-    .ascii {
-      opacity: 0.8;
-    }
-  }
+	@media (width > 768px) {
+		.ascii {
+			opacity: 0.8;
+		}
+	}
 
-  @media (640px < width <= 768px ) {
-    .ascii {
-      font-size: 0.45rem;
-      opacity: 0.5;
-    }
-  }
+	@media (640px < width <= 768px) {
+		.ascii {
+			font-size: 0.45rem;
+			opacity: 0.6;
+		}
+	}
 
-  @media (475px < width <= 640px) {
-    .ascii {
-      font-size: 0.37rem;
-      opacity: 0.5;
-    }
-  }
+	@media (475px < width <= 640px) {
+		.ascii {
+			font-size: 0.37rem;
+			opacity: 0.6;
+		}
+	}
 
-  @media (width <= 475px) {
-    .ascii {
-      font-size: 0.32rem;
-      opacity: 0.5;
-    }
-  }
+	@media (width <= 475px) {
+		.ascii {
+			font-size: 0.32rem;
+			opacity: 0.6;
+		}
+	}
 </style>

@@ -31,10 +31,10 @@
 </script>
 
 <!-- Hero Section -->
+<div class="animate-fade">
+	<Spotlight class="left-[5rem] top-[-5rem] md:left-[5rem] md:top-[2rem]" />
+</div>
 <GridBackground>
-	<div class="animate-fade">
-		<Spotlight class="left-[5rem] top-[-5rem] md:left-[5rem] md:top-[2rem]" />
-	</div>
 	<section
 		class="relative z-[30] flex min-h-[93dvh] w-full flex-col items-center py-[10dvh] md:items-start md:py-[20dvh]"
 	>
