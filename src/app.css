@@ -310,13 +310,13 @@ nav {
 	background: linear-gradient(
 		to top left,
 		#56f5b2 20%,
-		#41bd8a 25%,
+		#103626 25%,
 		#426354e1 30%,
 		#56f5b2 50%,
 		#095e3a 55%,
 		#426354e1 60%,
-		#41bd8a 70%,
-		#56f5b2 75%
+		#348d68 65%,
+		#56f5b2 70%
 	);
 	background-size: 100%;
 	background-clip: text;
@@ -332,7 +332,8 @@ nav {
 	-webkit-text-fill-color: transparent;
 }
 
-.three-dee {
-	text-shadow: 0 0 10px #56f5b2;
-	transform: perspective(35em) rotateX(20deg) scale(0.9) translateY(-30px);
+.three-dee, .three-deez {
+    text-shadow: 0 0 10px #3bad7e;
+    transform: perspective(35em) rotateX(20deg) scale(0.9) translateY(-30px);
+    transition: transform 0.3s ease-out; /* Smooth transition */
 }

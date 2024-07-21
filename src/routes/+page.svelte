@@ -28,11 +28,14 @@
 		secondHalfProjects = shp;
 	});
 	onDestroy(unsubscribe);
+
+
+	
 </script>
 
 <!-- Hero Section -->
 <div class="animate-fade">
-	<Spotlight class="left-[5rem] top-[-5rem] md:left-[5rem] md:top-[2rem]" />
+	<Spotlight class="md:left-[5rem] md:top-[5rem] top-[10rem] left-[10rem]" />
 </div>
 <GridBackground>
 	<section

@@ -16,7 +16,7 @@
 	<!-- <Loading /> -->
 {:else}
 	<NavBar class="sticky h-[7dvh]" />
-	<div class="container">
+	<div class="container overflow-y-hidden">
 		<main class="relative min-h-[93dvh]">
 			<slot></slot>
 		</main>

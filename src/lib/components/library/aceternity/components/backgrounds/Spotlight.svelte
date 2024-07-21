@@ -6,7 +6,7 @@
 
 <svg
 	class={cn(
-		'translate-x-[-55%] translate-y-[-47%] scale-100 pointer-events-none absolute z-[1] h-[170%] w-[150%] animate-spotlight md:h-[100%] md:w-[100%]',
+		'pointer-events-none absolute z-[1] h-[250%] w-[250%] animate-spotlight translate-x-[-47%] translate-y-[-52%] scale-100  md:h-[100%] md:w-[100%]',
 		className
 	)}
 	width="454"

@@ -29,25 +29,25 @@ const config = {
 				},
 				spotlight: {
 					'0%': {
-						transform: 'translate(-55%,-47%) scale(1)'
+						transform: 'translate(-47%,-52%)'
 					},
 					'20%': {
-						transform: 'translate(-52%,-55%) scale(1)'
+						transform: 'translate(-49%,-50%)'
 					},
-					'30%': {
-						transform: 'translate(-50%,-40%) scale(1.02)'
+					'35%': {
+						transform: 'translate(-50%,-51%)'
 					},
 					'50%': {
-						transform: 'translate(-48%,-41%) scale(1.05)'
+						transform: 'translate(-50%,-50%) scale(1.1)'
 					},
 					'70%': {
-						transform: 'translate(-46%,-43%) scale(1.08)'
+						transform: 'translate(-51%,-50%)'
 					},
 					'80%': {
-						transform: 'translate(-51%,-44%) scale(1.05)'
+						transform: 'translate(-50%,-49%)'
 					},
 					'100%': {
-						transform: 'translate(-55%,-47%) scale(1)'
+						transform: 'translate(-47%,-52%)'
 					}
 				},
 				fade: {

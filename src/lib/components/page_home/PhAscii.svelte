@@ -74,7 +74,20 @@
 	}
 
 	onMount(() => {
-		startAnimation(); // Start the animation when the component mounts
+		startAnimation();
+		document.addEventListener('scroll', function () {
+			// const scrollPercentage = Math.min((window.scrollY + window.innerHeight) / (window.innerHeight * 2), 1);
+			const scrollPercentage = Math.min((window.scrollY * 3.5) / window.innerHeight, 1);
+			const maxRotateX = 20;
+			const maxRotateY = -30;
+			const newRotateX = Math.max(0, (1 - scrollPercentage) * maxRotateX);
+			const newRotateY = Math.max(0, (1 - scrollPercentage) * maxRotateY);
+
+			const element = document.querySelector('.three-dee');
+			if (element) {
+				element.style.transform = `perspective(35em) rotateX(${newRotateX}deg) rotateY(${newRotateY}deg) scale(0.9) translateY(-30px)`;
+			}
+		});
 
 		return () => {
 			clearInterval(interval); // Clear interval on component unmount
