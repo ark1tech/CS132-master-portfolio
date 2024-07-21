@@ -32,19 +32,19 @@ const config = {
 						transform: 'translate(-30%,-40%) scale(1.5)'
 					},
 					'20%': {
-						transform: 'translate(-32%,-37%) scale(1.55)' // Slightly increased translate
+						transform: 'translate(-35%,-35%) scale(1.6)' // Increased translate and scale
 					},
 					'35%': {
-						transform: 'translate(-34%,-41%) scale(1.55)' // Slightly increased translate
+						transform: 'translate(-38%,-45%) scale(1.65)' // Increased translate and scale
 					},
 					'50%': {
-						transform: 'translate(-30%,-40%) scale(1.6)' // Increased scale at 50%
+						transform: 'translate(-30%,-40%) scale(1.7)' // Increased scale significantly
 					},
 					'70%': {
-						transform: 'translate(-32%,-39%) scale(1.55)' // Slightly increased translate
+						transform: 'translate(-35%,-38%) scale(1.65)' // Increased translate and scale
 					},
 					'80%': {
-						transform: 'translate(-30%,-38%) scale(1.55)' // Slightly increased translate
+						transform: 'translate(-30%,-35%) scale(1.6)' // Increased translate and scale
 					},
 					'100%': {
 						transform: 'translate(-30%,-40%) scale(1.5)'

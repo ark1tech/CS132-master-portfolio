@@ -2,13 +2,12 @@ import { clsx } from 'clsx';
 import { twMerge } from 'tailwind-merge';
 import { cubicOut } from 'svelte/easing';
 
-
 // Class names for components
 export function cn(...inputs) {
 	return twMerge(clsx(inputs));
 }
 
-// Animations 
+// Animations
 export const flyAndScale = (node, params = { y: -8, x: 0, start: 0.95, duration: 150 }) => {
 	const style = getComputedStyle(node);
 	const transform = style.transform === 'none' ? '' : style.transform;
@@ -49,39 +48,46 @@ export const flyAndScale = (node, params = { y: -8, x: 0, start: 0.95, duration:
 
 // See how the options work here: https://developer.mozilla.org/en-US/docs/Web/API/Intersection_Observer_API
 let options = {
-    root: null,
-    rootMargin: "0px",
-    threshold: 0
-}
+	root: null,
+	rootMargin: '0px',
+	threshold: 0
+};
 
 export const lazyLoad = (image, src) => {
-    const loaded = () => {
-        //image.classList.add('visible')                          // doesn't work in REPL
-			  image.style.opacity = "1"                                 // REPL hack to apply loading animation
-    }
-    const observer = new IntersectionObserver(entries => {
-        if (entries[0].isIntersecting) {
-					  console.log('an image has loaded')                  // console log for REPL
-            image.src = src                                     // replace placeholder src with the image src on observe
-            if (image.complete) {                               // check if instantly loaded
-                loaded()        
-            } else {
-                image.addEventListener('load', loaded)          // if the image isn't loaded yet, add an event listener
-            }
-        }
-    }, options)
-    observer.observe(image)                                     // intersection observer
+	const loaded = () => {
+		//image.classList.add('visible')                          // doesn't work in REPL
+		image.style.opacity = '1'; // REPL hack to apply loading animation
+	};
+	const observer = new IntersectionObserver((entries) => {
+		if (entries[0].isIntersecting) {
+			console.log('an image has loaded'); // console log for REPL
+			image.src = src; // replace placeholder src with the image src on observe
+			if (image.complete) {
+				// check if instantly loaded
+				loaded();
+			} else {
+				image.addEventListener('load', loaded); // if the image isn't loaded yet, add an event listener
+			}
+		}
+	}, options);
+	observer.observe(image); // intersection observer
 
-    return {
-        destroy() {
-            image.removeEventListener('load', loaded)           // clean up the event listener
-        }
-    }
-}
+	return {
+		destroy() {
+			image.removeEventListener('load', loaded); // clean up the event listener
+		}
+	};
+};
 
 export const splitProjects = (data) => {
 	return Object.entries(data.projects).reduce(
 		(acc, [key, projects]) => {
+			// Shuffling the projects array
+			for (let i = projects.length - 1; i > 0; i--) {
+				const j = Math.floor(Math.random() * (i + 1));
+				[projects[i], projects[j]] = [projects[j], projects[i]];
+			}
+
 			const midpoint = Math.ceil(projects.length / 2);
 			acc.firstHalf.push({
 				key,

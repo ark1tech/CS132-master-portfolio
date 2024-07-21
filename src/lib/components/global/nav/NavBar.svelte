@@ -2,7 +2,6 @@
 	import { cn } from '$lib/utils';
 	export let className = undefined;
 	export { className as class };
-	export let images;
 	import LogoMark from '$components/global/LogoMark.svelte';
 	import ProjectMenu from '$components/global/nav/ProjectMenu.svelte';
 </script>
@@ -11,9 +10,24 @@
 	<div class="relative z-50 flex h-full flex-row items-center bg-black px-[1rem] sm:px-[4rem]">
 		<LogoMark />
 		<div class="flex flex-grow flex-row justify-end gap-[2rem]">
-			<p class="mono-text text-[#989898] sm:inline hidden">About</p>
-			<ProjectMenu><p class="mono-text text-[#989898]">Projects by SDG</p></ProjectMenu>
-			<p class="mono-text text-[#989898] sm:inline hidden">Contact</p>
+			<p
+				class="mono-text hidden p-[0.5rem] text-[#989898] transition-['background-color']  hover:bg-[#70707036] hover:text-[#e2e2e2] md:inline"
+			>
+				About
+			</p>
+
+			<ProjectMenu>
+				<p
+					class="mono-text p-[0.5rem] text-[#989898] transition-['background-color']  hover:bg-[#70707036] hover:text-[#e2e2e2]"
+				>
+					Projects by SDG
+				</p>
+			</ProjectMenu>
+			<p
+				class="mono-text hidden p-[0.5rem] text-[#989898] transition-['background-color']  hover:bg-[#70707036] hover:text-[#e2e2e2] md:inline"
+			>
+				Contact
+			</p>
 		</div>
 	</div>
 	<div class="h-[1px] border-b-[1px] border-b-[#7f7f7f60]"></div>

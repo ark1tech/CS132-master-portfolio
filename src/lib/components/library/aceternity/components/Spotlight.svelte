@@ -2,6 +2,17 @@
 	import { cn } from '$lib/utils';
 	export let className = undefined;
 	export { className as class };
+	import { onMount } from 'svelte';
+
+	let fillOpacity = 0.15; // default opacity
+
+	onMount(() => {
+		const updateScroll = () => {
+			fillOpacity = Math.max(0.15 - (0.5 * window.scrollY) / 1000, 0); // Decrease opacity based on scroll
+		};
+		window.addEventListener('scroll', updateScroll);
+		return () => window.removeEventListener('scroll', updateUpdate);
+	});
 </script>
 
 <svg
@@ -19,7 +30,7 @@
 		<path
 			d="M45 45.2329L182.807 284.794C228.947 365.003 334.755 386.96 409 331.733V331.733L45 45.2329Z"
 			fill="url(#paint0_linear_192_16)"
-			fill-opacity="0.21"
+			fill-opacity={fillOpacity}
 		/>
 	</g>
 	<defs>

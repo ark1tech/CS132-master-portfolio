@@ -109,7 +109,7 @@
 	}
 </script>
 
-<div class={cn('select-none', className)} role="presentation">
+<div class={cn('z-[100]', className)} role="button">
 	<pre style="font-weight:600;" class="three-deez ascii magic-text-static-2 hack-effect">
 		{randomString}
 	</pre>
@@ -122,25 +122,27 @@
 			opacity: 0.5;
 		}
 	}
+	@media (width <= 768px) {
+		.ascii {
+			opacity: 0.4;
+		}
+	}
 
 	@media (640px < width <= 768px) {
 		.ascii {
 			font-size: 0.36rem;
-			opacity: 0.4;
 		}
 	}
 
 	@media (475px < width <= 640px) {
 		.ascii {
 			font-size: 0.34rem;
-			opacity: 0.4;
 		}
 	}
 
 	@media (width <= 475px) {
 		.ascii {
 			font-size: 0.29rem;
-			opacity: 0.4;
 		}
 	}
 </style>

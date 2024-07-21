@@ -31,8 +31,10 @@
 	<div
 		class="card-bg absolute bottom-0 left-0 z-10 mt-auto flex h-fit w-full flex-col gap-[0rem] p-[1.5rem]"
 	>
-		<h3 class="small-text mb-2 font-semibold text-white">{title}</h3>
-		<SdgBadge {sdg} {key} />
+		<h3 class="small-text up-up-away mb-2 font-semibold text-white">{title}</h3>
+		<div class="up-up-away-2">
+			<SdgBadge {sdg} {key} />
+		</div>
 	</div>
 </div>
 
@@ -44,6 +46,24 @@
 		-moz-filter: brightness(1);
 		-o-filter: brightness(1);
 		-ms-filter: brightness(1);
+	}
+
+	.card:hover .up-up-away,
+	.card:hover > div > .up-up-away-2 {
+		transform: translateY(-4px);
+		text-shadow: 2px 2px 10px rgb(121, 121, 121);
+	}
+
+	.up-up-away {
+		transition:
+			transform 0.25s ease-in-out,
+			text-shadow 0.25s ease-in-out;
+	}
+
+	.up-up-away-2 {
+		transition:
+			transform 0.5s ease-in-out,
+			text-shadow 0.5s ease-in-out;
 	}
 
 	.card-bg {

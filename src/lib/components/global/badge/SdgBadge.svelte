@@ -1,16 +1,19 @@
 <script>
+	import { cn } from '$lib/utils';
+	export let className = '';
+	export { className as class };
 	export let sdg; // Accept sdg as a prop
 	export let key;
 </script>
 
 {#if sdg}
-	<div class="flex flex-row items-center gap-2">
+	<div class={cn('flex flex-row items-center gap-2', className)}>
 		<div class="relative">
 			<img src={sdg.Image} alt={`SDG ${key} icon`} class="z-30 w-[10px]" />
 			<img
 				src={sdg.Image}
 				alt={`SDG ${key} icon`}
-				class="absolute bottom-0 left-0 z-20 m-auto w-[10px] animate-ping-custom blur-[2px]"
+				class="animate-ping-custom absolute bottom-0 left-0 z-20 m-auto w-[10px] blur-[2px]"
 			/>
 		</div>
 		<p class="foot-text">{sdg.Title}</p>
