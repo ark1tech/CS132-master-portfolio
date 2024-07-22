@@ -9,8 +9,7 @@
 	// TODO: Add index.js to components
 	import PhAscii from '$components/page_home/PhAscii.svelte';
 	import GridBackground from '$components/library/aceternity/components/GridBackground.svelte';
-	import Marquee from '$components/page_home/Marquee.svelte';
-	import PreviewCards from '$components/page_home/PreviewCards.svelte';
+	import Marquee from '$lib/components/page_home/marquee/Marquee.svelte';
 	import PrimaryButton from '$components/global/buttons/PrimaryButton.svelte';
 	import SecondaryButton from '$components/global/buttons/SecondaryButton.svelte';
 	import Spotlight from '$components/library/aceternity/components/Spotlight.svelte';
@@ -146,43 +145,18 @@
 	<main class="relative min-h-[93dvh]">
 		<section class="flex min-h-[93dvh] w-full flex-col items-center justify-center gap-[2rem]">
 			<h2 class="mx-auto max-w-3xl text-center leading-relaxed">Meow meow. Meow. Meow meow.</h2>
-			<div
-				class="three-dee relative flex w-full flex-col items-center justify-center gap-[1.5rem] overflow-hidden"
+			<Marquee
+				{firstHalfProjects}
+				{secondHalfProjects}
+				class="relative flex w-full flex-col items-center justify-center gap-[1.5rem] overflow-hidden"
 			>
-				<Marquee>
-					{#each firstHalfProjects as { key, projects }}
-						{#each projects as project, i}
-							<PreviewCards
-								imageSource={project.plot}
-								title={project.title}
-								sdg={project.sdg}
-								{key}
-								class="mx-4"
-							/>
-						{/each}
-					{/each}
-				</Marquee>
-				<Marquee isReversed={true}>
-					{#each secondHalfProjects as { key, projects }}
-						{#each projects as project}
-							<PreviewCards
-								imageSource={project.plot}
-								title={project.title}
-								sdg={project.sdg}
-								{key}
-								class="mx-4"
-							/>
-						{/each}
-					{/each}
-				</Marquee>
-
 				<div
 					class="pointer-events-none absolute inset-y-0 left-0 w-[5%] bg-gradient-to-r from-black via-black sm:w-[10%]"
 				></div>
 				<div
 					class="pointer-events-none absolute inset-y-0 right-0 w-[5%] bg-gradient-to-l from-black via-black sm:w-[10%]"
 				></div>
-			</div>
+			</Marquee>
 		</section>
 	</main>
 </div>
