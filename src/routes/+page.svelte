@@ -115,9 +115,28 @@
 <div class="container relative">
 	<main class="relative min-h-[93dvh]">
 		<section class="flex h-full w-full flex-col items-center justify-start gap-[2rem]">
-			<h2 class="">About the project</h2>
-			<h3 class="">Meow meow meow</h3>
-			<p class="">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, quos.</p>
+			<div class="flex h-full w-8/12 flex-col items-center justify-start gap-[1.5rem] text-justify">
+				<h2 class="">About the project</h2>
+				<h3 class="">Overview</h3>
+
+				<p class="leading-5">
+					As the culminating project of CS 132 (Data Science) in UP Diliman, PilipiNuts 2023 is a symposium of data science projects that tackle emerging socioeconomic problems in the Philippines. 
+				</p>
+				<p class="leading-5">
+					These projects were modeled and conceptualized from the United Nations' Sustainable Development Goals (SDGs), which are considered to form the global blueprint towards long-term welfare and prosperity. These SDGs contain the necessary objectives to achieve a social equality and sustainable development. 
+				</p>
+				<p class="leading-5">
+					Through the lens of data science, the projects of Pilipinuts 2023 explore contemporary issues such as climate change, gender inequality, and poverty. They examine the progress made and challenges to overcome in achieving sustainable development within the Philippine context. 
+				</p>
+				<p class="leading-5">
+					When done right, data science not only provide us with an opinion to observe; it enables us to take action towards social good.
+				</p>
+			</div>
+
+			<PrimaryButton>
+				<ProjectsIcon class="h-[1em] w-[1em]" />
+				View Projects
+			</PrimaryButton>
 		</section>
 	</main>
 </div>
