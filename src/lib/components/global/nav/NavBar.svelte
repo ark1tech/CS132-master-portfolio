@@ -11,20 +11,20 @@
 		<LogoMark />
 		<div class="flex flex-grow flex-row justify-end gap-[2rem]">
 			<p
-				class="mono-text hidden p-[0.5rem] text-[#989898] transition-['background-color']  hover:bg-[#70707036] hover:text-[#e2e2e2] md:inline"
+				class="mono-text hidden p-[0.5rem] text-[#989898]  hover:bg-[#70707036] hover:text-[#e2e2e2] md:inline"
 			>
 				About
 			</p>
 
 			<ProjectMenu>
 				<p
-					class="mono-text p-[0.5rem] text-[#989898] transition-['background-color']  hover:bg-[#70707036] hover:text-[#e2e2e2]"
+					class="mono-text p-[0.5rem] text-[#989898]  hover:bg-[#70707036] hover:text-[#e2e2e2]"
 				>
 					Projects by SDG
 				</p>
 			</ProjectMenu>
 			<p
-				class="mono-text hidden p-[0.5rem] text-[#989898] transition-['background-color']  hover:bg-[#70707036] hover:text-[#e2e2e2] md:inline"
+				class="mono-text hidden p-[0.5rem] text-[#989898]  hover:bg-[#70707036] hover:text-[#e2e2e2] md:inline"
 			>
 				Contact
 			</p>

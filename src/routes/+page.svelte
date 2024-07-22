@@ -1,7 +1,5 @@
 <script>
-	import { onMount, onDestroy } from 'svelte';
 	import { cn } from '$lib/utils';
-	import { dataStore } from '$lib/stores/dataStore.js';
 	import { splitProjects } from '$lib/utils.js';
 	/*
 	 * Components *
@@ -14,24 +12,29 @@
 	import SecondaryButton from '$components/global/buttons/SecondaryButton.svelte';
 	import Spotlight from '$components/library/aceternity/components/Spotlight.svelte';
 	import ProjectsIcon from '$lib/components/icons/projects.svelte';
-	import { BentoGrid, BentoGridItem } from '$components/library/aceternity/bento-grid';
+	import {
+		BentoGrid,
+		BentoGridItem,
+		BentoRowCard
+	} from '$components/library/aceternity/bento-grid';
 
 	/*
 	 * Assets *
 	 */
 	import PilipiNutsLogo from '$assets/logo/logo-plain.svg';
+	import LogoOutline from '$assets/logo/logo-outline.svg';
+	import LogoOutlineGreen from '$assets/logo/logo-outline-green.svg';
 
 	/*
 	 * Data *
 	 */
-	let firstHalfProjects, secondHalfProjects, sdgData;
-	const unsubscribe = dataStore.subscribe(($data) => {
-		sdgData = $data.sdg;
-		const { firstHalf: fhp, secondHalf: shp } = splitProjects($data);
-		firstHalfProjects = fhp;
-		secondHalfProjects = shp;
-	});
-	onDestroy(unsubscribe);
+	export let data;
+	const sdgData = Object.fromEntries(
+		Object.entries(data.sdg).filter(([key]) => key !== '12' && key !== '17')
+	);
+	const { firstHalf, secondHalf } = splitProjects(data);
+	const firstHalfProjects = firstHalf;
+	const secondHalfProjects = secondHalf;
 
 	let images = {};
 	$: {
@@ -64,7 +67,7 @@
 </script>
 
 <!-- Hero Section -->
-<div id="spotlight" class="container relative">
+<div class="container relative contain-paint">
 	<main class="relative min-h-[93dvh]">
 		<div class="absolute h-full w-[calc(100%-3rem)] animate-fade">
 			<Spotlight
@@ -111,37 +114,49 @@
 </div>
 
 <!-- About section -->
-<div class="container relative">
+<div class="container relative contain-paint">
+	<img
+		src={LogoOutlineGreen}
+		alt="PilipiNuts Logo"
+		class="absolute bottom-0 top-0 left-[1rem] -z-0 h-[60dvh] w-auto opacity-40"
+		style="mask-image: linear-gradient(to top right, transparent, black 40%, black 70%, transparent)"
+	/>
 	<main class="relative min-h-[93dvh]">
-		<section class="flex h-full w-full flex-col items-center justify-start gap-[2rem]">
-			<div class="flex h-full w-8/12 flex-col items-center justify-start gap-[1.5rem] text-justify">
-				<h2 class="">About the project</h2>
-				<h3 class="">Overview</h3>
-
-				<p class="leading-5">
-					As the culminating project of CS 132 (Data Science) in UP Diliman, PilipiNuts 2023 is a symposium of data science projects that tackle emerging socioeconomic problems in the Philippines. 
-				</p>
-				<p class="leading-5">
-					These projects were modeled and conceptualized from the United Nations' Sustainable Development Goals (SDGs), which are considered to form the global blueprint towards long-term welfare and prosperity. These SDGs contain the necessary objectives to achieve a social equality and sustainable development. 
-				</p>
-				<p class="leading-5">
-					Through the lens of data science, the projects of Pilipinuts 2023 explore contemporary issues such as climate change, gender inequality, and poverty. They examine the progress made and challenges to overcome in achieving sustainable development within the Philippine context. 
-				</p>
-				<p class="leading-5">
-					When done right, data science not only provide us with an opinion to observe; it enables us to take action towards social good.
-				</p>
+		<section class="flex h-full w-full flex-col items-start justify-start gap-[2rem] md:flex-row">
+			<div class="md:w-[60%] md:order-1 order-2">
 			</div>
-
-			<PrimaryButton>
-				<ProjectsIcon class="h-[1em] w-[1em]" />
-				View Projects
-			</PrimaryButton>
+			<div class="md:order-2 order-1 flex w-full flex-col items-center gap-[3rem] md:items-start">
+				<div class="flex flex-col gap-[1rem]">
+					<h2 class="font-[500] leading-tight md:text-left">PilipiNuts: Pilipinas in a Nutshell</h2>
+					<p class="sans-text font-[320] leading-[1.7em] text-[#c9c9c9] md:text-left">
+						As the culminating project of CS 132 (Data Science) in UP Diliman, PilipiNuts 2023 is a
+						symposium of data science projects that tackle emerging socioeconomic problems in the
+						Philippines.
+					</p>
+					<p class="sans-text font-[320] leading-[1.7em] text-[#c9c9c9] md:text-left">
+						These projects were modeled and conceptualized from the United Nations' Sustainable
+						Development Goals (SDGs), which are considered to form the global blueprint towards
+						long-term welfare and prosperity. These SDGs contain the necessary objectives to achieve
+						a social equality and sustainable development.
+					</p>
+					<p class="sans-text font-[320] leading-[1.7em] text-[#c9c9c9] md:text-left">
+						Through the lens of data science, the projects of Pilipinuts 2023 explore contemporary
+						issues such as climate change, gender inequality, and poverty. They examine the progress
+						made and challenges to overcome in achieving sustainable development within the
+						Philippine context.
+					</p>
+					<p class="sans-text font-[320] leading-[1.7em] text-[#c9c9c9] md:text-left">
+						When done right, data science not only provide us with an opinion to observe; it enables
+						us to take action towards social good.
+					</p>
+				</div>
+			</div>
 		</section>
 	</main>
 </div>
 
 <!-- Marquee Section -->
-<div id="gradient-marquee" class="container relative">
+<div id="gradient-marquee" class="container relative contain-paint">
 	<main class="relative min-h-[93dvh]">
 		<section class="flex min-h-[93dvh] w-full flex-col items-center justify-center gap-[2rem]">
 			<h2 class="mx-auto max-w-3xl text-center leading-relaxed">Meow meow. Meow. Meow meow.</h2>
@@ -164,19 +179,31 @@
 <!-- SDG section -->
 <div class="container relative mb-[8rem] mt-[4rem]">
 	<main class="relative min-h-[93dvh]">
-		<section class="flex h-full w-full flex-col items-center justify-center gap-[2rem]">
+		<section
+			class="flex h-full w-full max-w-full flex-col items-center justify-center gap-[2rem] overflow-hidden"
+		>
 			<h2 class="">View projects by SDG</h2>
 			<BentoGrid class="mx-auto max-w-full md:auto-rows-[8.5rem]">
 				{#each Object.entries(sdgData) as [key, sdg]}
-					<BentoGridItem title={sdg.Title} description={sdg.Description} class={sdg.class}>
-						<div
-							slot="icon"
-							style="background:radial-gradient(ellipse at top left,{sdgColors[
-								key
-							]} -200%, #2c2c2caa 85%, #2c2c2caa 100%);"
-							class={cn('h-full w-full text-[#2c2c2c]')}
-						></div>
-					</BentoGridItem>
+					<a
+						data-sveltekit-preload-code="tap"
+						target="_self"
+						href={`/sdg-${key}/projects`}
+						class="h-full w-full"
+					>
+						<BentoGridItem title={sdg.Title} description={sdg.Description} class={sdg.class}>
+							<div
+								slot="icon"
+								style="background:radial-gradient(
+								ellipse at top left,
+								{sdgColors[key]} -300%, 
+								#2c2c2c99 85%, 
+								#2c2c2caa 100%
+							);"
+								class={cn('h-full w-full text-[#2c2c2c]')}
+							></div>
+						</BentoGridItem>
+					</a>
 				{/each}
 			</BentoGrid>
 		</section>
@@ -217,10 +244,16 @@
 </div>
 
 <style>
-	@media (width < 768px) {
-		#spotlight {
-			contain: paint;
-		}
+	.contain-paint {
+		contain: paint;
+	}
+	.overflow-content {
+		overflow-x: auto;
+		overscroll-behavior-x: contain;
+		scroll-snap-type: x mandatory;
+		scroll-padding: var(--spacing-3);
+		-ms-overflow-style: none;
+		scrollbar-width: none;
 	}
 
 	/* #gradient-marquee::before {

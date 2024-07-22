@@ -4,14 +4,15 @@
 	let className = undefined;
 	export let inset = undefined;
 	export let disabled = false;
+	export let href = undefined;
 	export { className as class };
 </script>
 
 <div
 	class={cn(
-		'relative flex cursor-default select-none items-center rounded-sm px-2 py-2 text-sm outline-none data-[highlighted]:bg-accent data-[highlighted]:text-accent-foreground',
+		'relative flex cursor-default select-none items-center rounded-sm text-sm outline-none data-[highlighted]:bg-accent data-[highlighted]:text-accent-foreground',
 		inset && 'pl-8',
-		disabled ? '' : 'hover:bg-accent hover:text-accent-foreground',
+		disabled ? '' : 'group/div hover:bg-[#70707036]',
 		className
 	)}
 	on:click
@@ -27,14 +28,16 @@
 	{#if disabled}
 		<HoverCard.Root openDelay={150}>
 			<HoverCard.Trigger class="cursor-not-allowed"
-				><div class="opacity-20">
+				><div class="px-2 py-2 opacity-20">
 					<slot />
 				</div></HoverCard.Trigger
 			>
 			<HoverCard.Content><p>No Projects :(</p></HoverCard.Content>
 		</HoverCard.Root>
 	{:else}
-		<slot />
+		<a {href} target="_self" data-sveltekit-replacestate data-sveltekit-preload-data="tap" class="h-full w-full px-2 py-2">
+			<slot />
+		</a>
 	{/if}
 </div>
 

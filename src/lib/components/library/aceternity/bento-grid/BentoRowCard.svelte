@@ -11,7 +11,7 @@
 
 <div
 	class={cn(
-		'group/bento h-full w-full  relative row-span-1 flex flex-col overflow-hidden   bg-black shadow-none shadow-input grayscale transition duration-200 hover:shadow-xl hover:grayscale-0',
+		'group/bento relative flex-col overflow-hidden grayscale transition duration-200 hover:shadow-xl hover:grayscale-0',
 		className
 	)}
 >
