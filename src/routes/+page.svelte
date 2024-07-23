@@ -66,6 +66,10 @@
 	};
 </script>
 
+<svelte:head>
+    <title>PilipiNuts 2023</title> 
+</svelte:head>
+
 <!-- Hero Section -->
 <div class="container relative contain-paint">
 	<main class="relative min-h-[93dvh]">

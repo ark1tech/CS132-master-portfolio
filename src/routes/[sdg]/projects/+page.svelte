@@ -40,6 +40,10 @@
 	};
 </script>
 
+<svelte:head>
+    <title>SDG {sdg} | PilipiNuts 2023</title> 
+</svelte:head>
+
 <!-- Hero Section -->
 <div class="container relative contain-paint">
 	<div

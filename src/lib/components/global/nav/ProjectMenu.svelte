@@ -3,25 +3,10 @@
 </script>
 
 <script>
-	import { dataStore } from '$lib/stores/dataStore';
-	import { onDestroy } from 'svelte';
-
 	import * as Popover from '$components/library/shadcn/ui/popover';
 
-	let sdgData;
-	const unsubscribe = dataStore.subscribe(($data) => {
-		sdgData = $data.sdg;
-	});
-	onDestroy(unsubscribe);
-
-	let images = {};
-	$: {
-		Object.keys(sdgData).forEach((key) => {
-			import(`$assets/sdg/${key}.webp`).then((module) => {
-				images[key] = module.default;
-			});
-		});
-	}
+	export let images = {};
+	export let sdgData = {};
 </script>
 
 <Popover.Root preventScroll={true}>

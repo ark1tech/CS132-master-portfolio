@@ -8,12 +8,12 @@
 <!-- Hero Section -->
 <div class="item-start container relative">
 	<main class="relative flex min-h-[93dvh] flex-col justify-center gap-[1.25rem]">
-		<div class="skeleton h-[10dvh] w-full opacity-20 rounded-lg"></div>
-		<div class="skeleton h-[8dvh] w-full opacity-20 rounded-lg"></div>
-		<div class="skeleton h-[5dvh] w-full opacity-20 rounded-lg"></div>
-		<div class="skeleton h-[8dvh] w-full opacity-20 rounded-lg"></div>
-		<div class="skeleton h-[4dvh] w-full opacity-20 rounded-lg"></div>
-		<div class="skeleton h-[10dvh] w-full opacity-20 rounded-lg"></div>
+		<div class="skeleton h-[10dvh] w-full rounded-lg opacity-20"></div>
+		<div class="skeleton h-[8dvh] w-full rounded-lg opacity-20"></div>
+		<div class="skeleton h-[5dvh] w-full rounded-lg opacity-20"></div>
+		<div class="skeleton h-[8dvh] w-full rounded-lg opacity-20"></div>
+		<div class="skeleton h-[4dvh] w-full rounded-lg opacity-20"></div>
+		<div class="skeleton h-[10dvh] w-full rounded-lg opacity-20"></div>
 	</main>
 </div>
 

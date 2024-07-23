@@ -26,7 +26,7 @@
 						{$page.error.description ?? 'Sorry, the page you are looking for is not available.'}
 					</h3>
 				</div>
-				<a href="/" target="_self" class="hover:text-white font-[400] sans-text small-text">
+				<a href="/" target="_self" class="hover:text-white font-[00] sans-text small-text">
 					Go Back
 				</a>
 			</div>
