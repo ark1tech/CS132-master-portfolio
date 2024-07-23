@@ -16,7 +16,10 @@
 				class="animate-ping-custom absolute bottom-0 left-0 z-20 m-auto w-[10px] blur-[2px]"
 			/>
 		</div>
-		<p class="foot-text">{sdg.Title}</p>
+		<p class="foot-text mono-text font-[300] text-[#aaaaaac8]">
+			<span class="mono-text hidden text-inherit sm:inline">{sdg.Title}</span>
+			<span class="mono-text inline text-inherit sm:hidden">SDG #{key}</span>
+		</p>
 	</div>
 {/if}
 

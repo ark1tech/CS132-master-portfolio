@@ -67,7 +67,7 @@
 </script>
 
 <svelte:head>
-    <title>PilipiNuts 2023</title> 
+	<title>PilipiNuts 2023</title>
 </svelte:head>
 
 <!-- Hero Section -->
@@ -83,7 +83,7 @@
 				<section
 					class="relative z-[30] flex h-[93dvh] w-full flex-col items-center py-[5dvh] sm:py-[10dvh] md:items-start md:py-[20dvh]"
 				>
-					<div class="flex w-full flex-col items-center gap-[3rem] md:w-[60%] md:items-start">
+					<div class="flex w-full flex-col items-center sm:gap-[3rem] gap-[2rem] md:w-[60%] md:items-start">
 						<div class="flex flex-col gap-[1rem]">
 							<h2 class="text-center font-[500] leading-tight md:text-left">
 								The state of <span class="hidden text-inherit sm:inline">Philippine</span><span
@@ -97,13 +97,12 @@
 								sustainable development in the Philippines.
 							</h3>
 						</div>
-						<div class="flex flex-row gap-[1.5rem]">
+						<div class="flex sm:flex-row flex-col sm:gap-[1.5rem] gap-[1rem]">
 							<PrimaryButton>
 								<ProjectsIcon class="h-[1em] w-[1em]" />
 								View Projects
 							</PrimaryButton>
 							<SecondaryButton class="">
-								<!-- <Icon icon="bxs:down-arrow"  style="color: white" /> -->
 								Learn More
 							</SecondaryButton>
 						</div>
@@ -122,14 +121,13 @@
 	<img
 		src={LogoOutlineGreen}
 		alt="PilipiNuts Logo"
-		class="absolute bottom-0 top-0 left-[1rem] -z-0 h-[60dvh] w-auto opacity-40"
+		class="absolute bottom-0 left-[1rem] top-0 -z-0 h-[60dvh] w-auto opacity-40"
 		style="mask-image: linear-gradient(to top right, transparent, black 40%, black 70%, transparent)"
 	/>
 	<main class="relative min-h-[93dvh]">
 		<section class="flex h-full w-full flex-col items-start justify-start gap-[2rem] md:flex-row">
-			<div class="md:w-[60%] md:order-1 order-2">
-			</div>
-			<div class="md:order-2 order-1 flex w-full flex-col items-center gap-[3rem] md:items-start">
+			<div class="order-2 md:order-1 md:w-[60%]"></div>
+			<div class="order-1 flex w-full flex-col items-center gap-[3rem] md:order-2 md:items-start">
 				<div class="flex flex-col gap-[1rem]">
 					<h2 class="font-[500] leading-tight md:text-left">PilipiNuts: Pilipinas in a Nutshell</h2>
 					<p class="sans-text font-[320] leading-[1.7em] text-[#c9c9c9] md:text-left">
@@ -259,6 +257,11 @@
 		-ms-overflow-style: none;
 		scrollbar-width: none;
 	}
+
+	/* .filter-grain {
+		backdrop-filter: url(#noiseFilter);
+		-webkit-backdrop-filter: url(#noiseFilter);
+	} */
 
 	/* #gradient-marquee::before {
 		content: '';

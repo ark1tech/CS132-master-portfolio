@@ -4,7 +4,7 @@
 	export { className as class };
 </script>
 
-<button class={cn('flex flex-row gap-[0.5rem]', className)}>
+<button class={cn('flex flex-row justify-center', className)}>
 	<p class="m-0 flex flex-row items-center gap-[0.5rem] font-[300] text-white"><slot /></p>
 </button>
 

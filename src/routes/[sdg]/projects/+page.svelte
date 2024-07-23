@@ -8,6 +8,8 @@
 	 */
 	// TODO: Add index.js to components
 	import PageSdgBadge from '$components/global/badge/PageSdgBadge.svelte';
+	import HeaderBackground from '$components/page_sdg/HeaderBackground.svelte';
+	import Home from '$components/icons/home.svelte';
 
 	/*
 	 * Assets *
@@ -18,6 +20,8 @@
 	 */
 	export let data;
 	const sdg = data.params.sdg.split('-')[1];
+	const projectBySdg = data.projects[sdg] || [];
+	console.log(projectBySdg);
 	const sdgData = data.sdg[sdg];
 	const sdgColors = {
 		1: '#E5243B',
@@ -41,46 +45,75 @@
 </script>
 
 <svelte:head>
-    <title>SDG {sdg} | PilipiNuts 2023</title> 
+	<title>SDG {sdg} | PilipiNuts 2023</title>
 </svelte:head>
 
 <!-- Hero Section -->
 <div class="container relative contain-paint">
-	<div
-		class="absolute left-[20dvw] top-[7dvh] h-[30dvh] w-[100dvw] rotate-[0deg] rounded-full opacity-85 blur-[95px]"
-		style={`
-		transform: perspective(90px) rotateY(8deg) rotateX(0123deg) scale(0.9);
-		background: 
-			linear-gradient(to right, 
-			${sdgColors[sdg]}, 
-			${sdgColors[sdg]}22 10%, 
-			${sdgColors[sdg]}22 30%, 
-			${sdgColors[sdg]}a2,
-			${sdgColors[sdg]}33 40%, 
-			${sdgColors[sdg]}33 40%, 
-			${sdgColors[sdg]}93, 
-			${sdgColors[sdg]}43, 
-			${sdgColors[sdg]}13 80%, 
-			${sdgColors[sdg]}10 90%, 
-			${sdgColors[sdg]});
-		`}
-	></div>
+	<HeaderBackground sdgColor={sdgColors[sdg]} />
 	<main class="relative min-h-[93dvh]">
 		<section
-			class="relative z-[30] flex h-[93dvh] w-full flex-col items-center py-[5dvh] md:items-start"
+			class="relative z-[30] flex min-h-[93dvh] w-full flex-col items-center gap-[5rem] py-[5dvh] md:items-start"
 		>
-			<div class="flex w-full flex-col items-center gap-[3rem] pb-[dvh] md:items-start">
+			<div class="flex w-full flex-col items-center gap-[3rem] md:items-start">
 				<div class="flex flex-col items-center gap-[1rem] md:items-start">
-					<PageSdgBadge sdgNumber={sdg} imageSource={`/${sdgData.Image}`} />
+					<div class="flex flex-row items-center gap-[1rem]">
+						<a
+							class="foot-text mono-text flex flex-row items-center gap-[0.5rem] px-[0.3rem] py-[0.2rem] text-[#989898] hover:bg-[#70707036] hover:text-[#e2e2e2]"
+							href="/"
+							target="_self"
+							data-sveltekit-preload-data="tap"
+						>
+							✦ Home
+						</a>
+						<p class="foot-text mono-text">/</p>
+						<PageSdgBadge sdgNumber={sdg} imageSource={`/${sdgData.Image}`} />
+					</div>
 					<h1 class="text-center font-[600] leading-tight md:text-left">
 						{sdgData.Title}
 					</h1>
-					<h3 class="sans-text text-center font-[400] leading-tight text-[#bdbdbd] md:text-left">
+					<h3
+						class="sans-text text-balance text-center font-[400] leading-tight text-[#bdbdbd] md:text-left"
+					>
 						{sdgData.Description}
 					</h3>
 				</div>
 			</div>
-			<div class="flex w-full flex-col items-center gap-[3rem] md:items-start"></div>
+			<div class="flex w-full flex-col items-start gap-[3rem]">
+				{#each projectBySdg as project}
+					<div class="border-style relative flex flex-col items-start gap-[1rem] md:flex-row">
+						<div class="relative z-10 flex w-full flex-col gap-[2rem] p-[2rem] md:w-[75%]">
+							<h4 class="text-left font-[600] leading-tight">{project.title}</h4>
+							<img src={project.plot} alt={project.title} />
+							<p
+								class="sans-text w-full text-wrap text-left font-[350] leading-[1.4em] text-[#bdbdbd]"
+							>
+								{@html project.desc}
+							</p>
+						</div>
+						<div
+							class="relative z-10 flex h-full w-full flex-col gap-[1rem] border-l p-[2rem] md:w-[25%]"
+						>
+							<p>Project by:</p>
+							{#each project.authors.split(', ') as author}
+								<p class="w-full text-left leading-tight">{author}</p>
+							{/each}
+						</div>
+						<div class="absolute z-0 h-full w-full bg-gradient-to-bl from-[#000000] to-[#151515]">
+							<div
+								class="absolute inset-0"
+								style={`
+									background-image: url('/noise.png');
+									background-size: 160px 160px;
+									background-repeat: repeat;
+									mix-blend-mode: overlay;
+									opacity: 1;
+								`}
+							></div>
+						</div>
+					</div>
+				{/each}
+			</div>
 		</section>
 	</main>
 </div>

@@ -16,10 +16,7 @@
 </script>
 
 <svg
-	class={cn(
-		'pointer-events-none z-[1]',
-		className
-	)}
+	class={cn(' pointer-events-none z-[1]', className)}
 	width="454"
 	height="408"
 	viewBox="0 0 454 408"
@@ -46,6 +43,7 @@
 			<feFlood flood-opacity="0" result="BackgroundImageFix" />
 			<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
 			<feGaussianBlur stdDeviation="22.5" result="effect1_foregroundBlur_192_16" />
+			<!-- <feTurbulence type="fractalNoise" baseFrequency="1" numOctaves="0.1" stitchTiles="stitch" /> -->
 		</filter>
 		<linearGradient
 			id="paint0_linear_192_16"
@@ -60,3 +58,7 @@
 		</linearGradient>
 	</defs>
 </svg>
+
+<style>
+	
+</style>

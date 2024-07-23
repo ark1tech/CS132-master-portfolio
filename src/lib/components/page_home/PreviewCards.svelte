@@ -17,7 +17,7 @@
 
 <div
 	class={cn(
-		'card relative h-[13rem] w-[calc(100dvw*0.5)] overflow-clip rounded-[5px] border border-[#35353583] md:w-[23rem]',
+		'card relative h-[10rem] md:h-[13rem] w-[calc(100dvw*0.5)] overflow-clip rounded-[5px] border border-[#35353583] md:w-[23rem]',
 		className
 	)}
 >

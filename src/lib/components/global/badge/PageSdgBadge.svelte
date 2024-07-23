@@ -20,7 +20,8 @@
 			/>
 		</div>
 	{/if}
-	<p class="foot-text font-[300] text-[#aaaaaac8]">
-		Sustainable Development Goal #{sdgNumber}
+	<p class="foot-text mono-text font-[300] text-[#aaaaaac8]">
+		<span class="mono-text text-inherit sm:inline hidden">Sustainable Development Goal</span>
+		<span class="mono-text text-inherit sm:hidden inline">SDG</span> #{sdgNumber}
 	</p>
 </div>

@@ -99,9 +99,11 @@ h5 {
 
 h4 {
 	font-family: 'Inter', Arial, Helvetica, sans-serif;
-	font-size: clamp(3rem, 8vw, 5rem); /* Adjusted */
-	font-weight: 600;
 	color: var(--h-text-color);
+	font-size: clamp(1rem, 1vw + 1rem, 1.8rem); /* Adjusted */
+	font-weight: 400;
+	letter-spacing: -1px;
+	kerning: auto;
 }
 
 h3 {
@@ -136,7 +138,7 @@ p {
 	text-wrap: pretty;
 	font-kerning: auto;
 	font-weight: 300;
-	text-wrap:balance;
+	text-wrap: balance;
 	line-height: 120%;
 	font-size: clamp(0.85rem, 2vw, 1rem); /* Adjusted */
 }
