@@ -29,6 +29,7 @@
 	 * Data *
 	 */
 	export let data;
+	// console.log(data.projects)
 	const sdgData = Object.fromEntries(
 		Object.entries(data.sdg).filter(([key]) => key !== '12' && key !== '17')
 	);
@@ -83,7 +84,9 @@
 				<section
 					class="relative z-[30] flex h-[93dvh] w-full flex-col items-center py-[5dvh] sm:py-[10dvh] md:items-start md:py-[20dvh]"
 				>
-					<div class="flex w-full flex-col items-center sm:gap-[3rem] gap-[2rem] md:w-[60%] md:items-start">
+					<div
+						class="flex w-full flex-col items-center gap-[2rem] sm:gap-[3rem] md:w-[60%] md:items-start"
+					>
 						<div class="flex flex-col gap-[1rem]">
 							<h2 class="text-center font-[500] leading-tight md:text-left">
 								The state of <span class="hidden text-inherit sm:inline">Philippine</span><span
@@ -97,14 +100,12 @@
 								sustainable development in the Philippines.
 							</h3>
 						</div>
-						<div class="flex sm:flex-row flex-col sm:gap-[1.5rem] gap-[1rem]">
+						<div class="flex flex-col gap-[1rem] sm:flex-row sm:gap-[1.5rem]">
 							<PrimaryButton>
 								<ProjectsIcon class="h-[1em] w-[1em]" />
 								View Projects
 							</PrimaryButton>
-							<SecondaryButton class="">
-								Learn More
-							</SecondaryButton>
+							<SecondaryButton class="">Learn More</SecondaryButton>
 						</div>
 					</div>
 				</section>
@@ -118,18 +119,25 @@
 
 <!-- About section -->
 <div class="container relative contain-paint">
-	<img
+	<!-- <img
 		src={LogoOutlineGreen}
 		alt="PilipiNuts Logo"
-		class="absolute bottom-0 left-[1rem] top-0 -z-0 h-[60dvh] w-auto opacity-40"
+		class="absolute bottom-0 left-[4rem] top-0 -z-0 h-[60dvh] w-auto opacity-40"
 		style="mask-image: linear-gradient(to top right, transparent, black 40%, black 70%, transparent)"
-	/>
+	/> -->
 	<main class="relative min-h-[93dvh]">
-		<section class="flex h-full w-full flex-col items-start justify-start gap-[2rem] md:flex-row">
-			<div class="order-2 md:order-1 md:w-[60%]"></div>
-			<div class="order-1 flex w-full flex-col items-center gap-[3rem] md:order-2 md:items-start">
+		<section class="flex h-full w-full flex-col items-center justify-start gap-[3rem] md:flex-row">
+			<div class="order-2 md:order-1 md:w-[40%]">
+				<img
+					src={LogoOutlineGreen}
+					alt="PilipiNuts Logo"
+					class="h-auto w-full opacity-40"
+					style="mask-image: linear-gradient(to top right, transparent, black 40%, black 70%, transparent)"
+				/>
+			</div>
+			<div class="md:w-[60%] order-1 flex flex-col items-center gap-[3rem] md:order-2 md:items-start">
 				<div class="flex flex-col gap-[1rem]">
-					<h2 class="font-[500] leading-tight md:text-left">PilipiNuts: Pilipinas in a Nutshell</h2>
+					<h2 class="font-[600] leading-tight md:text-left">PilipiNuts: Pilipinas in a Nutshell</h2>
 					<p class="sans-text font-[320] leading-[1.7em] text-[#c9c9c9] md:text-left">
 						As the culminating project of CS 132 (Data Science) in UP Diliman, PilipiNuts 2023 is a
 						symposium of data science projects that tackle emerging socioeconomic problems in the
@@ -161,7 +169,7 @@
 <div id="gradient-marquee" class="container relative contain-paint">
 	<main class="relative min-h-[93dvh]">
 		<section class="flex min-h-[93dvh] w-full flex-col items-center justify-center gap-[2rem]">
-			<h2 class="mx-auto max-w-3xl text-center leading-relaxed">Meow meow. Meow. Meow meow.</h2>
+			<h2 class="mx-auto max-w-3xl text-center leading-relaxed font-[500]">42 projects. 15 SDGs. 1 Country.</h2>
 			<Marquee
 				{firstHalfProjects}
 				{secondHalfProjects}

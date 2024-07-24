@@ -1,15 +1,16 @@
 <script>
 	import { cn } from '$lib/utils';
 	export let className = '';
+	export let href = '';
 	export { className as class };
 </script>
 
-<button class={cn('flex flex-row justify-center', className)}>
+<a {href} class={cn('flex flex-row justify-center', className)}>
 	<p class="m-0 flex flex-row items-center gap-[0.5rem] font-[300] text-white"><slot /></p>
-</button>
+</a>
 
 <style>
-	button {
+	a {
 		background: linear-gradient(
 			to bottom,
 			rgba(30, 116, 94, 0.208) -20%,
@@ -22,7 +23,7 @@
 		filter: brightness(0.8);
 	}
 
-	button:hover {
+	a:hover {
 		filter: brightness(1.5);
 	}
 </style>

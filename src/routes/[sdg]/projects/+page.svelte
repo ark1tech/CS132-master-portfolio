@@ -9,7 +9,17 @@
 	// TODO: Add index.js to components
 	import PageSdgBadge from '$components/global/badge/PageSdgBadge.svelte';
 	import HeaderBackground from '$components/page_sdg/HeaderBackground.svelte';
+	import PrimaryButton from '$components/global/buttons/PrimaryButton.svelte';
+	import SecondaryButton from '$components/global/buttons/SecondaryButton.svelte';
 	import Home from '$components/icons/home.svelte';
+	import {
+		Dialog,
+		DialogContent,
+		DialogDescription,
+		DialogHeader,
+		DialogTitle,
+		DialogTrigger
+	} from '$components/library/shadcn/ui/dialog';
 
 	/*
 	 * Assets *
@@ -81,25 +91,64 @@
 			</div>
 			<div class="flex w-full flex-col items-start gap-[3rem]">
 				{#each projectBySdg as project}
-					<div class="border-style relative flex flex-col items-start gap-[1rem] md:flex-row">
+					<div
+						class="border-style relative flex flex-col items-start md:flex-row md:items-stretch md:justify-start"
+					>
 						<div class="relative z-10 flex w-full flex-col gap-[2rem] p-[2rem] md:w-[75%]">
 							<h4 class="text-left font-[600] leading-tight">{project.title}</h4>
-							<img src={project.plot} alt={project.title} />
+
+							<Dialog>
+								<DialogTrigger
+									><img
+										class="border-style"
+										fetchpriority="high"
+										loading="eager"
+										src={project.plot}
+										alt={project.title}
+									/></DialogTrigger
+								>
+								<DialogContent
+									class="flex h-auto w-[90dvw] flex-col justify-center sm:w-[70dvw]"
+									imageHref={project.plot}
+								>
+									<img
+										class="h-auto w-full"
+										fetchpriority="high"
+										loading="eager"
+										src={project.plot}
+										alt={project.title}
+									/>
+								</DialogContent>
+							</Dialog>
+
 							<p
 								class="sans-text w-full text-wrap text-left font-[350] leading-[1.4em] text-[#bdbdbd]"
 							>
 								{@html project.desc}
 							</p>
 						</div>
-						<div
-							class="relative z-10 flex h-full w-full flex-col gap-[1rem] border-l p-[2rem] md:w-[25%]"
-						>
-							<p>Project by:</p>
-							{#each project.authors.split(', ') as author}
-								<p class="w-full text-left leading-tight">{author}</p>
-							{/each}
+						<div class="z-10 flex w-full flex-col gap-[1rem] bg-[#00000045] p-[2rem] md:w-[25%]">
+							<div class="sticky top-[5rem] flex flex-col gap-[1rem]">
+								<p class="sans-text font-[500]">Project by</p>
+								<div class="flex flex-col gap-[0.2rem]">
+									{#each project.authors.split(', ') as author}
+										<p class="sans-text w-full text-left leading-tight">{author}</p>
+									{/each}
+								</div>
+								<PrimaryButton href={project.website}>Website</PrimaryButton>
+								<SecondaryButton href={project.website}>GitHub</SecondaryButton>
+								<SecondaryButton href={project.website}>Dataset</SecondaryButton>
+							</div>
 						</div>
-						<div class="absolute z-0 h-full w-full bg-gradient-to-bl from-[#000000] to-[#151515]">
+						<div
+							class="absolute inset-0 z-0"
+							style={`
+							 background: 
+        						radial-gradient(circle at top right, 
+        						#202020 -50%,
+								#090909 100%);
+							`}
+						>
 							<div
 								class="absolute inset-0"
 								style={`
