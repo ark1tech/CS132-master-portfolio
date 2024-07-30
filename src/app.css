@@ -6,30 +6,6 @@
 @tailwind components;
 @tailwind utilities;
 
-/* :root {
-	--font-size-min: 17;
-	--font-size-max: 20;
-	--font-ratio-min: 1.2;
-	--font-ratio-max: 1.33;
-	--font-width-min: 320;
-	--font-width-max: 1500;
-}
-
-:where(.fluid) {
-	--fluid-min: calc(var(--font-size-min) * pow(var(--font-ratio-min), var(--font-level, 0)));
-	--fluid-max: calc(var(--font-size-max) * pow(var(--font-ratio-max), var(--font-level, 0)));
-	--fluid-preferred: calc(
-		(var(--fluid-max) - var(--fluid-min)) / (var(--font-width-max) - var(--font-width-min))
-	);
-	--fluid-type: clamp(
-		(var(--fluid-min) / 16) * 1rem,
-		((var(--fluid-min) / 16) * 1rem) -
-			(((var(--fluid-preferred) * var(--font-width-min)) / 16) * 1rem) +
-			(var(--fluid-preferred) * var(--variable-unit, 100vi)),
-		(var(--fluid-max) / 16) * 1rem
-	);
-	font-size: var(--fluid-type);
-} */
 
 /* shadcn */
 @layer base {
@@ -222,13 +198,13 @@ main {
 	padding-right: 1.5rem;
 }
 
-@media (width > 1024px) {
+@media (min-width: 1024px) {
 	main {
 		max-width: 1024px;
 	}
 }
 
-@media (768px < width < 1024px) {
+@media (min-width: 768px) and (max-width: 1024px) {
 	main {
 		max-width: 768px;
 	}

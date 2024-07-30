@@ -116,31 +116,31 @@
 </div>
 
 <style>
-	@media (width > 768px) {
+	@media (min-width: 769px) {
 		.ascii {
 			font-size: 0.52rem;
 			opacity: 0.5;
 		}
 	}
-	@media (width <= 768px) {
+	@media (max-width: 768px) {
 		.ascii {
 			opacity: 0.4;
 		}
 	}
 
-	@media (640px < width <= 768px) {
+	@media (min-width: 641px) and (max-width: 768px) {
 		.ascii {
 			font-size: 0.36rem;
 		}
 	}
 
-	@media (475px < width <= 640px) {
+	@media (min-width: 476px) and (max-width: 640px) {
 		.ascii {
 			font-size: 0.34rem;
 		}
 	}
 
-	@media (width <= 475px) {
+	@media (max-width: 475px) {
 		.ascii {
 			font-size: 0.29rem;
 		}
