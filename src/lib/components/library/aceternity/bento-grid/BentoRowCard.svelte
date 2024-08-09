@@ -1,6 +1,6 @@
 <script>
 	import { cn } from '$lib/utils';
-	import ShareArrow from '$components/icons/share_arrow.svelte';
+	import ShareArrow from '$lib/components/icons/ShareArrowIcon.svelte';
 
 	export let className = undefined;
 	export { className as class };

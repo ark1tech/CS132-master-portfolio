@@ -9,10 +9,11 @@
 
 	import Loading from './loading.svelte';
 	import NavBar from '$components/global/nav/NavBar.svelte';
+
 </script>
 
 <ModeWatcher defaultMode={'dark'} />
-<NavBar class="sticky h-[7dvh]" />
+<NavBar class="sticky h-[7dvh]"/>
 {#if !browser}
 	<Loading />
 {:else}

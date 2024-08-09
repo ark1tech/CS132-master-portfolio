@@ -54,8 +54,8 @@
 	let randomString = originalAsciiArt;
 
 	const characters = '1234567890';
-	const updateInterval = 40; // Interval in milliseconds for updates
-	const resetDelay = 3500; // Delay in milliseconds before resetting
+	const updateInterval = 30; // Interval in milliseconds for updates
+	const resetDelay = 3000; // Delay in milliseconds before resetting
 
 	function startAnimation() {
 		let currentLine = randomString.split('\n').length - 1; // Start from the last line
@@ -75,24 +75,6 @@
 
 	onMount(() => {
 		startAnimation();
-		document.addEventListener('scroll', function () {
-			const scrollPercentage = Math.min((window.scrollY * 4.5) / window.innerHeight, 1);
-			const scrollPercentageScale = Math.min((window.scrollY * 10.5) / window.innerHeight, 1);
-			const maxRotateX = 15;
-			const maxRotateY = -30;
-			const maxScale = 1;
-			const minScale = 0.9;
-
-			const scaleRange = maxScale - minScale;
-			const newScale = Math.max(minScale, minScale + scrollPercentageScale * scaleRange);
-			const newRotateX = Math.max(0, (1 - scrollPercentage) * maxRotateX);
-			const newRotateY = Math.max(0, (1 - scrollPercentage) * maxRotateY);
-
-			const foreground = document.querySelector('.three-deez');
-			if (foreground) {
-				foreground.style.transform = `perspective(35em) rotateX(${newRotateX}deg) rotateY(${newRotateY}deg) scale(${newScale}) translateY(-30px)`;
-			}
-		});
 		return () => {
 			clearInterval(interval); // Clear interval on component unmount
 		};
@@ -110,39 +92,44 @@
 </script>
 
 <div class={cn('z-[100]', className)} role="button">
-	<pre style="font-weight:600;" class="three-deez ascii magic-text-static-2 hack-effect">
+	<pre class="font-[600] three-dee ascii magic-text-static-2 hack-effect">
 		{randomString}
 	</pre>
 </div>
 
 <style>
-	@media (min-width: 769px) {
+	@media (min-width: 1024px) {
 		.ascii {
-			font-size: 0.52rem;
+			/* font-size: 0.52rem; */
+			transform: perspective(35em) rotateX(15deg) scale(0.9) translateY(-30px);
 			opacity: 0.5;
 		}
 	}
-	@media (max-width: 768px) {
+	@media (max-width: 1023px) {
 		.ascii {
 			opacity: 0.4;
+			transform: perspective(35em) rotateX(15deg) scale(0.8) translateY(-30px);
 		}
 	}
 
 	@media (min-width: 641px) and (max-width: 768px) {
 		.ascii {
-			font-size: 0.36rem;
+			transform: perspective(35em) rotateX(15deg) scale(0.8) translateY(-30px);
+			/* font-size: 0.36rem; */
 		}
 	}
 
 	@media (min-width: 476px) and (max-width: 640px) {
 		.ascii {
-			font-size: 0.34rem;
+			transform: perspective(35em) rotateX(15deg) scale(0.75) translateY(-30px);
+			/* font-size: 0.34rem; */
 		}
 	}
 
 	@media (max-width: 475px) {
 		.ascii {
-			font-size: 0.29rem;
+			transform: perspective(35em) rotateX(15deg) scale(0.7) translateY(-30px);
+			/* font-size: 0.29rem; */
 		}
 	}
 </style>

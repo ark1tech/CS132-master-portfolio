@@ -3,7 +3,7 @@
 	export let isReversed = false;
 </script>
 
-<div class="marquee">
+<div class="marquee three-dee">
 	<div
 		class={cn({
 			marquee__content__reversed: isReversed,

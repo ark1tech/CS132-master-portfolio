@@ -5,8 +5,15 @@
 <script>
 	import * as Popover from '$components/library/shadcn/ui/popover';
 
-	export let images = {};
 	export let sdgData = {};
+	let images = {};
+    $: {
+    	Object.keys(sdgData).forEach((key) => {
+    		import(`$assets/sdg/${key}.png`).then((module) => {
+    			images[key] = module.default;
+    		});
+    	});
+    }
 </script>
 
 <Popover.Root preventScroll={true}>

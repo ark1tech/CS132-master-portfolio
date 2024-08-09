@@ -1,168 +1,145 @@
 <script>
-	import { onMount, onDestroy } from 'svelte';
-	import { cn } from '$lib/utils';
-	import { goto } from '$app/navigation';
+    import { onMount } from 'svelte';
+    import { browser } from '$app/environment';
+    import { scrollTop } from 'svelte-scrolling';
+    /*
+     * Components *
+     */
+    // TODO: Add index.js to components
+    import PageSdgBadge from '$components/global/badge/PageSdgBadge.svelte';
+    import HeaderBackground from '$components/page_sdg/HeaderBackground.svelte';
+    import ProjectList from '$components/page_sdg/ProjectList.svelte';
+    import ProjectTable from '$components/page_sdg/ProjectTable.svelte';
+    import ArrowUpIcon from '$components/icons/ArrowUpIcon.svelte';
 
-	/*
-	 * Components *
-	 */
-	// TODO: Add index.js to components
-	import PageSdgBadge from '$components/global/badge/PageSdgBadge.svelte';
-	import HeaderBackground from '$components/page_sdg/HeaderBackground.svelte';
-	import PrimaryButton from '$components/global/buttons/PrimaryButton.svelte';
-	import SecondaryButton from '$components/global/buttons/SecondaryButton.svelte';
-	import Home from '$components/icons/home.svelte';
-	import {
-		Dialog,
-		DialogContent,
-		DialogDescription,
-		DialogHeader,
-		DialogTitle,
-		DialogTrigger
-	} from '$components/library/shadcn/ui/dialog';
+    import * as Tabs from '$components/library/shadcn/ui/tabs';
 
-	/*
-	 * Assets *
-	 */
+    // import { Reddit } from 'svelte-share-buttons-component';
 
-	/*
-	 * Data *
-	 */
-	export let data;
-	const sdg = data.params.sdg.split('-')[1];
-	const projectBySdg = data.projects[sdg] || [];
-	console.log(projectBySdg);
-	const sdgData = data.sdg[sdg];
-	const sdgColors = {
-		1: '#E5243B',
-		2: '#DDA63A',
-		3: '#4C9F38',
-		4: '#C5192D',
-		5: '#FF3A21',
-		6: '#26BDE2',
-		7: '#FCC30B',
-		8: '#A21942',
-		9: '#FD6925',
-		10: '#DD1367',
-		11: '#FD9D24',
-		12: '#BF8B2E',
-		13: '#3F7E44',
-		14: '#0A97D9',
-		15: '#56C02B',
-		16: '#00689D',
-		17: '#19486A'
-	};
+    /*
+     * Assets *
+     */
+
+    /*
+     * Data *
+     */
+    export let data;
+    const sdg = data.params.sdg.split('-')[1];
+    const projectBySdg = data.projects[sdg] || [];
+    const sdgData = data.sdg[sdg];
+    const sdgColors = {
+        1: '#E5243B',
+        2: '#DDA63A',
+        3: '#4C9F38',
+        4: '#C5192D',
+        5: '#FF3A21',
+        6: '#26BDE2',
+        7: '#FCC30B',
+        8: '#A21942',
+        9: '#FD6925',
+        10: '#DD1367',
+        11: '#FD9D24',
+        12: '#BF8B2E',
+        13: '#3F7E44',
+        14: '#0A97D9',
+        15: '#56C02B',
+        16: '#00689D',
+        17: '#19486A'
+    };
+
+    let url = ``;
+    onMount(() => {
+        if (browser) {
+            const { hash } = window.location;
+            if (!hash) {
+                url = window.location.href;
+            }
+            url = window.location.href.split('#')[0];
+            const id = hash.replace('#', '');
+            const element = document.getElementById(id);
+            if (element) {
+                setTimeout(() => {
+                    const yOffset = -70;
+                    const y =
+                        element.getBoundingClientRect().top +
+                        window.scrollY +
+                        yOffset;
+                    window.scrollTo({ top: y, behavior: 'smooth' });
+                }, 500);
+            }
+        }
+    });
 </script>
 
 <svelte:head>
-	<title>SDG {sdg} | PilipiNuts 2023</title>
+    <title>SDG {sdg} | PilipiNuts 2023</title>
 </svelte:head>
 
 <!-- Hero Section -->
+<button on:click={() => scrollTop()} class="fixed bottom-[1.5rem] right-[1rem] z-[50]">
+    <ArrowUpIcon
+        class="border-style h-fit w-fit bg-[#00000025] p-[1rem] backdrop-blur-md"
+    />
+</button>
 <div class="container relative contain-paint">
-	<HeaderBackground sdgColor={sdgColors[sdg]} />
-	<main class="relative min-h-[93dvh]">
-		<section
-			class="relative z-[30] flex min-h-[93dvh] w-full flex-col items-center gap-[5rem] py-[5dvh] md:items-start"
-		>
-			<div class="flex w-full flex-col items-center gap-[3rem] md:items-start">
-				<div class="flex flex-col items-center gap-[1rem] md:items-start">
-					<div class="flex flex-row items-center gap-[1rem]">
-						<a
-							class="foot-text mono-text flex flex-row items-center gap-[0.5rem] px-[0.3rem] py-[0.2rem] text-[#989898] hover:bg-[#70707036] hover:text-[#e2e2e2]"
-							href="/"
-							target="_self"
-							data-sveltekit-preload-data="tap"
-						>
-							✦ Home
-						</a>
-						<p class="foot-text mono-text">/</p>
-						<PageSdgBadge sdgNumber={sdg} imageSource={`/${sdgData.Image}`} />
-					</div>
-					<h1 class="text-center font-[600] leading-tight md:text-left">
-						{sdgData.Title}
-					</h1>
-					<h3
-						class="sans-text text-balance text-center font-[400] leading-tight text-[#bdbdbd] md:text-left"
-					>
-						{sdgData.Description}
-					</h3>
-				</div>
-			</div>
-			<div class="flex w-full flex-col items-start gap-[3rem]">
-				{#each projectBySdg as project}
-					<div
-						class="border-style relative flex flex-col items-start md:flex-row md:items-stretch md:justify-start"
-					>
-						<div class="relative z-10 flex w-full flex-col gap-[2rem] p-[2rem] md:w-[75%]">
-							<h4 class="text-left font-[600] leading-tight">{project.title}</h4>
-
-							<Dialog>
-								<DialogTrigger
-									><img
-										class="border-style"
-										fetchpriority="high"
-										loading="eager"
-										src={project.plot}
-										alt={project.title}
-									/></DialogTrigger
-								>
-								<DialogContent
-									class="flex h-auto w-[90dvw] flex-col justify-center sm:w-[70dvw]"
-									imageHref={project.plot}
-								>
-									<img
-										class="h-auto w-full"
-										fetchpriority="high"
-										loading="eager"
-										src={project.plot}
-										alt={project.title}
-									/>
-								</DialogContent>
-							</Dialog>
-
-							<p
-								class="sans-text w-full text-wrap text-left font-[350] leading-[1.4em] text-[#bdbdbd]"
-							>
-								{@html project.desc}
-							</p>
-						</div>
-						<div class="z-10 flex w-full flex-col gap-[1rem] bg-[#00000045] p-[2rem] md:w-[25%]">
-							<div class="sticky top-[5rem] flex flex-col gap-[1rem]">
-								<p class="sans-text font-[500]">Project by</p>
-								<div class="flex flex-col gap-[0.2rem]">
-									{#each project.authors.split(', ') as author}
-										<p class="sans-text w-full text-left leading-tight">{author}</p>
-									{/each}
-								</div>
-								<PrimaryButton href={project.website}>Website</PrimaryButton>
-								<SecondaryButton href={project.website}>GitHub</SecondaryButton>
-								<SecondaryButton href={project.website}>Dataset</SecondaryButton>
-							</div>
-						</div>
-						<div
-							class="absolute inset-0 z-0"
-							style={`
-							 background: 
-        						radial-gradient(circle at top right, 
-        						#202020 -50%,
-								#090909 100%);
-							`}
-						>
-							<div
-								class="absolute inset-0"
-								style={`
-									background-image: url('/noise.png');
-									background-size: 160px 160px;
-									background-repeat: repeat;
-									mix-blend-mode: overlay;
-									opacity: 1;
-								`}
-							></div>
-						</div>
-					</div>
-				{/each}
-			</div>
-		</section>
-	</main>
+    <HeaderBackground sdgColor={sdgColors[sdg]} />
+    <main class="relative min-h-[93dvh]">
+        <section
+            class="relative z-[30] flex min-h-[93dvh] w-full flex-col items-center gap-[3rem] py-[5dvh] md:items-start"
+        >
+            <div
+                class="flex w-full flex-col items-center gap-[3rem] md:items-start"
+            >
+                <div
+                    class="flex flex-col items-center gap-[1rem] md:items-start"
+                >
+                    <div class="flex flex-row items-center gap-[1rem]">
+                        <a
+                            class="foot-text mono-text flex flex-row items-center gap-[0.5rem] px-[0.3rem] py-[0.2rem] text-[#989898] hover:bg-[#70707036] hover:text-[#e2e2e2]"
+                            href="/"
+                            target="_self"
+                            data-sveltekit-preload-data="tap"
+                        >
+                            ✦ Home
+                        </a>
+                        <p class="foot-text mono-text">/</p>
+                        <PageSdgBadge
+                            sdgNumber={sdg}
+                            imageSource={`/${sdgData.Image}`}
+                        />
+                    </div>
+                    <h1
+                        class="text-center font-[600] leading-tight md:text-left"
+                    >
+                        {sdgData.Title}
+                    </h1>
+                    <h3
+                        class="sans-text text-balance text-center leading-tight text-[#bdbdbd] md:text-left"
+                    >
+                        {sdgData.Description}
+                    </h3>
+                </div>
+                <Tabs.Root value="list" class="w-full">
+                    <div
+                        class="inline-flex w-full justify-center md:justify-start"
+                    >
+                        <Tabs.List>
+                            <Tabs.Trigger value="list" class="w-full"
+                                >List</Tabs.Trigger
+                            >
+                            <Tabs.Trigger value="table" class="w-full"
+                                >Table</Tabs.Trigger
+                            >
+                        </Tabs.List>
+                    </div>
+                    <Tabs.Content value="list">
+                        <ProjectList projects={projectBySdg} {url} />
+                    </Tabs.Content>
+                    <Tabs.Content value="table">
+                        <ProjectTable projects={projectBySdg} {url} />
+                    </Tabs.Content>
+                </Tabs.Root>
+            </div>
+        </section>
+    </main>
 </div>

@@ -55,7 +55,7 @@
 </script>
 
 <div class={cn('z-[100]', className)} role="button">
-	<pre style="font-weight:600;" class="three-deez ascii magic-text-static-2-error error-effect">
+	<pre style="font-weight:600;" class="three-dee ascii magic-text-static-2-error error-effect">
 		{randomString}
 	</pre>
 </div>

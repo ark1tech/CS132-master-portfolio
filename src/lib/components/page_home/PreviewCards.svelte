@@ -10,12 +10,15 @@
 	export let title = '';
 	export let sdg = '';
 	export let key = '';
+	export let groupNumber = '';
 
 	let className = undefined;
 	export { className as class };
 </script>
 
-<div
+<a
+	href={`/sdg-${key}/projects#${groupNumber}`}
+	data-sveltekit-reload
 	class={cn(
 		'card relative h-[10rem] md:h-[13rem] w-[calc(100dvw*0.5)] overflow-clip rounded-[5px] border border-[#35353583] md:w-[23rem]',
 		className
@@ -36,7 +39,7 @@
 			<SdgBadge {sdg} {key} />
 		</div>
 	</div>
-</div>
+</a>
 
 <style>
 	.card:hover > .image {

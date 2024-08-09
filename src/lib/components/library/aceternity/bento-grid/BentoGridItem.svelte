@@ -1,6 +1,6 @@
 <script>
 	import { cn } from '$lib/utils';
-	import ShareArrow from '$components/icons/share_arrow.svelte';
+	import ShareArrow from '$lib/components/icons/ShareArrowIcon.svelte';
 
 	export let className = undefined;
 	export { className as class };
@@ -11,7 +11,7 @@
 
 <div
 	class={cn(
-		'group/bento h-full w-full  relative row-span-1 flex flex-col overflow-hidden   bg-black shadow-none shadow-input grayscale transition duration-200 hover:shadow-xl hover:grayscale-0',
+		'group/bento h-full w-full  relative row-span-1 flex flex-col overflow-hidden   bg-black shadow-none shadow-input grayscale transition duration-200 hover:shadow-xl hover:grayscale-0 ',
 		className
 	)}
 >

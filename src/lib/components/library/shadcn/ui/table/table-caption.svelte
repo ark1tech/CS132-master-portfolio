@@ -4,6 +4,6 @@
 	export { className as class };
 </script>
 
-<caption class={cn("mt-4 text-sm text-muted-foreground", className)} {...$$restProps}>
+<caption class={cn("mono-text mt-4 small-text text-[#414141]", className)} {...$$restProps}>
 	<slot />
 </caption>
