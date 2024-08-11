@@ -642,7 +642,7 @@
                     class="relative z-10 flex w-full flex-col items-center gap-[1.5rem] p-[3rem] sm:flex-row"
                 >
                     <h4 class="sans-text text-left font-[400]">
-                        Got more questions?
+                        Got questions?
                     </h4>
                     <PrimaryButton
                         href="https://forms.gle/xJjH4GYE6TQbxkkPA"

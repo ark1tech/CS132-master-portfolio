@@ -76,10 +76,8 @@
 </svelte:head>
 
 <!-- Hero Section -->
-<button on:click={() => scrollTop()} class="fixed bottom-[1.5rem] right-[1rem] z-[50]">
-    <ArrowUpIcon
-        class="border-style h-fit w-fit bg-[#00000025] p-[1rem] backdrop-blur-md"
-    />
+<button on:click={() => scrollTop()} class="fixed bottom-[1.5rem] right-[1rem] z-[50] border-style bg-[#00000025] p-[1rem] backdrop-blur-md">
+    <ArrowUpIcon/>
 </button>
 <div class="container relative contain-paint">
     <HeaderBackground sdgColor={sdgColors[sdg]} />
