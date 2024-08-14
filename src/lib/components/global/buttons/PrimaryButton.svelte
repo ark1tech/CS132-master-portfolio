@@ -38,9 +38,9 @@
 
 <style>
     a {
-        background: linear-gradient(to bottom, #005d39 -50%, #0ecf95 500%);
-        box-shadow: inset 0px -1px 8px 0px #0cb275;
-        border: 1px solid #0ecf88;
+        background: linear-gradient(to bottom, #00482d -50%, #0ecf95 250%);
+        box-shadow: inset 0px -1px 15px -2px #02c980;
+        border: 1px solid #005d39;
         border-radius: 2px;
         padding: 0.5rem 1.25rem;
         transition: filter 0.15s ease-in-out;
