@@ -167,6 +167,10 @@ li {
     font-size: clamp(0.75rem, 2vw, 0.95rem); /* Responsive to viewport width */
 }
 
+.medium-text {
+    font-size: clamp(0.9rem, 2vw, 1.05rem); /* Responsive to viewport width */
+}
+
 /* ---------------------- CONTAINERS --------------------------- */
 
 * {

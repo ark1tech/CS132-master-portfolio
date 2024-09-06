@@ -16,19 +16,10 @@
     import Spotlight from '$components/library/aceternity/components/Spotlight.svelte';
     import ProjectsIcon from '$lib/components/icons/ProjectsIcon.svelte';
     import SendIcon from '$lib/components/icons/SendIcon.svelte';
-    import * as Accordion from '$components/library/shadcn/ui/accordion';
-    import Particles from '$components/page_home/Particles.svelte';
     import StarIcon from '$components/icons/StarIcon.svelte';
     import Star2Icon from '$components/icons/Star2Icon.svelte';
     import svg_wheel from '$assets/svg_wheel.svg';
-    import ellipse from '$assets/ellipse.svg';
     import svg_outline from '$assets/svg_outline.svg';
-    import jeepney from '$assets/jeep.jpg';
-    import eyes from '$assets/eyes.png';
-    import fish from '$assets/fish.png';
-    import store from '$assets/store.png';
-    import kids from '$assets/kids.jpg';
-    import farm from '$assets/farm.jpg';
     import {
         BentoGrid,
         BentoGridItem
@@ -571,62 +562,6 @@
 
 <div use:scrollRef={'contacts'} class="container relative mb-[8rem] !min-h-fit">
     <main class="relative flex min-h-fit flex-col gap-0">
-        <!-- <section
-            class="grid w-full grid-cols-[repeat(3,_minmax(0,_1fr))] grid-rows-[1fr,_2rem]"
-        >
-            <div
-                class="border-style-thin-rb border-style-thin-left relative col-span-3 flex flex-col items-center justify-center gap-[1rem] bg-[#000000] p-[2rem] text-left md:p-[3rem]"
-            >
-                <h5
-                    class="sans-text w-full text-center font-[400] md:text-left"
-                >
-                    Frequently Asked Questions
-                </h5>
-                <Accordion.Root class="w-full">
-                    <Accordion.Item value="item-1">
-                        <Accordion.Trigger>
-                            <p
-                                class="small-text duration-200 group-hover/accordion:font-[700]"
-                            >
-                                Why are there only 15 SDGs covered?
-                            </p>
-                        </Accordion.Trigger>
-                        <Accordion.Content>
-                            <p class="sans-text text-white">Meow</p>
-                        </Accordion.Content>
-                    </Accordion.Item>
-                    <Accordion.Item value="item-2">
-                        <Accordion.Trigger>
-                            <p
-                                class="small-text duration-200 group-hover/accordion:font-[700]"
-                            >
-                                Who made all these projects?
-                            </p>
-                        </Accordion.Trigger>
-                        <Accordion.Content>
-                            <p class="sans-text text-white">Meow</p>
-                        </Accordion.Content>
-                    </Accordion.Item>
-                    <Accordion.Item value="item-3">
-                        <Accordion.Trigger>
-                            <p
-                                class="small-text duration-200 group-hover/accordion:font-[700]"
-                            >
-                                Is it accessible?
-                            </p>
-                        </Accordion.Trigger>
-                        <Accordion.Content>
-                            <p class="sans-text text-white">
-                                Yes. It adheres to the WAI-ARIA design pattern.
-                            </p>
-                        </Accordion.Content>
-                    </Accordion.Item>
-                </Accordion.Root>
-            </div>
-            <div
-                class="border-style-thin-rb border-style-thin-left relative col-span-3 overflow-hidden"
-            ></div>
-        </section> -->
         <section
             class="grid w-full grid-cols-[repeat(3,_minmax(0,_1fr))] grid-rows-[repeat(1,_minmax(0,_1fr))]"
         >

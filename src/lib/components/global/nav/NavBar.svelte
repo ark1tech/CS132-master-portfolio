@@ -33,7 +33,7 @@
 
             <ProjectMenu {sdgData}>
                 <p
-                    class="small-text mono-text p-[0.5rem] text-[#989898] hover:bg-[#70707036] hover:text-[#e2e2e2]"
+                    class="small-text mono-text p-[0.5rem] text-[#cccccc] hover:bg-[#70707036] hover:text-[#ffffff]"
                 >
                     Projects by SDG
                 </p>
