@@ -2,6 +2,7 @@
     import { cn } from '$lib/utils';
     import { splitProjects } from '$lib/utils.js';
     import { scrollRef } from 'svelte-scrolling';
+    import { onMount } from 'svelte';
     /*
      * Components *
      */
@@ -71,6 +72,13 @@
         16: '#00689D',
         17: '#19486A'
     };
+
+    onMount(() => {
+        const video = document.querySelector('video');
+        video.muted = true;
+        video.play();
+	});
+
 </script>
 
 <svelte:head>
@@ -179,7 +187,7 @@
                             target="_blank"
                             >CS 132 (Introduction to Data Science)
                         </a>
-                        in UP Diliman under the advisory of Instructor Paul Regonia,
+                        in UP Diliman under the advisory of Assistant Professor Paul Regonia,
                         PilipiNuts 2023 is a symposium of data science projects that
                         tackle emerging socioeconomic problems in the Philippines.
                     </p>
@@ -333,7 +341,7 @@
             class="grid w-full grid-cols-[repeat(3,_minmax(0,_1fr))] grid-rows-[1fr,_8rem,_8rem,_8rem]"
         >
             <div
-                class="border-style-thin-rb border-style-thin-left col-span-3 flex flex-col items-center justify-center p-[2rem] text-left md:p-[3rem]"
+                class="border-style-thin-right border-style-thin-left col-span-3 flex flex-col items-center justify-center p-[2rem] text-left md:p-[3rem]"
             >
                 <p
                     class="sans-text text-center font-[320] leading-[1.7em] text-[#c9c9c9]"
@@ -348,51 +356,13 @@
             <div
                 class="border-style-thin-right border-style-thin-left relative col-span-3 flex flex-col items-center justify-center overflow-hidden text-left"
             >
-                <!-- <img
-                    src={farm}
-                    alt="Jeepney"
-                    class="h-auto w-full object-cover grayscale hover:grayscale-0"
-                /> -->
                 <video
-                    muted
-                    autoplay
-                    loop
-                    playsinline
-                    disablepictureinpicture
-                    class="absolute top-[-50%] saturate-50 md:top-[-100%]"
-                >
-                    <source src="/weave.webm" type="video/webm" />
-                </video>
-                <div
-                    class="absolute inset-0 z-10"
-                    style={`
-                        background-image: url('/noise.png');
-                        background-size: 20px 20px;
-                        background-repeat: repeat;
-                        mix-blend-mode: overlay;
-                        opacity: 1;
-                    `}
-                ></div>
-                <!-- <div
-                    class="absolute inset-0 z-[5]"
-                    style="background: linear-gradient(to bottom, black 5%, transparent 100%);"
-                ></div> -->
-            </div>
-            <div
-                class="border-style-thin-right border-style-thin-left relative col-span-3 flex flex-col items-center justify-center overflow-hidden text-left"
-            >
-                <!-- <img
-                    src={eyes}
-                    alt="Jeepney"
-                    class="h-auto w-full object-cover grayscale hover:grayscale-0"
-                /> -->
-                <video
-                    muted
-                    autoplay
-                    loop
-                    playsinline
-                    disablepictureinpicture
-                    class="saturate-50"
+                muted
+                autoplay
+                loop
+                playsinline
+                disablepictureinpicture
+                class="saturate-0"
                 >
                     <source src="/traffic.webm" type="video/webm" />
                 </video>
@@ -400,7 +370,35 @@
                     class="absolute inset-0 z-10"
                     style={`
                         background-image: url('/noise.png');
-                        background-size: 20px 20px;
+                        background-size: 50px 50px;
+                        background-repeat: repeat;
+                        mix-blend-mode: overlay;
+                        opacity: 1;
+                    `}
+                ></div>
+                <div
+                    class="absolute inset-0 z-[5]"
+                    style="background: linear-gradient(to bottom, black -20%, transparent 100%);"
+                ></div>
+            </div>
+            <div
+                class="border-style-thin-right border-style-thin-left relative col-span-3 flex flex-col items-center justify-center overflow-hidden text-left"
+            >
+               <video
+                    muted
+                    autoplay
+                    loop
+                    playsinline
+                    disablepictureinpicture
+                    class="absolute saturate-0 md:top-[-100%] top-0 bottom-0 left-0 right-0 mx-auto md:my-0 my-auto"
+                >
+                    <source src="/weave.webm" type="video/webm" />
+                </video>
+                <div
+                    class="absolute inset-0 z-10"
+                    style={`
+                        background-image: url('/noise.png');
+                        background-size: 50px 50px;
                         background-repeat: repeat;
                         mix-blend-mode: overlay;
                         opacity: 1;
@@ -410,35 +408,30 @@
             <div
                 class="border-style-thin-right border-style-thin-left relative col-span-3 flex flex-col items-center justify-center overflow-hidden text-left"
             >
-                <!-- <img
-                    src={kids}
-                    alt="Jeepney"
-                    class="h-auto w-full object-cover grayscale hover:grayscale-0"
-                /> -->
                 <video
                     muted
                     autoplay
                     loop
                     playsinline
                     disablepictureinpicture
-                    class="absolute inset-0 m-auto saturate-50"
+                    class="absolute md:top-[-140%] top-0 bottom-0 left-0 right-0 mx-auto md:my-0 my-auto saturate-0"
                 >
-                    <source src="/boat.webm" type="video/webm" />
+                    <source src="/street.webm" type="video/webm" />
                 </video>
                 <div
                     class="absolute inset-0 z-10"
                     style={`
                         background-image: url('/noise.png');
-                        background-size: 20px 20px;
+                        background-size: 50px 50px;
                         background-repeat: repeat;
                         mix-blend-mode: overlay;
                         opacity: 1;
                     `}
                 ></div>
-                <!-- <div
+                <div
                     class="absolute inset-0 z-[5]"
-                    style="background: linear-gradient(to top, black 5%, transparent 100%);"
-                ></div> -->
+                    style="background: linear-gradient(to top, black -20%, transparent 100%);"
+                ></div>
             </div>
         </section>
         <section
@@ -450,13 +443,12 @@
                 <h5
                     class="relative z-10 w-full text-balance text-center font-[400] leading-[1.5em]"
                 >
-                    When done right, data science not only provide us with an
-                    opinion to observe;
+                    When done right, data science not only offers us insights
                 </h5>
                 <h5
                     class="relative z-10 mb-[1rem] w-full text-balance text-center font-[400] leading-[1.5em] text-[#00e582]"
                 >
-                    it enables us to take action towards social good.
+                    but also empowers us to take action for social good.
                 </h5>
                 <FightAscii />
             </div>
@@ -486,7 +478,7 @@
                 class="border-style-thin-rb border-style-thin-left relative col-span-3 overflow-hidden"
             ></div>
             <div
-                class="border-style-thin-rb border-style-thin-left relative col-span-3 flex flex-col items-center justify-center gap-[2rem] bg-[#070707] p-[2rem] text-left md:p-[3rem]"
+                class="border-style-thin-rb border-style-thin-left relative col-span-3 flex flex-col items-center justify-center gap-[2rem] bg-[#0f0f0fba] p-[2rem] text-left md:p-[3rem]"
             >
                 <div
                     class="relative overflow-hidden rounded-[13px] p-[0.8px] text-[#2ba054]"
@@ -505,7 +497,7 @@
                             data-sveltekit-preload-code="tap"
                             target="_self"
                             href={`/sdg-${key}/projects`}
-                            class="h-full w-full"
+                            class="h-full w-full border-style-thin"
                         >
                             <BentoGridItem
                                 title={sdg.Title}
@@ -660,54 +652,6 @@
     </main>
 </div>
 
-<!-- About Us section -->
-<div class="container relative !min-h-[50dvh]">
-    <div class="relative h-[1px] overflow-hidden">
-        <div class="h-[1px] border-t-[1px] border-t-[#7f7f7f60]"></div>
-        <div
-            class="pointer-events-none absolute inset-y-0 left-0 w-0 bg-gradient-to-r from-black via-black sm:w-[5%]"
-        ></div>
-        <div
-            class="pointer-events-none absolute inset-y-0 right-0 w-0 bg-gradient-to-l from-black via-black sm:w-[5%]"
-        ></div>
-    </div>
-    <nav class="relative flex min-h-[50dvh] flex-col justify-between py-[4rem]">
-        <div
-            class="relative z-50 flex h-full flex-col items-center justify-between gap-[1rem] bg-black px-[1rem] sm:px-[4rem] md:flex-row"
-        >
-            <div class="flex w-fit flex-row items-center gap-[0.5rem]">
-                <img
-                    src={PilipiNutsLogo}
-                    alt="PilipiNuts Logo"
-                    class="h-[20px] w-auto"
-                />
-                <p class="mono-text text-[#989898]">PilipiNuts</p>
-                <p class="sans-text text-[#989898]">©</p>
-                <p class="mono-text text-[#989898]">
-                    {new Date().getFullYear()}
-                </p>
-            </div>
-            <div class="flex flex-col gap-[0.5rem] items-end">
-                <p class="mono-text text-[#989898]">More about</p>
-                <div class="flex w-fit flex-row items-center gap-[4rem]">
-                    <h3>CS 132</h3>
-                    <h3>Paul Regonia</h3>
-                </div>
-            </div>
-        </div>
-        <!-- <div
-            class="relative z-50 flex h-full flex-row items-center justify-between bg-black px-[1rem] sm:px-[4rem]"
-        >
-            <div class="flex w-full flex-grow flex-row justify-end">
-                <p class="foot-text font-[100]">
-                    Website made with ♥ by Arki Mañago, Denzell Dy, Elijah
-                    Mejilla, Brill Riña
-                </p>
-            </div>
-        </div> -->
-    </nav>
-</div>
-
 <style>
     .contain-paint {
         contain: paint;
@@ -720,21 +664,4 @@
         -ms-overflow-style: none;
         scrollbar-width: none;
     }
-
-    /* .filter-grain {
-		backdrop-filter: url(#noiseFilter);
-		-webkit-backdrop-filter: url(#noiseFilter);
-	} */
-
-    /* #gradient-marquee::before {
-		content: '';
-		position: absolute;
-		bottom: 0;
-		left: 50%;
-		transform: translate(-50%);
-		width: 100%;
-		height: 100%;
-		background: radial-gradient(circle at bottom, rgba(45, 45, 45, 0.179), transparent 40%);
-		pointer-events: none;
-	} */
 </style>
