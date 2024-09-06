@@ -362,6 +362,7 @@
                 loop
                 playsinline
                 disablepictureinpicture
+                poster="/traffic.webp"
                 class="saturate-0"
                 >
                     <source src="/traffic.webm" type="video/webm" />
@@ -390,6 +391,7 @@
                     loop
                     playsinline
                     disablepictureinpicture
+                    poster="/weave.webp"
                     class="absolute saturate-0 md:top-[-100%] top-0 bottom-0 left-0 right-0 mx-auto md:my-0 my-auto"
                 >
                     <source src="/weave.webm" type="video/webm" />
@@ -415,6 +417,7 @@
                     playsinline
                     disablepictureinpicture
                     class="absolute md:top-[-140%] top-0 bottom-0 left-0 right-0 mx-auto md:my-0 my-auto saturate-0"
+                    poster="/street.webp"
                 >
                     <source src="/street.webm" type="video/webm" />
                 </video>
