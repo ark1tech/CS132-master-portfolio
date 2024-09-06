@@ -1,5 +1,5 @@
 <script>
-	// import Spotlight from '$components/library/aceternity/components/Spotlight.svelte';
+	import Spotlight from '$components/library/aceternity/components/Spotlight.svelte';
 	import Arki from '$assets/rkbm.svg';
 </script>
 
@@ -9,11 +9,11 @@
 
 <div class="container relative contain-paint">
 	<main class="relative min-h-[93dvh]">
-		<!-- <div class="absolute h-full w-[calc(100%-3rem)]">
+		<div class="absolute h-full w-[calc(100%-3rem)]">
 			<Spotlight
 				class="absolute top-[1rem] h-[200dvh] max-h-[300%] w-[120dvh] max-w-[300%] translate-x-[-30%] translate-y-[-40%]  animate-spotlight md:h-[100dvh] md:max-h-[100%] md:w-full md:max-w-[100%] md:scale-[1.5]"
 			/>
-		</div> -->
+		</div>
 		<section
 			class="relative z-[30] flex min-h-[93dvh] w-full flex-col items-center py-[5dvh] sm:py-[10dvh] md:items-start md:py-[10dvh]"
 		>
