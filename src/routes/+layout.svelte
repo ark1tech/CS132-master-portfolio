@@ -43,7 +43,7 @@
 				</p>
 			</div>
 			<div class="flex flex-col items-end gap-[0.5rem]">
-				<p class="mono-text text-[#989898]">Made by</p>
+				<a class="mono-text text-[#989898]" href="/bts">Made by</a>
 			</div>
 		</div>
 	</nav>
