@@ -14,9 +14,10 @@
 
 <ModeWatcher defaultMode={'dark'} />
 <NavBar class="sticky h-[7dvh]" />
-{#if !browser}
+<slot />
+<!-- {#if !browser}
 	<Loading />
 {:else}
 	<slot />
-{/if}
+{/if} -->
 <Footer/>

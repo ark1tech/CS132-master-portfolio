@@ -9,5 +9,5 @@
     {#each projects as project}
         <ProjectCard {project} {url} />
     {/each}
-    <p class="small-text text-[#414141] w-full flex flex-col items-center">*:⊹ Nothing follows ⊹:*</p>
+    <p class="foot-text text-[#414141] w-full flex flex-col items-center">*:⊹ Nothing follows ⊹:*</p>
 </div>

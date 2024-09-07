@@ -320,7 +320,7 @@
                 style="background: radial-gradient(circle at top, black 60%, transparent 100%);"
             ></div>
             <div
-                class="absolute inset-0 z-0 shadow-[inset_0_0_20px_15px_#000]"
+                class="absolute inset-0 z-0 shadow-[inset_0_0_20px_15px_#000] brightness-125"
                 style="background-image: url('./bg.svg');
                 background-repeat: no-repeat;
                 background-blend-mode: normal;
@@ -451,7 +451,7 @@
                 style="background: radial-gradient(ellipse at bottom, black 50%, transparent 100%);"
             ></div>
             <div
-                class="absolute inset-0 z-0 m-auto shadow-[inset_0_0_20px_15px_#000]"
+                class="absolute inset-0 z-0 m-auto shadow-[inset_0_0_20px_15px_#000] brightness-125"
                 style="background-image: url('./bg.svg');
                         background-repeat: no-repeat;
                         background-blend-mode: normal;
