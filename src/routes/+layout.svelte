@@ -20,4 +20,4 @@
 {:else}
 	<slot />
 {/if} -->
-<Footer/>
+<Footer />

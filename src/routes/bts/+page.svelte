@@ -1,10 +1,13 @@
 <script>
 	import Spotlight from '$components/library/aceternity/components/Spotlight.svelte';
-	import Arki from '$assets/rkbm.svg';
+	import Arki from '$assets/bts/arki.webp';
+	import SirPaul from '$assets/bts/sir_paul.webp';
+	import Denzell from '$assets/bts/denzell.webp';
+	import PilipiNutsLogo from '$assets/logo/logo-plain-green.svg';
 </script>
 
 <svelte:head>
-	<title>Meet the Devs | PilipiNuts 2023</title>
+	<title>Meet the Team | PilipiNuts 2023</title>
 </svelte:head>
 
 <div class="container relative contain-paint">
@@ -27,14 +30,14 @@
 					✦ Home
 				</a>
 				<p class="foot-text mono-text">/</p>
-				<p class="foot-text mono-text">Meet the Devs</p>
+				<p class="foot-text mono-text">Meet the Team</p>
 			</div>
 			<h2 class="mb-[2rem] w-full md:text-left text-center">This website was made possible by</h2>
 			<div class="flex md:w-[80%] w-full flex-col items-start gap-[2rem]">
 				<div class="flex h-fit flex-row items-start gap-[1rem]">
 					<img
-						src={Arki}
-						class="border-style-thin inset-0 md:h-[50px] h-[45px] w-auto rounded-[10px] p-[0.7rem]"
+						src={SirPaul}
+						class="border-style-thin inset-0 md:h-[50px] h-[45px] w-auto rounded-[10px] p-[0.1rem]"
 						alt="arki"
 					/>
 					<div class="flex h-fit flex-col items-start gap-[0.5rem]">
@@ -43,14 +46,14 @@
 							<p class="font-[200] sans-text small-text">Adviser</p>
 						</div>
 						<p class="small-text sans-text text-pretty">
-							Lorem ipsum.
+							Assistant Professor, Computer Vision and Machine Intelligence Lab, UP Diliman.
 						</p>
 					</div>
 				</div>
 				<div class="flex h-fit flex-row items-start gap-[1rem]">
 					<img
 						src={Arki}
-						class="border-style-thin inset-0 md:h-[50px] h-[45px] w-auto rounded-[10px] p-[0.7rem]"
+						class="border-style-thin inset-0 md:h-[50px] h-[45px] w-auto rounded-[10px] p-[0.1rem]"
 						alt="arki"
 					/>
 					<div class="flex h-fit flex-col items-start gap-[0.5rem]">
@@ -73,8 +76,8 @@
 				</div>
 				<div class="flex h-fit flex-row items-start gap-[1rem]">
 					<img
-						src={Arki}
-						class="border-style-thin inset-0 md:h-[50px] h-[45px] w-auto rounded-[10px] p-[0.7rem]"
+						src={Denzell}
+						class="border-style-thin inset-0 md:h-[50px] h-[45px] w-auto rounded-[10px] p-[0.1rem]"
 						alt="arki"
 					/>
 					<div class="flex h-fit flex-col items-start gap-[0.5rem]">
@@ -83,14 +86,14 @@
 							<p class="font-[200] sans-text small-text">Developer, Designer</p>
 						</div>
 						<p class="small-text sans-text text-pretty">
-							Lorem ipsum.
+							I love solving problems and making things! Currently interested in web development, cybersecurity, and data science.
 						</p>
 					</div>
 				</div>
 				<div class="flex h-fit flex-row items-start gap-[1rem]">
 					<img
-						src={Arki}
-						class="border-style-thin inset-0 md:h-[50px] h-[45px] w-auto rounded-[10px] p-[0.7rem]"
+						src={PilipiNutsLogo}
+						class="border-style-thin inset-0 md:h-[50px] h-[45px] w-auto rounded-[10px] p-[0.5rem] grayscale brightness-50"
 						alt="arki"
 					/>
 					<div class="flex h-fit flex-col items-start gap-[0.5rem]">
@@ -98,15 +101,12 @@
 							<p class="font-[500] text-[#cccccc]">Elijah Mejilla</p>
 							<p class="font-[200] sans-text small-text">Copywriter</p>
 						</div>
-						<p class="small-text sans-text text-pretty">
-							Lorem ipsum.
-						</p>
 					</div>
 				</div>
 				<div class="flex h-fit flex-row items-start gap-[1rem]">
 					<img
-						src={Arki}
-						class="border-style-thin inset-0 md:h-[50px] h-[45px] w-auto rounded-[10px] p-[0.7rem]"
+						src={PilipiNutsLogo}
+						class="border-style-thin inset-0 md:h-[50px] h-[45px] w-auto rounded-[10px] p-[0.5rem] grayscale brightness-50"
 						alt="arki"
 					/>
 					<div class="flex h-fit flex-col items-start gap-[0.5rem]">
@@ -114,9 +114,6 @@
 							<p class="font-[500] text-[#cccccc]">Brill Riña</p>
 							<p class="font-[200] sans-text small-text">Contributor</p>
 						</div>
-						<p class="small-text sans-text text-pretty">
-							Lorem ipsum.
-						</p>
 					</div>
 				</div>
 				<!-- <p class="mt-[1rem] foot-text text-[#282828] w-full flex flex-col md:text-left text-center">Of course, it's made with Svelte.</p> -->

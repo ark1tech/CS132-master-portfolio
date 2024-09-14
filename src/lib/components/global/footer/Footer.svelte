@@ -29,7 +29,7 @@
 				<a
 					data-sveltekit-reload
 					class="flex flex-row items-center gap-[0.2rem] mono-text p-[0.5rem] text-[#cccccc] hover:bg-[#70707036] hover:text-white"
-					href="/bts">Meet the Devs</a
+					href="/bts">Meet the Team</a
 				>
 			</div>
 		</div>
